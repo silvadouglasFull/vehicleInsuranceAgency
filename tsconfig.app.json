@@ -2,10 +2,10 @@
   "compilerOptions": {
     "paths": {
       "@app/*": ["./src/app/*"],
-      "@api/*": ["./src/api/*"],
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
       "@constants/*": ["./src/constants/*"],
+      "@core/*": ["./src/core/*"],
       "@context/*": ["./src/context/*"],
       "@config/*": ["./src/config/*"],
       "@features/*": ["./src/features/*"],
@@ -19,6 +19,7 @@
       "@utils/*": ["./src/utils/*"],
       "@styles/*": ["./src/styles/*"],
       "@navbarPublic/*": ["./src/components/navbarPublic/*"],
+      "@modules/*": ["./src/modules/*"],
       "@publicRouter/*": ["./src/routes/public/*"],
       "@router/*": ["./src/routes/*"],
       "@flavor/*": ["./src/flavor/*"]
