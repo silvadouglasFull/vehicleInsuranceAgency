@@ -1,6 +1,6 @@
-import { states } from "@components/forms/suhai/constants";
-import { Context } from "@components/forms/suhai/context";
-import type { HandleFormField, States } from "@components/forms/suhai/context/types";
+import { states } from "@components/forms/suhai/cotacaoSeguro/constants";
+import { Context } from "@components/forms/suhai/cotacaoSeguro/context";
+import type { Event, HandleFormField, States } from "@components/forms/suhai/cotacaoSeguro/context/types";
 import { formatPhoneNumber } from "@utils/form/mask/phone";
 import { reducer } from "@utils/form/reducer";
 import React, { useReducer } from "react";

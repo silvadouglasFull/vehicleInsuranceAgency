@@ -1,5 +1,5 @@
-import type { FormField } from "@components/forms/suhai/constants/types";
-import type { States } from "@components/forms/suhai/context/types";
+import type { FormField } from "@components/forms/suhai/cotacaoSeguro/constants/types";
+import type { States } from "../context/types";
 
 export const formLabels: FormField[] = [
     {
@@ -129,7 +129,6 @@ export const formLabels: FormField[] = [
         required: true,
     }
 ];
-
 export const states: States = {
     codigoFipe: '',
     marca: '',

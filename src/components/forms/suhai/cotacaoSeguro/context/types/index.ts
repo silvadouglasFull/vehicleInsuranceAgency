@@ -24,7 +24,7 @@ export type ReducerParams = {
     value: StateValue
 }
 export type HandleFormField = States
-
+export type Event = React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 export type StateValue = States[keyof States]
 export type FormContextType = {
     state: States
