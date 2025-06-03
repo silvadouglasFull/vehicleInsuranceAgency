@@ -1,6 +1,6 @@
 
-import { Context } from '@components/forms/suhai/cotacaoSeguro/context';
-import type { FormContextType } from '@components/forms/suhai/cotacaoSeguro/context/types';
+import { Context } from '@components/forms/suhai/insuranceQuote/context';
+import type { FormContextType } from '@components/forms/suhai/insuranceQuote/context/types';
 import { useContext } from 'react';
 
 /**

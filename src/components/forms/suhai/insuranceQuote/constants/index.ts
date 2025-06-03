@@ -1,4 +1,4 @@
-import type { FormField } from "@components/forms/suhai/cotacaoSeguro/constants/types";
+import type { FormField } from "@components/forms/suhai/insuranceQuote/constants/types";
 import type { States } from "../context/types";
 
 export const formLabels: FormField[] = [

@@ -1,6 +1,6 @@
-import type { States } from "@components/forms/suhai/cotacaoSeguro/context/types";
-import { useInsuranceQuote } from "@components/forms/suhai/cotacaoSeguro/hooks/cotacaoSeguro";
-import type { TRenderFormSection } from "@components/forms/suhai/cotacaoSeguro/renderFormSection/types";
+import type { States } from "@components/forms/suhai/insuranceQuote/context/types";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
+import type { TRenderFormSection } from "@components/forms/suhai/insuranceQuote/renderFormSection/types";
 import type React from "react";
 import { Card, Col, Form, Row } from 'react-bootstrap';
 
