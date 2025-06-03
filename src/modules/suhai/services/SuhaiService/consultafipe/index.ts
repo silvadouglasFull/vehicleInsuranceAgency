@@ -9,7 +9,7 @@ import type {
 import type { ISuhaiServices } from '@modules/suhai/services/SuhaiService/ISuhaiServices';
 
 export class SuhaiService implements ISuhaiServices {
-    private readonly http: AxiosHttpClient;
+    public http: AxiosHttpClient;
     private readonly host: UrlString
     private readonly endPoints: EndPoints
     constructor() {
