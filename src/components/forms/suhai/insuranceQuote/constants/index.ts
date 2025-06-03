@@ -1,5 +1,5 @@
 import type { FormField } from "@components/forms/suhai/insuranceQuote/constants/types";
-import type { States } from "../context/types";
+import type { States } from "@components/forms/suhai/insuranceQuote/context/types";
 
 export const formLabels: FormField[] = [
     {
@@ -10,6 +10,8 @@ export const formLabels: FormField[] = [
         type: 'text',
         placeholder: 'Digite o código FIPE',
         required: true,
+        min: 8,
+        max: 8
     },
     {
         id: 2,
@@ -19,6 +21,8 @@ export const formLabels: FormField[] = [
         type: 'text',
         placeholder: 'Digite a marca',
         required: true,
+        maxLength: 100
+
     },
     {
         id: 3,
@@ -28,6 +32,7 @@ export const formLabels: FormField[] = [
         type: 'text',
         placeholder: 'Digite o modelo',
         required: true,
+        maxLength: 100
     },
     {
         id: 4,
@@ -37,6 +42,9 @@ export const formLabels: FormField[] = [
         type: 'number',
         placeholder: 'Digite o ano do modelo',
         required: true,
+        maxLength: 6,
+        min: 0,
+        max: 2025
     },
     {
         id: 5,
@@ -46,6 +54,7 @@ export const formLabels: FormField[] = [
         type: 'text',
         placeholder: 'Digite seu CPF',
         required: true,
+        maxLength: 16
     },
     {
         id: 6,
@@ -55,6 +64,7 @@ export const formLabels: FormField[] = [
         type: 'text',
         placeholder: 'Digite seu nome completo',
         required: true,
+        maxLength: 100
     },
     {
         id: 7,
@@ -64,6 +74,7 @@ export const formLabels: FormField[] = [
         type: 'email',
         placeholder: 'Digite seu e-mail',
         required: true,
+        maxLength: 100
     },
     {
         id: 8,
@@ -73,6 +84,7 @@ export const formLabels: FormField[] = [
         type: 'tel',
         placeholder: 'Digite seu telefone',
         required: false,
+        maxLength: 14
     },
     {
         id: 9,
@@ -82,6 +94,7 @@ export const formLabels: FormField[] = [
         type: 'number',
         placeholder: 'Digite o valor do veículo',
         required: true,
+        min: 0,
     },
     {
         id: 10,
@@ -91,6 +104,7 @@ export const formLabels: FormField[] = [
         type: 'text',
         placeholder: 'Ex: boleto, cartão',
         required: true,
+        maxLength: 100
     },
     {
         id: 11,
@@ -100,6 +114,8 @@ export const formLabels: FormField[] = [
         type: 'number',
         placeholder: 'Digite o número de parcelas',
         required: true,
+        min: 0,
+        max: 12
     },
     {
         id: 12,
@@ -109,6 +125,7 @@ export const formLabels: FormField[] = [
         type: 'text',
         placeholder: 'Digite o nome do segurado',
         required: true,
+        maxLength: 100
     },
     {
         id: 13,
@@ -118,6 +135,7 @@ export const formLabels: FormField[] = [
         type: 'text',
         placeholder: 'Digite o CPF do segurado',
         required: true,
+        maxLength: 11
     },
     {
         id: 14,
@@ -127,6 +145,7 @@ export const formLabels: FormField[] = [
         type: 'text',
         placeholder: 'Digite o endereço do segurado',
         required: true,
+        maxLength: 100
     }
 ];
 export const states: States = {

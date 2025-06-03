@@ -1,11 +1,11 @@
 import type {
     ConsultarFipeRequest,
-    ConsultarFipeResponse
+    ResponseConsultaFipe
 } from '@modules/suhai/consultarFipe/dtos/ConsultarFipe';
-import { container } from "@modules/suhai/services/SuhaiService/consultafipe/container";
+import { container } from "@modules/suhai/consultarFipe/services/consultafipe/container";
 export const consultaFipe = {
-    consultation: async (data: ConsultarFipeRequest): Promise<ConsultarFipeResponse> => {
+    consultation: async (data: ConsultarFipeRequest): Promise<ResponseConsultaFipe> => {
         const response = await container().post(data);
-        return response as ConsultarFipeResponse;
+        return response as ResponseConsultaFipe;
     }
 } 

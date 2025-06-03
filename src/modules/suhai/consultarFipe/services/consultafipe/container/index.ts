@@ -1,5 +1,5 @@
+import { SuhaiService } from "@modules/suhai/consultarFipe/services/consultafipe/instance"
 import type { ISuhaiServices } from "@modules/suhai/services/ISuhaiServices"
-import { SuhaiService } from "@modules/suhai/services/SuhaiService/consultafipe/instance"
 
 export const container = (): ISuhaiServices => {
     const suhaiService: ISuhaiServices = new SuhaiService()

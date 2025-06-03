@@ -9,4 +9,7 @@ export type FormField = {
     type: Type
     placeholder: string
     required: boolean
+    min?: number
+    max?: number
+    maxLength?: number
 }

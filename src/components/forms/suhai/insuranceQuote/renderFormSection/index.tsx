@@ -13,21 +13,22 @@ export const RenderFormSection: React.FC<TRenderFormSection> = ({ fields, title 
             </Card.Header>
             <Card.Body>
                 <Row>
-                    {fields.map((field, i) => (
-                        <Col md={6} className="mb-3" key={field.id}>
-                            <Form.Group controlId={field.idControll}>
+                    {fields.sort((a, b) => a.id - b.id).map(({ id, idControll, label, name, placeholder, required, type, ...rest }) => (
+                        <Col md={6} className="mb-3" key={id}>
+                            <Form.Group controlId={idControll}>
                                 <Form.Label className="fw-bold">
-                                    {field.label}
-                                    {field.required && <span className="text-danger ms-1">*</span>}
+                                    {label}
+                                    {required && <span className="text-danger ms-1">*</span>}
                                 </Form.Label>
                                 <Form.Control
-                                    type={field.type}
-                                    name={field.name}
-                                    placeholder={field.placeholder}
-                                    required={field.required}
-                                    value={state[field.name as keyof States]}
+                                    type={type}
+                                    name={name}
+                                    placeholder={placeholder}
+                                    required={required}
+                                    value={state[name as keyof States]}
                                     onChange={onChange}
-                                    tabIndex={i}
+                                    tabIndex={id}
+                                    {...rest}
                                 />
                             </Form.Group>
                         </Col>
