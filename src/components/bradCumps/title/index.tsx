@@ -1,5 +1,6 @@
 import { styles } from "@components/bradCumps/title/styles";
 import type { TitleProps } from "@components/bradCumps/title/types";
+import { transformerInFirstWord } from "@utils/transfomerText";
 import React from "react";
 import { Card } from "react-bootstrap";
 export const Title: React.FC<TitleProps> = ({ title, ...props }) => {
@@ -10,7 +11,7 @@ export const Title: React.FC<TitleProps> = ({ title, ...props }) => {
                     ...styles,
                     top: 0
                 }}>
-                    {title}
+                    {transformerInFirstWord({ world: title })}
                 </span>
                 {title}
             </Card.Title>

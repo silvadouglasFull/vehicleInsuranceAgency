@@ -13,7 +13,7 @@ export const RenderFormSection: React.FC<TRenderFormSection> = ({ fields, title 
             </Card.Header>
             <Card.Body>
                 <Row>
-                    {fields.map((field) => (
+                    {fields.map((field, i) => (
                         <Col md={6} className="mb-3" key={field.id}>
                             <Form.Group controlId={field.idControll}>
                                 <Form.Label className="fw-bold">
@@ -27,6 +27,7 @@ export const RenderFormSection: React.FC<TRenderFormSection> = ({ fields, title 
                                     required={field.required}
                                     value={state[field.name as keyof States]}
                                     onChange={onChange}
+                                    tabIndex={i}
                                 />
                             </Form.Group>
                         </Col>
