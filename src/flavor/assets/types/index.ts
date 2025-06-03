@@ -1,3 +1,5 @@
+import type { TRoute } from "@flavor/links/types";
+
 export type CaptionStyle = {
     mobile: React.CSSProperties
     desktop: React.CSSProperties
@@ -10,3 +12,9 @@ export type Slide = {
     subtitle: string;
     captionStyle?: CaptionStyle
 };
+
+export type BreadCrumps = {
+    id: number | string
+    midia: string
+    url: TRoute
+}

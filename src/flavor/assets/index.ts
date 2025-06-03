@@ -4,7 +4,8 @@ import cardService3 from "@assets/suhai/imagens/cards/3.png";
 import logo from "@assets/suhai/imagens/logo.png";
 import slide1 from "@assets/suhai/imagens/slides/1.png";
 import slide2 from "@assets/suhai/imagens/slides/2.jpg";
-import type { Slide } from "@flavor/assets/types";
+import slide3 from "@assets/suhai/imagens/slides/3.png";
+import type { BreadCrumps, Slide } from "@flavor/assets/types";
 export { cardService1, cardService2, cardService3, logo };
 export const slides: Slide[] = [
     {
@@ -31,7 +32,7 @@ export const slides: Slide[] = [
     },
     {
         id: 3,
-        midia: "https://img.freepik.com/fotos-gratis/carro-luxuoso-estacionado-na-estrada-com-um-farol-iluminado-ao-por-do-sol_181624-60607.jpg?semt=ais_hybrid&w=740",
+        midia: slide3,
         textButton: "Fale com um consultor",
         title: "Atendimento especializado",
         subtitle: "Nossa equipe está pronta para te ajudar em todas as etapas.",
@@ -45,3 +46,10 @@ export const slides: Slide[] = [
         }
     },
 ];
+export const breadCrumps: BreadCrumps[] = [
+    {
+        id: 1,
+        midia: slide3,
+        url: '/cotacao'
+    },
+]

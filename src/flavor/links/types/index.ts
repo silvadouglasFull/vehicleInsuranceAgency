@@ -1,7 +1,9 @@
+export type TRoute = '/' | '/contato' | '/cotacao';
+export type NamePage = 'Home' | 'Cotação' | 'Contato'
 export type Link = {
     id: number | string;
-    namePage: string;
-    route: '/' | '/contato' | '/cotacao';
+    namePage: NamePage;
+    route: TRoute
 };
 
 export type Type = 'Endereço' | 'Whatsapp' | 'Email'
