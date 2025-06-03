@@ -1,22 +1,20 @@
 import type { UseGetNamePage } from "@components/bradCumps/title/hooks/useGetNamePage/types"
-import { useLanguage } from "@context/language/hooks"
-import { links } from "@utils/linksHeader"
+import { links } from "@flavor/links"
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 
 export const useGetNamePage = (): UseGetNamePage => {
     const { pathname } = useLocation()
-    const { language } = useLanguage()
     const [namePage, setNamePage] = useState<string>('')
     useEffect(() => {
         const getNamePage = () => {
-            const find = links.find(item => (item.url === pathname) && (item.language === language))
+            const find = links.find(item => (item.route === pathname))
             if (find) {
-                const { title } = find
-                setNamePage(title)
+                const { namePage } = find
+                setNamePage(namePage)
             }
         }
         getNamePage()
-    }, [pathname, language])
+    }, [pathname])
     return { namePage }
 }

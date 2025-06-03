@@ -1,5 +1,5 @@
 import type { UseGetImageBradCrumps } from "@components/bradCumps/hooks/types"
-import { breadCrumps } from "@flavor/constants/assets"
+import { breadCrumps } from "@flavor/assets"
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 
