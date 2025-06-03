@@ -2,10 +2,10 @@ import { AxiosHttpClient } from '@core/http/AxiosHttpClient';
 import { endPoints, host } from '@flavor/api';
 import type { EndPoints, UrlString } from '@flavor/api/types';
 import type {
-    ConsultarFipeRequest,
-    ConsultarFipeResponse
-} from '@modules/suhai/dtos/ConsultarFipe/';
-import type { ISuhaiServices } from '@modules/suhai/services/SuhaiService/ISuhaiServices';
+    IncluirCotacaoRequest,
+    IncluirCotacaoResponse
+} from '@modules/suhai/incluirCotacao/dtos/IncluirCotacao';
+import type { ISuhaiServices } from '@modules/suhai/services/ISuhaiServices';
 
 export class SuhaiService implements ISuhaiServices {
     public http: AxiosHttpClient;
@@ -17,7 +17,7 @@ export class SuhaiService implements ISuhaiServices {
         this.http = new AxiosHttpClient(this.host);
     }
 
-    async post(data: ConsultarFipeRequest): Promise<ConsultarFipeResponse> {
-        return this.http.post<ConsultarFipeResponse>(`${this.endPoints.consultafipe}`, data);
+    async post(data: IncluirCotacaoRequest): Promise<IncluirCotacaoResponse> {
+        return this.http.post<IncluirCotacaoResponse>(`${this.endPoints.incluircotacao}`, data);
     }
 }

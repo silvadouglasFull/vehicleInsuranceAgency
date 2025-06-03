@@ -1,11 +1,11 @@
 import { AxiosHttpClient } from '@core/http/AxiosHttpClient';
 import { endPoints, host } from '@flavor/api';
 import type { EndPoints, UrlString } from '@flavor/api/types';
+import type { ISuhaiServices } from '@modules/suhai/services/ISuhaiServices';
 import type {
     TransmitirPropostaRequest,
     TransmitirPropostaResponse
-} from '@modules/suhai/dtos/TransmitirProposta';
-import type { ISuhaiServices } from '@modules/suhai/services/SuhaiService/ISuhaiServices';
+} from '@modules/suhai/transmitirProposta/dtos/TransmitirProposta';
 
 export class SuhaiService implements ISuhaiServices {
     public http: AxiosHttpClient;

@@ -1,4 +1,4 @@
-import type { ISuhaiServices } from "@modules/suhai/services/SuhaiService/ISuhaiServices"
+import type { ISuhaiServices } from "@modules/suhai/services/ISuhaiServices"
 import { SuhaiService } from "@modules/suhai/services/SuhaiService/incluirCotacao/instance"
 
 export const container = (): ISuhaiServices => {
