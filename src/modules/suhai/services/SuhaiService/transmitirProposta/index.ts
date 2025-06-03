@@ -1,22 +1,8 @@
-import { AxiosHttpClient } from '@core/http/AxiosHttpClient';
-import { endPoints, host } from '@flavor/api';
-import type { EndPoints, UrlString } from '@flavor/api/types';
-import type {
-    TransmitirPropostaRequest,
-    TransmitirPropostaResponse
-} from '@modules/suhai/dtos/TransmitirProposta';
-import type { ISuhaiServices } from '@modules/suhai/services/SuhaiService/ISuhaiServices';
-
-export class SuhaiService implements ISuhaiServices {
-    public http: AxiosHttpClient;
-    private readonly host: UrlString
-    private readonly endPoints: EndPoints
-    constructor() {
-        this.host = host
-        this.endPoints = endPoints
-        this.http = new AxiosHttpClient(this.host);
-    }
-    async post(data: TransmitirPropostaRequest): Promise<TransmitirPropostaResponse> {
-        return this.http.post<TransmitirPropostaResponse>(`${this.endPoints.transmitirproposta}`, data);
+import type { TransmitirPropostaRequest, TransmitirPropostaResponse } from "@modules/suhai/dtos/TransmitirProposta";
+import { container } from "@modules/suhai/services/SuhaiService/transmitirProposta/container";
+export const transmitirProposta = {
+    transmit: async (data: TransmitirPropostaRequest): Promise<TransmitirPropostaResponse> => {
+        const response = await container().post(data);
+        return response as TransmitirPropostaResponse
     }
 }
