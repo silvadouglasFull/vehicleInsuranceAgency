@@ -19,7 +19,7 @@ export type Data = {
     cod_categoria_tarifaria?: number
 }
 export type ResponseConsultaFipe = {
-    data?: Data
+    data?: Data[]
     error?: string
     success: boolean
 }

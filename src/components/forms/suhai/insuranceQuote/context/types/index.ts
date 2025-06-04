@@ -1,22 +1,22 @@
 
 export type States = {
-    codigoFipe: string;
-    marca: string;
-    modelo: string;
-    anoModelo: number;
-    cpf: string;
-    nome: string;
-    email: string;
-    telefone: string;
-    valor: number;
-    numeroCotacao: string;
-    status: string;
-    validade: string;
-    formaPagamento: string;
-    quantidadeParcelas: number;
-    endereco: string;
-    numeroProposta: string;
-    pdfPropostaBase64: string;
+    codigoFipe?: string;
+    marca?: string;
+    modelo?: string;
+    anoModelo?: number;
+    cpf?: string;
+    nome?: string;
+    email?: string;
+    telefone?: string;
+    valor?: number;
+    numeroCotacao?: string;
+    status?: string;
+    validade?: string;
+    formaPagamento?: string;
+    quantidadeParcelas?: number;
+    endereco?: string;
+    numeroProposta?: string;
+    pdfPropostaBase64?: string;
 };
 
 export type ReducerParams = {
