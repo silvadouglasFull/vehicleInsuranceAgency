@@ -3,7 +3,7 @@ import { Spinner as ReactBootstrapSpinner } from 'react-bootstrap';
 
 export const Spinner: React.FC = () => {
     return (
-        <ReactBootstrapSpinner animation="grow" role="status">
+        <ReactBootstrapSpinner size='sm' animation="grow" role="status">
             <p></p>
         </ReactBootstrapSpinner>
     );

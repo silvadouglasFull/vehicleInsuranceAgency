@@ -12,7 +12,7 @@ export const useVehicleData = (): UseVehicleData => {
     const { codigoFipe } = state
     useEffect(() => {
         const fetchInfo = async () => {
-            if (codigoFipe && (codigoFipe?.length === 8)) {
+            if (codigoFipe?.length === 7) {
                 setLoading(true)
                 const response = await fetchVehicleData({ codigoFipe })
                 if (response?.data?.length) {
