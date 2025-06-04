@@ -17,7 +17,9 @@ export class SuhaiService implements ISuhaiServices {
         this.http = new AxiosHttpClient(this.host);
     }
 
-    async post(data: ConsultarFipeRequest): Promise<ResponseConsultaFipe> {
-        return this.http.post<ResponseConsultaFipe>(`${this.endPoints.consultafipe}`, data);
+    async post({ codigoFipe, signal }: ConsultarFipeRequest): Promise<ResponseConsultaFipe> {
+        return this.http.post<ResponseConsultaFipe>(`${this.endPoints.consultafipe}`, codigoFipe, {
+            signal
+        });
     }
 }

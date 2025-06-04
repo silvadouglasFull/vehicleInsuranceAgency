@@ -3,6 +3,7 @@ import { consultaFipe } from "@modules/suhai/consultarFipe/services/consultafipe
 
 export type FetchVehicleData = {
     codigoFipe: string
+    signal?: AbortSignal
 }
 
 export const fetchVehicleData = async ({ codigoFipe }: FetchVehicleData): Promise<ResponseConsultaFipe> => {

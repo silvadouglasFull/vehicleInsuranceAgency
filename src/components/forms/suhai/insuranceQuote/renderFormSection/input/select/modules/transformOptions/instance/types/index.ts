@@ -13,4 +13,5 @@ export type GetTransformOptions = VehicleTransformData | TransformData
 export interface ITransformOptions {
     transformData(data: []): Options[]
     transformVehicleData(data: []): Options[]
+    init(data: []): Options[]
 }

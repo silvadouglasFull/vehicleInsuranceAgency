@@ -3,6 +3,7 @@
 /** Request body for FIPE consultation */
 export interface ConsultarFipeRequest {
     codigoFipe: string;
+    signal?: AbortSignal
 }
 export type Data = {
     protocolo?: null | string,

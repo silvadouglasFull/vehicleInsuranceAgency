@@ -11,11 +11,11 @@ export class TransformOptions implements ITransformOptions {
     private data: TransformData = {
         apply: (data: []) => this.transformData(data)
     }
-    constructor(data: []) {
-        const typeTransform = whatIsDataType.typeDate(data)
-        this.getTransformOptions(typeTransform)?.apply(data)
+    init(data: []): Options[] {
+        const typeTransform: keyof Strategies = whatIsDataType.typeDate(data)
+        return this.getTransformOptions(typeTransform).apply(data)
     }
-    private getTransformOptions(typeTransform: keyof Strategies): GetTransformOptions {
+    getTransformOptions(typeTransform: keyof Strategies): GetTransformOptions {
         this.typeTransform = {
             vehicleTransformData: this.vehicleData,
             transformData: this.data

@@ -5,25 +5,44 @@ import { fetchVehicleData } from "@components/forms/suhai/insuranceQuote/vehicle
 import type { Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe"
 import { useEffect, useState } from "react"
 
+/**
+ * Custom hook to fetch vehicle data based on Fipe code.
+ * @returns {UseVehicleData} loading state and list of vehicle items.
+ */
 export const useVehicleData = (): UseVehicleData => {
     const [loading, setLoading] = useState<boolean>(false)
+    const [items, setItems] = useState<Data[]>([])
     const { state } = useInsuranceQuote()
-    const [items, setItems] = useState<Data[] | []>([])
     const { codigoFipe } = state
+
     useEffect(() => {
+        const controller = new AbortController()
         const fetchInfo = async () => {
-            if (codigoFipe?.length === 7) {
+            if (codigoFipe?.length === 8) {
                 setLoading(true)
-                const response = await fetchVehicleData({ codigoFipe })
-                if (response?.data?.length) {
-                    const { data } = response
-                    setItems(data)
+                try {
+                    const response = await fetchVehicleData({ codigoFipe: codigoFipe ?? '', signal: controller.signal })
+                    if (response?.data?.length) {
+                        setItems(response.data)
+                    } else {
+                        setItems([])
+                    }
+                } catch (error) {
+                    if (typeof error === "object" && error !== null && "name" in error && (error as { name: string }).name !== 'AbortError') {
+                        console.error('Failed to fetch vehicle data:', error)
+                        setItems([])
+                    }
+                } finally {
+                    setLoading(false)
                 }
-                setLoading(false)
             }
         }
         fetchInfo()
+        return () => {
+            controller.abort()
+        }
     }, [codigoFipe])
+
     return {
         loading,
         items,
