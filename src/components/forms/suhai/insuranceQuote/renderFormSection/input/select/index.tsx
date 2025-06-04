@@ -4,18 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import Select from "react-select";
 
-/**
- * List of options
- */
-const options = [
-    { value: "honda", label: "Honda" },
-    { value: "toyota", label: "Toyota" },
-    { value: "bmw", label: "BMW" },
-    { value: "mercedes", label: "Mercedes" },
-    { value: "audi", label: "Audi" },
-    { value: "volkswagen", label: "Volkswagen" },
-    { value: "ford", label: "Ford" },
-];
 export const SelectBrand: React.FC<SelectBrandProps> = ({
     isClearable = true,
     isSearchable = true,
