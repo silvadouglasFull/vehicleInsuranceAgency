@@ -19,8 +19,9 @@ export type Data = {
     categoria_suhai?: string,
     cod_categoria_tarifaria?: number
 }
+export type AgroupedConsultaFipe = Record<string, Data[]>
 export type ResponseConsultaFipe = {
-    data?: Data[]
+    data?: AgroupedConsultaFipe
     error?: string
     success: boolean
 }

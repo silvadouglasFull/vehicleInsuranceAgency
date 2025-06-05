@@ -5,10 +5,16 @@ export class AxiosHttpClient implements IAxiosHttpClient {
     private readonly client: AxiosInstance;
 
     constructor(baseURL: string) {
-        this.client = axios.create({ baseURL });
+        this.client = axios.create({
+            baseURL,
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+            }
+        });
     }
 
-    async post<T = any, R = AxiosResponse<T>>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T> {
+    async post<T = any, R = AxiosResponse<T>>(url: string, data?: object, config?: AxiosRequestConfig): Promise<T> {
         const response = await this.client.post<T>(url, data, config);
         return response.data;
     }

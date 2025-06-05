@@ -3,5 +3,11 @@ import type { TWhatIsDataType } from "@components/forms/suhai/insuranceQuote/ren
 import type { TypeData } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/utils/types";
 
 export const whatIsDataType: TWhatIsDataType = {
-    typeDate: (data: []): TypeData => container().whatIsDataType.handle(data)
+    typeDate: (data: Record<string, []>): TypeData => {
+        const result = container().whatIsDataType.handle(data);
+        if (result === null) {
+            throw new Error("handle returned null, expected keyof Strategies");
+        }
+        return result;
+    }
 }

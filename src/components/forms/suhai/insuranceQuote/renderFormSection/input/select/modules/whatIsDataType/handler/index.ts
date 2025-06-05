@@ -6,7 +6,7 @@ export class Handler implements IWhatIsDataType {
     constructor(next: Handler | null) {
         this.next = next ?? null;
     }
-    handle(data: []): TypeData | null {
+    handle(data: Record<string, []>): TypeData | null {
         if (this.next) {
             return this.next.handle(data);
         }

@@ -15,7 +15,6 @@ export type FormField = {
     min?: number
     max?: number
     maxLength?: number
-    options?: []
 }
 export type FormProps = {
     type?: Type

@@ -5,11 +5,14 @@ import type { TypeData } from "@components/forms/suhai/insuranceQuote/renderForm
 import type { Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe";
 
 export class IsTypeVehicleData extends Handler implements IWhatIsDataType {
-    handle(data: []): TypeData | null {
+    handle(data: Record<string, []>): TypeData | null {
         if (!Array.isArray(data)) {
             return super.handle(data);
         }
-        const items: Data[] = data
+        const items: Data[] = []
+        Object.keys(data).forEach(key => {
+            items.push(...data[key])
+        })
         if (items.every(
             (item) =>
                 typeof item === 'object' &&

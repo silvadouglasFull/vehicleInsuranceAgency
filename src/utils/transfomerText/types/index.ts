@@ -6,3 +6,10 @@ export type AddDots = {
     padNumber: number,
     dot: '.' | '|' | ',' | '-'
 }
+export type SplitStringProps = {
+    fullString: string
+    separator: '.'
+
+}
+export type FunctionSplitString = { firstPart: string; secondPart: string }
+export type SplitString = ({ fullString, separator }: SplitStringProps) => FunctionSplitString

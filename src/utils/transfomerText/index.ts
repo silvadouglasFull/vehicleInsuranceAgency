@@ -1,4 +1,4 @@
-import type { AddDots, TransformerInFirstWord } from "@utils/transfomerText/types"
+import type { AddDots, FunctionSplitString, SplitStringProps, TransformerInFirstWord } from "@utils/transfomerText/types"
 export const transformerInFirstWord = ({ world }: TransformerInFirstWord): string => {
     return String(world).substring(0, 1)
 }
@@ -26,4 +26,38 @@ export const addDots = ({ text, padNumber, dot = '.' }: AddDots): string => {
     }
     const result = partes.join(dot)
     return result
+}
+/**
+ * Splits a string into two variables based on a specified separator.
+ *
+ * @param {string} fullString - The complete string to be split.
+ * @param {string} separator - The character used to separate the string into parts.
+ * @returns {Object} An object containing two variables, each representing a part of the split string.
+ *
+ * @example
+ * const fullString = 'pedido_venda.ped_venda_cod';
+ * const result = splitString(fullString, '.');
+ * console.log(result);
+ * // Output:
+ * // {
+ * //   firstPart: 'pedido_venda',
+ * //   secondPart: 'ped_venda_cod',
+ * // }
+ */
+export function splitString({ fullString, separator }: SplitStringProps): FunctionSplitString {
+    try {
+        const parts = fullString.split(separator)
+        const firstPart = parts?.[0] || ''
+        const secondPart = parts?.[1] || ''
+        return {
+            firstPart,
+            secondPart,
+        }
+    } catch (error) {
+        console.log(error)
+        return {
+            firstPart: '',
+            secondPart: ''
+        }
+    }
 }

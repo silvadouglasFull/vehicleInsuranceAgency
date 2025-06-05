@@ -14,7 +14,6 @@ export const Input: React.FC<FormField> = ({
     max,
     maxLength,
     min,
-    options,
     ...rest }) => {
     const { onChange } = useInsuranceQuote()
 
@@ -37,7 +36,6 @@ export const Input: React.FC<FormField> = ({
                         maxLength,
                         min,
                         onChange: onChange,
-                        options,
                         ...rest
                     }}
                     type={type}

@@ -6,6 +6,5 @@ export type SelectBrandProps = {
     placeholder: string
     isClearable?: boolean
     isSearchable?: boolean
-    options?: []
     label: Label
 }

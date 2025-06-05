@@ -1,21 +1,14 @@
-import { transformOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/modules/transformOptions";
-import { customStyles } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/styles";
-import type { Options, SelectBrandProps, SelectedOption } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
-import React, { useEffect, useState } from "react";
-import Select from "react-select";
 
+import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/hooks/useSelectInput";
+import { customStyles } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/styles";
+import type { SelectBrandProps } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
+import React from "react";
+import Select from "react-select";
 export const SelectBrand: React.FC<SelectBrandProps> = ({
     isClearable = true,
     isSearchable = true,
-    placeholder, options: itemsOptions }: SelectBrandProps) => {
-    const [options, setOptions] = useState<Options[]>([])
-    useEffect(() => {
-        console.log('itemsOptions=>', itemsOptions)
-        if (itemsOptions?.length) {
-            setOptions(transformOptions.transform(itemsOptions))
-        }
-    }, [itemsOptions])
-    const [selectedOption, setSelectedOption] = useState<SelectedOption>(null);
+    placeholder }: SelectBrandProps) => {
+    const { options, selectedOption, setSelectedOption } = useSelectInput()
     return (
         <>
             <Select
@@ -26,6 +19,7 @@ export const SelectBrand: React.FC<SelectBrandProps> = ({
                 placeholder={placeholder}
                 isClearable={isClearable}
                 isSearchable={isSearchable}
+                noOptionsMessage={() => <span>Nenhum resultado encontrado</span>}
             />
         </>
     );

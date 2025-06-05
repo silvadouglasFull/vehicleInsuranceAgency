@@ -18,7 +18,7 @@ export class SuhaiService implements ISuhaiServices {
     }
 
     async post({ codigoFipe, signal }: ConsultarFipeRequest): Promise<ResponseConsultaFipe> {
-        return this.http.post<ResponseConsultaFipe>(`${this.endPoints.consultafipe}`, codigoFipe, {
+        return this.http.post<ResponseConsultaFipe>(`${this.endPoints.consultafipe}`, { codigoFipe }, {
             signal
         });
     }
