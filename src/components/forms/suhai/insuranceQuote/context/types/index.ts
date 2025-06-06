@@ -17,6 +17,16 @@ export type States = {
     endereco?: string;
     numeroProposta?: string;
     pdfPropostaBase64?: string;
+    protocolo?: null | string
+    codMsgRet?: null | string
+    textoMsgRet?: null | string
+    cod_fipe?: null | string | number
+    num_passageiros?: number
+    cod_marca?: null | string | number
+    cod_modelo?: null | string | number
+    cod_categoria_suhai?: null | string | number
+    categoria_suhai?: null | string
+    cod_categoria_tarifaria?: null | string | number
 };
 
 export type ReducerParams = {

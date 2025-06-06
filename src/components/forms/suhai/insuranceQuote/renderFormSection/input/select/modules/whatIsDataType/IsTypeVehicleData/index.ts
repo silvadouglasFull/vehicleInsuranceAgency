@@ -6,12 +6,13 @@ import type { Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe";
 
 export class IsTypeVehicleData extends Handler implements IWhatIsDataType {
     handle(data: Record<string, []>): TypeData | null {
-        if (!Array.isArray(data)) {
+        if (typeof data !== 'object') {
             return super.handle(data);
         }
         const items: Data[] = []
         Object.keys(data).forEach(key => {
-            items.push(...data[key])
+            const itemsFromGroup = data[key]
+            items.push(...itemsFromGroup)
         })
         if (items.every(
             (item) =>

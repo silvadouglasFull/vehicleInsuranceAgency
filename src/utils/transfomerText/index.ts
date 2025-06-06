@@ -1,31 +1,17 @@
-import type { AddDots, FunctionSplitString, SplitStringProps, TransformerInFirstWord } from "@utils/transfomerText/types"
+import type { FormatCPF, FunctionSplitString, MaskCodFipe, SplitStringProps, TransformerInFirstWord } from "@utils/transfomerText/types"
 export const transformerInFirstWord = ({ world }: TransformerInFirstWord): string => {
     return String(world).substring(0, 1)
 }
-/**
-   * Added a period to every three digits of a number.
-   * @param {Object} params - The number that will be formatted.
-   * @param {string} params.string - A string that will be formatted.
-   * @param {number} params.padNumber - After 5 digits you want to add the points.
-   * @returns {string} A string containing the number formatted with periods every three digits.
-   * @example
-   * const number = 1234567890;
-   * const formattednumber = addPointToThreeDigits({sring: number, paddNumber:3});
-   * console.log(FormattedNumber); //Output: '1,234,567,890'
-   */
-export const addDots = ({ text, padNumber, dot = '.' }: AddDots): string => {
-    const parsedString = String(text)
-    const partes = []
-    let temp = ''
-    for (let i = parsedString.length - 1; i >= 0; i--) {
-        temp = parsedString[i] + temp
-        if (temp.length === padNumber || i === 0) {
-            partes.unshift(temp)
-            temp = ''
-        }
+export const maskCodFipe = ({ codFipe }: MaskCodFipe): string => {
+    if ((codFipe.length <= 6)) {
+        return codFipe
     }
-    const result = partes.join(dot)
-    return result
+    if (codFipe.length >= 7) {
+        return codFipe
+    }
+    const lastDigit = codFipe.substring(codFipe.length - 1)
+    const replacedTexy = codFipe.replace(lastDigit, `-${lastDigit}`)
+    return replacedTexy
 }
 /**
  * Splits a string into two variables based on a specified separator.
@@ -60,4 +46,21 @@ export function splitString({ fullString, separator }: SplitStringProps): Functi
             secondPart: ''
         }
     }
+}
+/**
+ * Formats a string into the Brazilian CPF format: XXX.XXX.XXX-XX
+ *
+ * @param {string} cpf - The string representing the CPF number (only digits).
+ * @returns {string} The formatted CPF string or the original string if it cannot be formatted.
+ *
+ * @example
+ * formatCpf('12345678901'); // returns '123.456.789-01'
+ * formatCpf('12345678'); // returns '12345678'
+ */
+export function formatCpf({ cpf }: FormatCPF): string {
+    const digits = cpf.replace(/\D/g, '');
+    if (digits.length !== 11) {
+        return cpf;
+    }
+    return digits.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
 }

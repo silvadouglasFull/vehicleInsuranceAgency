@@ -7,11 +7,12 @@ export const formLabels: FormField[] = [
         idControll: 'codigoFipe',
         label: 'Código FIPE',
         name: 'codigoFipe',
-        type: 'text',
+        type: 'fipe',
         placeholder: 'Digite o código FIPE',
         required: true,
         min: 8,
-        max: 8
+        max: 8,
+        maxLength: 7
     },
     {
         id: 2,
@@ -51,7 +52,7 @@ export const formLabels: FormField[] = [
         idControll: 'cpf',
         label: 'CPF',
         name: 'cpf',
-        type: 'text',
+        type: 'cpf',
         placeholder: 'Digite seu CPF',
         required: true,
         maxLength: 16
@@ -132,10 +133,11 @@ export const formLabels: FormField[] = [
         idControll: 'dadosSegurado.cpf',
         label: 'CPF do Segurado',
         name: 'dadosSegurado.cpf',
-        type: 'text',
+        type: 'cpf',
         placeholder: 'Digite o CPF do segurado',
         required: true,
-        maxLength: 11
+        maxLength: 11,
+        readOnly: true
     },
     {
         id: 14,
@@ -166,4 +168,14 @@ export const states: States = {
     endereco: '',
     numeroProposta: '',
     pdfPropostaBase64: '',
+    protocolo: '',
+    codMsgRet: '',
+    textoMsgRet: '',
+    cod_fipe: '',
+    num_passageiros: 0,
+    cod_marca: '',
+    cod_modelo: '',
+    cod_categoria_suhai: '',
+    categoria_suhai: '',
+    cod_categoria_tarifaria: '',
 }

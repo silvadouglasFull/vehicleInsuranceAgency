@@ -3,18 +3,17 @@ import type { Options } from "@components/forms/suhai/insuranceQuote/renderFormS
 import type { AgroupedConsultaFipe, Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe"
 
 export class TransformVehicleData implements ITransformBrandVehicleData {
-    transformBrandDataWhenOneResult(data: AgroupedConsultaFipe): Options[] {
-        const result: Data[] = []
+    public transformBrandData(data: AgroupedConsultaFipe): Options[] {
+        const result: Options[] = []
         Object.keys(data).forEach(key => {
             const itemsFromGroup: Data[] = data[key]
-            result.push(...itemsFromGroup)
+            result.push({
+                label: key,
+                keyNameToSetValueState: 'modelo',
+                value: JSON.stringify(itemsFromGroup)
+            })
         })
-        return result.map(item => ({
-            value: item?.marca ?? '',
-            label: item?.marca ?? '',
-        })) as Options[]
-    }
-    public transformBrandData(data: AgroupedConsultaFipe): Options[] {
-        return this.transformBrandDataWhenOneResult(data)
+        return result
+
     }
 }
