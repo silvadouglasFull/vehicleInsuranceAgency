@@ -11,7 +11,7 @@ import { useEffect, useState } from "react"
  */
 export const useVehicleData = (): UseVehicleData => {
     const [loading, setLoading] = useState<boolean>(false)
-    const [items, setItems] = useState<Data[]>([])
+    const [items, setItems] = useState<Record<string, Data[]> | null>(null)
     const { state } = useInsuranceQuote()
     const { codigoFipe } = state
 
@@ -22,15 +22,15 @@ export const useVehicleData = (): UseVehicleData => {
                 setLoading(true)
                 try {
                     const response = await fetchVehicleData({ codigoFipe: codigoFipe ?? '', signal: controller.signal })
-                    if (response?.data?.length) {
+                    if (response?.data) {
                         setItems(response.data)
                     } else {
-                        setItems([])
+                        setItems(null)
                     }
                 } catch (error) {
                     if (typeof error === "object" && error !== null && "name" in error && (error as { name: string }).name !== 'AbortError') {
                         console.error('Failed to fetch vehicle data:', error)
-                        setItems([])
+                        setItems(null)
                     }
                 } finally {
                     setLoading(false)

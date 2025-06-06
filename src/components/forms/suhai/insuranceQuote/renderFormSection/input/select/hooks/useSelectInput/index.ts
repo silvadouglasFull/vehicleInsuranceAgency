@@ -23,7 +23,7 @@ export const useSelectInput = (): UseSelectInput => {
     }, [selectedOption])
     useEffect(() => {
         if ((items?.length) && (!loading)) {
-            setOptions(transformOptions.transform(items as []))
+            setOptions(transformOptions.transform(items as Record<string, []>))
         }
     }, [items, loading])
     return {
