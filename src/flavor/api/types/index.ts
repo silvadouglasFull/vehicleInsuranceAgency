@@ -4,4 +4,5 @@ export type EndPoints = {
     consultafipe: '/consultafipe'
     incluircotacao: '/incluircotacao'
     transmitirproposta: '/transmitirproposta'
+    formOptions: '/formOptions'
 }

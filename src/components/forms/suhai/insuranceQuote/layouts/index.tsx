@@ -1,5 +1,7 @@
+import { FormGarageData } from "@components/forms/suhai/insuranceQuote/garageData";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { FormInsuredData } from "@components/forms/suhai/insuranceQuote/insuredData";
+import { FormMainDriveData } from "@components/forms/suhai/insuranceQuote/mainDriverData";
 import { FormPaymentDetails } from "@components/forms/suhai/insuranceQuote/paymentDetails";
 import { FormPersonalData } from "@components/forms/suhai/insuranceQuote/personalData";
 import { FormVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData";
@@ -22,9 +24,10 @@ export const FormLayout: React.FC = () => {
                 <FormVehicleData />
                 <FormVehicleValue />
                 <FormPersonalData />
-                <FormPaymentDetails />
                 <FormInsuredData />
-
+                <FormMainDriveData />
+                <FormGarageData />
+                <FormPaymentDetails />
                 <div className="text-center mt-4">
                     <Button
                         type="submit"

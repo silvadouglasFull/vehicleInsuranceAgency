@@ -1,11 +1,11 @@
 import { RenderFormSection } from "@components/forms/suhai/insuranceQuote/renderFormSection";
 import { listForms } from "@components/forms/suhai/insuranceQuote/utils/listForms";
 import type React from "react";
-import { personalData } from "../constants";
+import { mainDriverData } from "../constants";
 
-export const FormPersonalData: React.FC = () => {
-    const pessoalFields = listForms({ sliceStart: 4, sliceEnd: 8, additionalForms: personalData });
+export const FormMainDriveData: React.FC = () => {
+    const Fields = listForms({ additionalForms: mainDriverData });
     return RenderFormSection({
-        fields: pessoalFields, title: "Dados Pessoais"
+        fields: Fields, title: "Dados do Principal Condutor"
     })
 }

@@ -1,4 +1,4 @@
-import type { FormField } from "@components/forms/suhai/insuranceQuote/constants/types";
+import type { FormField, GroupForms } from "@components/forms/suhai/insuranceQuote/constants/types";
 import type { States } from "@components/forms/suhai/insuranceQuote/context/types";
 
 export const formLabels: FormField[] = [
@@ -148,8 +148,131 @@ export const formLabels: FormField[] = [
         placeholder: 'Digite o endereço do segurado',
         required: true,
         maxLength: 100
-    }
+    },
+    {
+        id: 27,
+        name: 'sexo',
+        idControll: 'sexo',
+        label: 'Sexo',
+        type: 'select',
+        placeholder: 'Selecione o sexo',
+        required: true,
+    },
+    {
+        id: 15,
+        name: 'estadoCivil',
+        idControll: 'estadoCivil',
+        label: 'Estado Civil',
+        type: 'select',
+        placeholder: 'Selecione o estado civil',
+        required: true,
+    },
+    {
+        id: 16,
+        name: 'zeroKm',
+        idControll: 'zeroKm',
+        label: 'Veículo Zero KM?',
+        type: 'select',
+        placeholder: 'Selecione',
+        required: true,
+    },
+    {
+        id: 17,
+        name: 'tipoUtilizacao',
+        idControll: 'tipoUtilizacao',
+        label: 'Tipo de Utilização',
+        type: 'select',
+        placeholder: 'Selecione a utilização',
+        required: true,
+    },
+    {
+        id: 18,
+        name: 'possuiOutroVeic',
+        idControll: 'possuiOutroVeic',
+        label: 'Possui outro veículo?',
+        type: 'select',
+        placeholder: 'Selecione',
+        required: true,
+    },
+    {
+        id: 19,
+        name: 'tipoContratacao',
+        idControll: 'tipoContratacao',
+        label: 'Tipo de Contratação',
+        type: 'select',
+        placeholder: 'Selecione',
+        required: true,
+    },
+    {
+        id: 20,
+        name: 'sexoPrincipalCondutor',
+        idControll: 'sexoPrincipalCondutor',
+        label: 'Sexo do Condutor Principal',
+        type: 'select',
+        placeholder: 'Selecione o sexo',
+        required: true,
+    },
+    {
+        id: 21,
+        name: 'estadoCivilPrincipalCondutor',
+        idControll: 'estadoCivilPrincipalCondutor',
+        label: 'Estado Civil do Condutor Principal',
+        type: 'select',
+        placeholder: 'Selecione o estado civil',
+        required: true,
+    },
+    {
+        id: 22,
+        name: 'pergunta1',
+        idControll: 'pergunta1',
+        label: 'Veículo em garagem na residência?',
+        type: 'select',
+        placeholder: 'Selecione',
+        required: true,
+    },
+    {
+        id: 23,
+        name: 'pergunta2',
+        idControll: 'pergunta2',
+        label: 'Garagem no local de trabalho?',
+        type: 'select',
+        placeholder: 'Selecione',
+        required: true,
+    },
+    {
+        id: 24,
+        name: 'pergunta3',
+        idControll: 'pergunta3',
+        label: 'Garagem na faculdade/colégio?',
+        type: 'select',
+        placeholder: 'Selecione',
+        required: true,
+    },
+    {
+        id: 25,
+        name: 'pergunta4',
+        idControll: 'pergunta4',
+        label: 'Veículo guardado fora de serviço?',
+        type: 'select',
+        placeholder: 'Selecione',
+        required: true,
+    },
+    {
+        id: 26,
+        name: 'pergunta6',
+        idControll: 'pergunta6',
+        label: 'É caminhão e guarda fora do serviço?',
+        type: 'select',
+        placeholder: 'Selecione',
+        required: true,
+    },
 ];
+export const personalData: GroupForms = [14, 15]; // sexo, estado civil
+export const vehicleData: GroupForms = [16, 17, 18, 19]; // zeroKm, tipoUtilizacao, possuiOutroVeic, tipoContratacao
+export const mainDriverData: GroupForms = [20, 21]; // sexoPrincipalCondutor, estadoCivilPrincipalCondutor
+export const garageData: GroupForms = [22, 23, 24, 25]; // pergunta1
+export const dadosCaminhao = [26]; // pergunta6
+
 export const states: States = {
     codigoFipe: '',
     marca: '',

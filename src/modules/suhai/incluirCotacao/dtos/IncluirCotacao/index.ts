@@ -25,22 +25,18 @@ export type IncluirCotacaoRequest = {
     dtNascimentoPrincipalCondutor: string;
     sexoPrincipalCondutor: string;
     estadoCivilPrincipalCondutor: string;
-
     pergunta1: string; // residência
     pergunta2: string; // trabalho
     pergunta3: string; // faculdade
     pergunta4: string; // fora de serviço
     pergunta6: string; // caminhão
-
     codProduto: string;
     tipoSeguro: string;
     nro_apolice_ant: string;
-
     vlr_DanosCorporais: string;
     vlr_DanosMateriais: string;
     fator_FipeAjuste: string;
     fator_Desconto: string;
-
     ddd_cel: string;
     num_cel: string;
     email: string;

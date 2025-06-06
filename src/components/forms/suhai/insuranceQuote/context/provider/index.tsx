@@ -3,10 +3,18 @@ import { Context } from "@components/forms/suhai/insuranceQuote/context";
 import type { Event, HandleFormField, States } from "@components/forms/suhai/insuranceQuote/context/types";
 import { formatPhoneNumber } from "@utils/form/mask/phone";
 import { reducer } from "@utils/form/reducer";
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 
 export const Provider: React.FC<React.PropsWithChildren> = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, states)
+    const { cpf, nome }: States = state
+    useEffect(() => {
+        handleForm({
+            cpfCnpj: cpf,
+            cpfCnpjPrincipalCondutor: cpf,
+            nomePrincipalCondutor: nome
+        })
+    }, [cpf, nome])
     const onChange = (event: Event) => {
         const target = event.target as HTMLInputElement;
         const { name, value } = target;

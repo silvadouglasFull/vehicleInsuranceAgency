@@ -1,11 +1,11 @@
 import { RenderFormSection } from "@components/forms/suhai/insuranceQuote/renderFormSection";
 import { listForms } from "@components/forms/suhai/insuranceQuote/utils/listForms";
 import type React from "react";
-import { personalData } from "../constants";
+import { garageData } from "../constants";
 
-export const FormPersonalData: React.FC = () => {
-    const pessoalFields = listForms({ sliceStart: 4, sliceEnd: 8, additionalForms: personalData });
+export const FormGarageData: React.FC = () => {
+    const pessoalFields = listForms({ additionalForms: garageData });
     return RenderFormSection({
-        fields: pessoalFields, title: "Dados Pessoais"
+        fields: pessoalFields, title: "Informações sobre Sua Garagem"
     })
 }

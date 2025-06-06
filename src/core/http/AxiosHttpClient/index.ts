@@ -18,4 +18,8 @@ export class AxiosHttpClient implements IAxiosHttpClient {
         const response = await this.client.post<T>(url, data, config);
         return response.data;
     }
+    async get<T = any, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig): Promise<T> {
+        const response = await this.client.get<T>(url, config);
+        return response.data;
+    }
 }

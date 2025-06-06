@@ -4,5 +4,6 @@ export const host: UrlString = `http://localhost:3333/api/suhai` as UrlString
 export const endPoints: EndPoints = {
     consultafipe: '/consultafipe',
     incluircotacao: '/incluircotacao',
-    transmitirproposta: '/transmitirproposta'
+    transmitirproposta: '/transmitirproposta',
+    formOptions: '/formOptions'
 }
