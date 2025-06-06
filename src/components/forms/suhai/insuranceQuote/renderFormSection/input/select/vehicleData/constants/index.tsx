@@ -4,5 +4,5 @@ import type { Forms } from "@components/forms/suhai/insuranceQuote/renderFormSec
 
 export const Inputs: Forms[] = [{
     key: 'marca',
-    component: (props?: SelectBrandProps) => (innerProps) => <SelectBrand {...(props ?? innerProps)} />
+    component: (props?: SelectBrandProps) => <SelectBrand {...props as SelectBrandProps} />
 }]
