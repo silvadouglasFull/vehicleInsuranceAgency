@@ -19,7 +19,7 @@ export const formLabels: FormField[] = [
         idControll: 'marca',
         label: 'Marca',
         name: 'marca',
-        type: 'select',
+        type: 'marca',
         placeholder: 'Digite a marca',
         required: true,
         maxLength: 100
@@ -30,7 +30,7 @@ export const formLabels: FormField[] = [
         idControll: 'modelo',
         label: 'Modelo',
         name: 'modelo',
-        type: 'text',
+        type: 'modelo',
         placeholder: 'Digite o modelo',
         required: true,
         maxLength: 100
