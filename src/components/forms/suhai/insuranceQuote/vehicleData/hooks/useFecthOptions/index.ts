@@ -1,6 +1,6 @@
-import type { UseFecthOptions } from "@components/forms/suhai/insuranceQuote/hooks/useFecthOptions/types";
 import { fetchPossuiOutroVeic, fetchTipoUtilizacao, fetchZeroKm } from "@components/forms/suhai/insuranceQuote/modules/fetchOptions";
 import type { Options } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
+import type { UseFecthOptions } from "@components/forms/suhai/insuranceQuote/vehicleData/hooks/useFecthOptions/types";
 import { useEffect, useState } from "react";
 export const useFecthOptions = (): UseFecthOptions => {
     const [zeroKm, setZeroKm] = useState<Options[]>([]);

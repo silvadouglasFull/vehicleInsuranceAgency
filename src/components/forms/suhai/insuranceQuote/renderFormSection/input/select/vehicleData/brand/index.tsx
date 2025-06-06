@@ -4,9 +4,9 @@ import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/
 import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/hooks/useSelectInputVehichleData";
 import { useSetFirstVehicleData } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/hooks/useSetFirstVehicleData";
 import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/hooks/useSetOptions";
+import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/renderInput";
 import type { SelectBrandProps } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import React, { useEffect } from "react";
-import { RenderSelect } from "./renderInput";
 
 export const SelectBrand: React.FC<SelectBrandProps> = ({
     isClearable = true,

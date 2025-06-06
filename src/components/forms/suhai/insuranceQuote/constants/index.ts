@@ -12,7 +12,7 @@ export const formLabels: FormField[] = [
         required: true,
         min: 8,
         max: 8,
-        maxLength: 7
+        maxLength: 8
     },
     {
         id: 2,

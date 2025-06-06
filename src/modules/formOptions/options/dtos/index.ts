@@ -6,7 +6,8 @@ export type ResponseFormOptions = {
     sucess: boolean
     error?: string
 }
+export type Key = 'sexo' | 'estadoCivil' | 'zeroKm' | 'tipoUtilizacao' | 'possuiOutroVeic' | 'tipoContratacao' | 'sexoPrincipalCondutor' | 'estadoCivilPrincipalCondutor'
 export type RequestBodyOptions = {
-    key: 'sexo' | 'estadoCivil' | 'zeroKm' | 'tipoUtilizacao' | 'possuiOutroVeic' | 'tipoContratacao' | 'sexoPrincipalCondutor' | 'estadoCivilPrincipalCondutor'
+    key: Key
     signal?: AbortSignal
 }
