@@ -217,7 +217,7 @@ export const formLabels: FormField[] = [
         name: 'estadoCivilPrincipalCondutor',
         idControll: 'estadoCivilPrincipalCondutor',
         label: 'Estado Civil do Condutor Principal',
-        type: 'select',
+        type: 'estadoCivilPrincipalCondutor',
         placeholder: 'Selecione o estado civil',
         required: true,
     },

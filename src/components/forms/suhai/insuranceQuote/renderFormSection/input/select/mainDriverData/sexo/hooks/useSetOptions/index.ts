@@ -1,19 +1,19 @@
 
-import { useFecthOptions } from "@components/forms/suhai/insuranceQuote/personalData/hooks/useFecthEstadoCivil";
+import { useFecthOptions } from "@components/forms/suhai/insuranceQuote/mainDriverData/hooks/useFecthEstadoCivil";
 import type { UseSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData/hooks/useSetOptions/types";
 import type { Options } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import { useEffect, useState } from "react";
 export const useSetOptions = (): UseSetOptions => {
     const [options, setOptions] = useState<Options[]>([])
-    const { estadoCivil, estadoCivilLoading } = useFecthOptions()
+    const { estadoCivilPrincipalCondutor, estadoCivilPrincipalCondutorLoading } = useFecthOptions()
     useEffect(() => {
-        if ((estadoCivil?.length) && (!estadoCivilLoading)) {
-            const transformData = estadoCivil
+        if ((estadoCivilPrincipalCondutor?.length) && (!estadoCivilPrincipalCondutorLoading)) {
+            const transformData = estadoCivilPrincipalCondutor
             setOptions(transformData)
         }
-    }, [estadoCivil, estadoCivilLoading])
+    }, [estadoCivilPrincipalCondutor, estadoCivilPrincipalCondutorLoading])
     return {
         options,
-        loading: estadoCivilLoading
+        loading: estadoCivilPrincipalCondutorLoading
     }
 }

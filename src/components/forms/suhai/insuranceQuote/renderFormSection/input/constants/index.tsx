@@ -3,6 +3,8 @@ import type { InputsType } from "@components/forms/suhai/insuranceQuote/renderFo
 import { FormControllBrand } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllBrand";
 import { FormControllDoc } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllDoc";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
+import { SelectEstadoCivilPrincipalCondutor } from "../select/mainDriverData";
+import { SelectEstadoCivil } from "../select/personalData";
 import { SelectBrand } from "../select/vehicleData/brand";
 import { SelectModel } from "../select/vehicleData/model";
 import { SelectOutroVeiculo } from "../select/vehicleData/outroVeiculo";
@@ -39,6 +41,10 @@ export const inputTypes: InputsType[] = [
     },
     {
         type: 'estadoCivil',
-        component: (props?: Select2BootStrap | FormProps) => <SelectOutroVeiculo {...props as Select2BootStrap} />
+        component: (props?: Select2BootStrap | FormProps) => <SelectEstadoCivil {...props as Select2BootStrap} />
+    },
+    {
+        type: 'estadoCivilPrincipalCondutor',
+        component: (props?: Select2BootStrap | FormProps) => <SelectEstadoCivilPrincipalCondutor {...props as Select2BootStrap} />
     }
 ]

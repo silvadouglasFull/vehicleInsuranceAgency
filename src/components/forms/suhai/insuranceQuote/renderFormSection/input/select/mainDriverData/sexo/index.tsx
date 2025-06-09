@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData/hooks/useSelectInput";
-import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData/hooks/useSetOptions";
+import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/maritalStatus/hooks/useSelectInput";
+import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/maritalStatus/hooks/useSetOptions";
 import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/renderInput";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import React from "react";
 
-export const SelectEstadoCivil: React.FC<Select2BootStrap> = ({
+export const SelectEstadoCivilPrincipalCondutor: React.FC<Select2BootStrap> = ({
     isClearable = true,
     isSearchable = true,
     placeholder }: Select2BootStrap) => {
