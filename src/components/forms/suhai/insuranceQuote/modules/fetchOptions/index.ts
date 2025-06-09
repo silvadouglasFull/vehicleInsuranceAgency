@@ -1,5 +1,5 @@
-import type { ResponseFormOptions } from "@modules/formOptions/options/dtos"
-import { formOptions } from "@modules/formOptions/options/services"
+import type { ResponseFormOptions } from "@modules/formOptions/options/vehicleData/dtos"
+import { formOptions } from "@modules/formOptions/options/vehicleData/services"
 import type { FetchOptions } from "./types"
 
 export const fetchSexo = async ({ signal }: FetchOptions): Promise<ResponseFormOptions> => {
