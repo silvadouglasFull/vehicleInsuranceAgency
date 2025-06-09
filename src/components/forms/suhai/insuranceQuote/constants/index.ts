@@ -266,7 +266,7 @@ export const formLabels: FormField[] = [
         label: 'É caminhão e guarda fora do serviço?',
         type: 'select',
         placeholder: 'Selecione',
-        required: true,
+        required: false,
     },
 ];
 export const personalData: GroupForms = [14, 15]; // sexo, estado civil

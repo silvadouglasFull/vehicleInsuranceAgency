@@ -1,6 +1,10 @@
+import { formLabels } from "@components/forms/suhai/insuranceQuote/constants";
 import { FormGarageData } from "@components/forms/suhai/insuranceQuote/garageData";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { FormInsuredData } from "@components/forms/suhai/insuranceQuote/insuredData";
+import { requiredFormsFields } from "@components/forms/suhai/insuranceQuote/layouts//utils/requiredFormsFields";
+import { generateMessageIncorrectFilling } from "@components/forms/suhai/insuranceQuote/layouts/utils/generateMessageIncorrectFilling";
+import { isValid } from "@components/forms/suhai/insuranceQuote/layouts/utils/isValidRequiredFields";
 import { FormMainDriveData } from "@components/forms/suhai/insuranceQuote/mainDriverData";
 import { FormPaymentDetails } from "@components/forms/suhai/insuranceQuote/paymentDetails";
 import { FormPersonalData } from "@components/forms/suhai/insuranceQuote/personalData";
@@ -14,7 +18,15 @@ export const FormLayout: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Dados da cotação:", formData);
+        const requiredFields = requiredFormsFields({ formFiels: formLabels })
+        const listToast: string[] = []
+        requiredFields.forEach(item => {
+            const valid = isValid({ name: item.name, state: formData })
+            if (!valid) {
+                listToast.push(generateMessageIncorrectFilling({ label: item.label }))
+            }
+        })
+        console.log(listToast)
         alert("Cotação enviada com sucesso!");
     };
 

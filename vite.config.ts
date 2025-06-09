@@ -14,7 +14,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": root,
-      "@components": `${root}/components`,
+      "@api/*": `${root}/api/*`,
       "@constants/*": `${root}/constants/*`,
       "@assets/*": `${root}/assets/*`,
       "@components/*": `${root}/components/*`,
