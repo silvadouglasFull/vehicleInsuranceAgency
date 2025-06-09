@@ -28,7 +28,7 @@ export type States = {
     categoria_suhai?: null | string
     cod_categoria_tarifaria?: null | string | number
     cpfCnpj?: string;
-    dtnascimento?: string; // formato DD/MM/AAAA
+    dtNascimento?: string; // formato DD/MM/AAAA
     sexo?: string; // "1" = Feminino, "2" = Masculino
     estadoCivil?: string; // "1" = Casado, "2" = Solteiro, "3" = Outros
     cepPerinote?: string;

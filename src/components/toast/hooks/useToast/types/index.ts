@@ -9,6 +9,6 @@ export type UseToast = {
     onClose: () => void
     setStatusCode: React.Dispatch<React.SetStateAction<ToastStatusCode>>
     statusCode: ToastStatusCode
-    setMessage: React.Dispatch<React.SetStateAction<string | null>>
-    message: string | null
+    setMessage: React.Dispatch<React.SetStateAction<string | string[] | null>>
+    message: string | string[] | null
 }

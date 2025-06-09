@@ -7,14 +7,16 @@ import React, { useEffect, useReducer } from "react";
 
 export const Provider: React.FC<React.PropsWithChildren> = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, states)
-    const { cpf, nome }: States = state
+    const { cpf, nome, modelo, telefone }: States = state
     useEffect(() => {
         handleForm({
             cpfCnpj: cpf,
             cpfCnpjPrincipalCondutor: cpf,
-            nomePrincipalCondutor: nome
+            nomePrincipalCondutor: nome,
+            modeloVeiculo: modelo,
+            num_cel: telefone
         })
-    }, [cpf, nome])
+    }, [cpf, nome, modelo, telefone])
     const onChange = (event: Event) => {
         const target = event.target as HTMLInputElement;
         const { name, value } = target;

@@ -156,7 +156,7 @@ export const formLabels: FormField[] = [
         name: 'sexo',
         idControll: 'sexo',
         label: 'Sexo',
-        type: 'select',
+        type: 'sexo',
         placeholder: 'Selecione o sexo',
         required: true,
     },
@@ -268,10 +268,46 @@ export const formLabels: FormField[] = [
         placeholder: 'Selecione',
         required: false,
     },
+    {
+        id: 28,
+        name: 'cepPerinote',
+        idControll: 'cepPerinote',
+        label: 'CEP',
+        type: 'text',
+        placeholder: 'Seu CEP',
+        required: true
+    },
+    {
+        id: 29,
+        name: 'dtNascimento',
+        idControll: 'dtNascimento',
+        label: 'Data de Nascimento',
+        type: 'date',
+        placeholder: '__/__/____',
+        required: true
+    },
+    {
+        id: 30,
+        name: 'dtNascimentoPrincipalCondutor',
+        idControll: 'dtNascimentoPrincipalCondutor',
+        label: 'Data de Nascimento do Principal Condutor',
+        type: 'date',
+        placeholder: '__/__/____',
+        required: true
+    },
+    {
+        id: 31,
+        name: 'placa',
+        idControll: 'placa',
+        label: 'Placa do Veículo',
+        type: 'text',
+        placeholder: 'Placa do Veículo',
+        required: true
+    }
 ];
-export const personalData: GroupForms = [14, 15]; // sexo, estado civil
-export const vehicleData: GroupForms = [16, 17, 18]; // zeroKm, tipoUtilizacao, possuiOutroVeic, tipoContratacao
-export const mainDriverData: GroupForms = [20, 21]; // sexoPrincipalCondutor, estadoCivilPrincipalCondutor
+export const personalData: GroupForms = [14, 15, 27, 28, 29]; // sexo, estado civil
+export const vehicleData: GroupForms = [16, 17, 18, 31]; // zeroKm, tipoUtilizacao, possuiOutroVeic, tipoContratacao
+export const mainDriverData: GroupForms = [20, 21, 30]; // sexoPrincipalCondutor, estadoCivilPrincipalCondutor
 export const garageData: GroupForms = [22, 23, 24, 25]; // pergunta1
 export const dadosCaminhao = [26]; // pergunta6
 export const paymentData = [19]
@@ -303,4 +339,38 @@ export const states: States = {
     cod_categoria_suhai: '',
     categoria_suhai: '',
     cod_categoria_tarifaria: '',
+    cpfCnpj: '',
+    dtNascimento: '', // formato DD/MM/AAAA
+    sexo: '', // "1" = Feminino, "2" = Masculino
+    estadoCivil: '', // "1" = Casado, "2" = Solteiro, "3" = Outros
+    cepPerinote: '',
+    modeloVeiculo: '',
+    zeroKm: '',
+    chassi: '',
+    placa: '',
+    utilizacaoDut: '',
+    tipoUtilizacao: '',
+    possuiOutroVeic: '', // "1" = Sim, "0" = Não
+    tipoContratacao: '',
+    tabelaComissao: '',
+    classeBonus: '',
+    cpfCnpjPrincipalCondutor: '',
+    nomePrincipalCondutor: '',
+    dtNascimentoPrincipalCondutor: '',
+    sexoPrincipalCondutor: '',
+    estadoCivilPrincipalCondutor: '',
+    pergunta1: '', // residência
+    pergunta2: '', // trabalho
+    pergunta3: '', // faculdade
+    pergunta4: '', // fora de serviço
+    pergunta6: '', // caminhão
+    codProduto: '',
+    tipoSeguro: '',
+    nro_apolice_ant: '',
+    vlr_DanosCorporais: '',
+    vlr_DanosMateriais: '',
+    fator_FipeAjuste: '',
+    fator_Desconto: '',
+    ddd_cel: '',
+    num_cel: '',
 }

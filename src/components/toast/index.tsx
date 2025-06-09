@@ -21,32 +21,62 @@ export const Toast: React.FC<ToastProps> = ({ statusCode, message, show, onclose
                 right: 0,
             }}
         >
-            <ToastReactBootstrap
-                show={show}
-                delay={3000}
-                autohide
-                onClose={handleClose}
-                className="d-inline-block m-1"
-                bg={variant}
-            >
-                <ToastReactBootstrap.Header closeButton={false}>
-                    <strong className="me-auto">
-                        {nameFlavor}
-                    </strong>
-                    <img
-                        src={logo}
-                        className="rounded mr-2"
-                        alt={`Logo da ${nameFlavor}`}
-                        style={{
-                            width: 100
-                        }}
-                    />
-                    <small className='d-flex d-flex-nowrap align-items-center'><Icon name='fa-solid fa-clock' /> {getTimeInHoursMinutes()}</small>
-                </ToastReactBootstrap.Header>
-                <ToastReactBootstrap.Body className={'text-white'}>
-                    {message}
-                </ToastReactBootstrap.Body>
-            </ToastReactBootstrap>
+            {typeof message === 'string' && (
+                <ToastReactBootstrap
+                    show={show}
+                    delay={3000}
+                    autohide
+                    onClose={handleClose}
+                    className="d-inline-block m-1"
+                    bg={variant}
+                >
+                    <ToastReactBootstrap.Header closeButton={false}>
+                        <img
+                            src={logo}
+                            className="rounded mr-2"
+                            alt={`Logo da ${nameFlavor}`}
+                            style={{
+                                width: 100
+                            }}
+                        />
+                        <small className='d-flex d-flex-nowrap align-items-center'><Icon name='fa-solid fa-clock' /> {getTimeInHoursMinutes()}</small>
+                    </ToastReactBootstrap.Header>
+                    <ToastReactBootstrap.Body className={'text-white'}>
+                        {message}
+                    </ToastReactBootstrap.Body>
+                </ToastReactBootstrap>
+            )}
+            {Array.isArray(message) && (
+                message.map((item, i) => (
+                    <ToastReactBootstrap
+                        key={i}
+                        show={show}
+                        delay={3000}
+                        autohide
+                        onClose={handleClose}
+                        className="d-inline-block m-1"
+                        bg={variant}
+                    >
+                        <ToastReactBootstrap.Header closeButton={false}>
+                            <strong className="me-auto">
+                                {nameFlavor}
+                            </strong>
+                            <img
+                                src={logo}
+                                className="rounded mr-2"
+                                alt={`Logo da ${nameFlavor}`}
+                                style={{
+                                    width: 100
+                                }}
+                            />
+                            <small className='d-flex d-flex-nowrap align-items-center'><Icon name='fa-solid fa-clock' /> {getTimeInHoursMinutes()}</small>
+                        </ToastReactBootstrap.Header>
+                        <ToastReactBootstrap.Body className={'text-white'}>
+                            {item}
+                        </ToastReactBootstrap.Body>
+                    </ToastReactBootstrap>
+                ))
+            )}
         </ToastContainer>
     );
 }
