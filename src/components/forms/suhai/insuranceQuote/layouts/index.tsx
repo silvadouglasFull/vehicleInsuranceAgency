@@ -1,3 +1,4 @@
+import type { StatusCodeSuccess } from "@api/statusCode/types";
 import { formLabels } from "@components/forms/suhai/insuranceQuote/constants";
 import { FormGarageData } from "@components/forms/suhai/insuranceQuote/garageData";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
@@ -29,7 +30,13 @@ export const FormLayout: React.FC = () => {
             setStatusCode(420)
         } else {
             const payload = createPayload({ formData })
-            await fetchIncluirCotacao({ ...payload })
+            const response = await fetchIncluirCotacao({ ...payload })
+            if (response?.error) {
+                setMessage(response.error)
+            }
+            if (response.status) {
+                setStatusCode(response.status as StatusCodeSuccess)
+            }
         }
     }
     return (

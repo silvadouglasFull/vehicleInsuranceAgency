@@ -45,4 +45,5 @@ export interface IncluirCotacaoResponse {
     data: Data
     success: boolean
     error: string
+    status: number
 }
