@@ -1,7 +1,7 @@
 
-import type { UseSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/hooks/useSetOptions/types";
 import { transformOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/modules/transformOptions";
 import type { Options } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
+import type { UseSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/hooks/useSetOptions/types";
 import { useVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData/hooks/useVehicleData";
 import { useEffect, useState } from "react";
 export const useSetOptions = (): UseSetOptions => {

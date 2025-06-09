@@ -1,5 +1,5 @@
-import type { UseSetFirstVehicleData, UseSetFirstVehicleDataProps } from '@components/forms/suhai/insuranceQuote/renderFormSection/input/select/hooks/useSetFirstVehicleData/types';
 import type { Options } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
+import type { UseSetFirstVehicleData, UseSetFirstVehicleDataProps } from '@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/hooks/useSetFirstVehicleData/types';
 import { useEffect, useState } from 'react';
 export const useSetFirstVehicleData = ({ options }: UseSetFirstVehicleDataProps): UseSetFirstVehicleData => {
     const [firstData, setFirstData] = useState<Options | null>(null)

@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import type { States } from "@components/forms/suhai/insuranceQuote/context/types";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
-import type { UseSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/hooks/useSelectInputVehichleData/types";
-import { transforValue } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/hooks/useSelectInputVehichleData/utils/transformParseValue";
 import type { SelectedOption } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
+import type { UseSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/hooks/useSelectInputVehichleData/types";
+import { transforValue } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/hooks/useSelectInputVehichleData/utils/transformParseValue";
 import { useEffect, useState } from "react";
 
 export const useSelectInput = (): UseSelectInput => {
