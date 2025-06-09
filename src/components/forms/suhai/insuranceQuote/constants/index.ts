@@ -208,7 +208,7 @@ export const formLabels: FormField[] = [
         name: 'sexoPrincipalCondutor',
         idControll: 'sexoPrincipalCondutor',
         label: 'Sexo do Condutor Principal',
-        type: 'select',
+        type: 'sexoPrincipalCondutor',
         placeholder: 'Selecione o sexo',
         required: true,
     },

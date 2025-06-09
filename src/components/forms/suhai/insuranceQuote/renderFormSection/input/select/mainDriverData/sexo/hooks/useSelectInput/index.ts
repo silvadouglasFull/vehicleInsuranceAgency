@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
-import type { UseSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/maritalStatus/types";
+import type { UseSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/sexo/types";
 import type { SelectedOption } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import { useEffect, useState } from "react";
 
@@ -12,7 +12,7 @@ export const useSelectInput = (): UseSelectInput => {
             try {
                 const { value } = selectedOption
                 handleForm({
-                    estadoCivilPrincipalCondutor: value
+                    sexoPrincipalCondutor: value
                 })
             } catch (error) {
                 console.log(error)
