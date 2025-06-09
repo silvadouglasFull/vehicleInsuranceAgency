@@ -41,3 +41,20 @@ export const fetchEstadoCivilPrincipalCondutor = async ({ signal }: FetchOptions
     const response: ResponseFormOptions = await formOptions.options({ signal, key: 'estadoCivilPrincipalCondutor' })
     return { ...response }
 }
+
+export const fetchGaragemPergunta1 = async ({ signal }: FetchOptions): Promise<ResponseFormOptions> => {
+    const response: ResponseFormOptions = await formOptions.options({ signal, key: 'garagemPergunta1' })
+    return { ...response }
+}
+export const fetchGaragemPergunta2 = async ({ signal }: FetchOptions): Promise<ResponseFormOptions> => {
+    const response: ResponseFormOptions = await formOptions.options({ signal, key: 'garagemPergunta2' })
+    return { ...response }
+}
+export const fetchGaragemPergunta3 = async ({ signal }: FetchOptions): Promise<ResponseFormOptions> => {
+    const response: ResponseFormOptions = await formOptions.options({ signal, key: 'garagemPergunta3' })
+    return { ...response }
+}
+export const fetchGaragemPergunta4 = async ({ signal }: FetchOptions): Promise<ResponseFormOptions> => {
+    const response: ResponseFormOptions = await formOptions.options({ signal, key: 'garagemPergunta4' })
+    return { ...response }
+}

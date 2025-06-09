@@ -3,6 +3,10 @@ import type { InputsType } from "@components/forms/suhai/insuranceQuote/renderFo
 import { FormControllBrand } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllBrand";
 import { FormControllDoc } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllDoc";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
+import { SelectPergunta1 } from "../select/garageData/pergunta1";
+import { SelectPergunta2 } from "../select/garageData/pergunta2";
+import { SelectPergunta3 } from "../select/garageData/pergunta3";
+import { SelectPergunta4 } from "../select/garageData/pergunta4";
 import { SelectEstadoCivilPrincipalCondutor } from "../select/mainDriverData/maritalStatus";
 import { SelectSexoPrincipalCondutor } from "../select/mainDriverData/sexo";
 import { SelectEstadoCivil } from "../select/personalData";
@@ -51,5 +55,21 @@ export const inputTypes: InputsType[] = [
     {
         type: 'sexoPrincipalCondutor',
         component: (props?: Select2BootStrap | FormProps) => <SelectSexoPrincipalCondutor {...props as Select2BootStrap} />
-    }
-]
+    },
+    {
+        type: 'pergunta1',
+        component: (props?: Select2BootStrap | FormProps) => <SelectPergunta1 {...props as Select2BootStrap} />
+    },
+    {
+        type: 'pergunta2',
+        component: (props?: Select2BootStrap | FormProps) => <SelectPergunta2 {...props as Select2BootStrap} />
+    },
+    {
+        type: 'pergunta3',
+        component: (props?: Select2BootStrap | FormProps) => <SelectPergunta3 {...props as Select2BootStrap} />
+    },
+    {
+        type: 'pergunta4',
+        component: (props?: Select2BootStrap | FormProps) => <SelectPergunta4 {...props as Select2BootStrap} />
+    },
+];
