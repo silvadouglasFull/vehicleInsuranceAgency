@@ -3,7 +3,7 @@ import type { InputsType } from "@components/forms/suhai/insuranceQuote/renderFo
 import { FormControllBrand } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllBrand";
 import { FormControllDoc } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllDoc";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
-import { SelectEstadoCivilPrincipalCondutor } from "../select/mainDriverData";
+import { SelectEstadoCivilPrincipalCondutor } from "../select/mainDriverData/maritalStatus";
 import { SelectEstadoCivil } from "../select/personalData";
 import { SelectBrand } from "../select/vehicleData/brand";
 import { SelectModel } from "../select/vehicleData/model";
