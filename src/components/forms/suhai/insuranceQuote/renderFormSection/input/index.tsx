@@ -1,7 +1,9 @@
 import type { FormField } from "@components/forms/suhai/insuranceQuote/constants/types";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
+import { Icon } from "@components/icons";
+import { openLink } from "@utils/openLink";
 import type React from "react";
-import { Col, Form } from "react-bootstrap";
+import { Badge, Col, Form } from "react-bootstrap";
 import { RenderInputType } from "./renderInputType";
 export const Input: React.FC<FormField> = ({
     id,
@@ -14,15 +16,27 @@ export const Input: React.FC<FormField> = ({
     max,
     maxLength,
     min,
+    helperLink,
+    title,
     ...rest }) => {
     const { onChange } = useInsuranceQuote()
-
+    const handleLink = () => {
+        if (helperLink) {
+            openLink({ link: helperLink })
+        }
+    }
     return (
         <Col md={6} className="mb-3" key={id} >
             <Form.Group controlId={idControll}>
                 <Form.Label className="fw-bold" >
                     {label}
                     {required && <span className="text-danger ms-1" >* </span>}
+                    {helperLink && title && <Badge style={{
+                        cursor: 'pointer'
+                    }} bg="success"
+                        title={title} onClick={handleLink}>
+                        <Icon name="fa-solid fa-circle-question" />
+                    </Badge>}
                 </Form.Label>
                 <RenderInputType
                     props={{

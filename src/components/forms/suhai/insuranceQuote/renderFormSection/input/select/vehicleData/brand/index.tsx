@@ -13,7 +13,7 @@ export const SelectBrand: React.FC<Select2BootStrap> = ({
     isSearchable = true,
     placeholder }: Select2BootStrap) => {
     const { selectedOption, setSelectedOption } = useSelectInput()
-    const { options } = useSetOptions()
+    const { options, loading } = useSetOptions()
     const { handleForm } = useInsuranceQuote()
     const { firstData } = useSetFirstVehicleData({ options: options })
     useEffect(() => {
@@ -40,6 +40,7 @@ export const SelectBrand: React.FC<Select2BootStrap> = ({
             selectedOption={selectedOption}
             isClearable={isClearable}
             isSearchable={isSearchable}
+            isLoading={loading}
         />
     );
 };

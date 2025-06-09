@@ -1,3 +1,4 @@
+import { Spinner } from "@components/spinner"
 import type React from "react"
 import Select from "react-select"
 import { customStyles } from "../styles"
@@ -10,6 +11,7 @@ export const RenderSelect: React.FC<RenderSelectProps> = ({
     onChange,
     options,
     selectedOption,
+    isLoading
 }: RenderSelectProps) => {
     return (
         <Select
@@ -21,6 +23,10 @@ export const RenderSelect: React.FC<RenderSelectProps> = ({
             isClearable={isClearable}
             isSearchable={isSearchable}
             noOptionsMessage={() => <span>Nenhum resultado encontrado</span>}
+            loadingMessage={() => (
+                <Spinner />
+            )}
+            isLoading={isLoading}
         />
     )
 }

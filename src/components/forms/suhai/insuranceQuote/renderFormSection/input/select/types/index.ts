@@ -15,4 +15,5 @@ export type RenderSelectProps = Select2BootStrap & {
     selectedOption: unknown
     onChange: (newValue: unknown, actionMeta: ActionMeta<unknown>) => void
     options: OptionsOrGroups<unknown, GroupBase<unknown>> | undefined
+    isLoading?: boolean
 }

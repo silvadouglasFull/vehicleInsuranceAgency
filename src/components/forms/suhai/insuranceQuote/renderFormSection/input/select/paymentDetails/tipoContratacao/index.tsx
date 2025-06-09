@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/tipoContratacao/hooks/useSelectInput";
+import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/tipoContratacao/hooks/useSetOptions";
 import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/renderInput";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
-import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/outroVeiculo/hooks/useSelectInputVehichleData";
-import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/outroVeiculo/hooks/useSetOptions";
 import React from "react";
 
-export const SelectOutroVeiculo: React.FC<Select2BootStrap> = ({
+export const SelectTipoContratacao: React.FC<Select2BootStrap> = ({
     isClearable = true,
     isSearchable = true,
     placeholder }: Select2BootStrap) => {
     const { selectedOption, setSelectedOption } = useSelectInput()
-    const { options, loading } = useSetOptions()
+    const { options } = useSetOptions()
     const handleChange = (newValue: unknown) => {
         setSelectedOption(newValue as any);
     };
@@ -24,7 +24,6 @@ export const SelectOutroVeiculo: React.FC<Select2BootStrap> = ({
             selectedOption={selectedOption}
             isClearable={isClearable}
             isSearchable={isSearchable}
-            isLoading={loading}
         />
     );
 };
