@@ -18,8 +18,6 @@ export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoR
         email,
         estadoCivil,
         estadoCivilPrincipalCondutor,
-        fator_Desconto,
-        fator_FipeAjuste,
         marca,
         modelo,
         modeloVeiculo,
@@ -35,13 +33,10 @@ export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoR
         possuiOutroVeic,
         sexo,
         sexoPrincipalCondutor,
-        tabelaComissao,
         tipoContratacao,
         tipoSeguro,
         tipoUtilizacao,
         utilizacaoDut,
-        vlr_DanosCorporais,
-        vlr_DanosMateriais,
         zeroKm
     } = formData
     return {
@@ -58,8 +53,6 @@ export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoR
         email,
         estadoCivil,
         estadoCivilPrincipalCondutor,
-        fator_Desconto,
-        fator_FipeAjuste,
         marca,
         modelo,
         modeloVeiculo,
@@ -75,13 +68,10 @@ export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoR
         possuiOutroVeic,
         sexo,
         sexoPrincipalCondutor,
-        tabelaComissao,
         tipoContratacao,
         tipoSeguro,
         tipoUtilizacao,
         utilizacaoDut,
-        vlr_DanosCorporais,
-        vlr_DanosMateriais,
         zeroKm
     } as IncluirCotacaoRequest
 }
