@@ -3,8 +3,8 @@
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/renderInput";
 import { type Options, type Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
-import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/hooks/useSelectInputVehichleData";
-import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/hooks/useSetOptions";
+import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/brand/hooks/useSelectInputVehichleData";
+import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/brand/hooks/useSetOptions";
 import type { Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe";
 import React, { useEffect, useState } from "react";
 

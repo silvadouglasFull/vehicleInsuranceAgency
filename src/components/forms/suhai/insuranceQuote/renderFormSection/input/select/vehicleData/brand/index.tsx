@@ -3,9 +3,9 @@
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/renderInput";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
-import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/hooks/useSelectInputVehichleData";
-import { useSetFirstVehicleData } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/hooks/useSetFirstVehicleData";
-import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/hooks/useSetOptions";
+import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/brand/hooks/useSelectInputVehichleData";
+import { useSetFirstVehicleData } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/brand/hooks/useSetFirstVehicleData";
+import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/brand/hooks/useSetOptions";
 import React, { useEffect } from "react";
 
 export const SelectBrand: React.FC<Select2BootStrap> = ({
