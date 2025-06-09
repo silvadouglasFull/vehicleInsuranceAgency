@@ -163,7 +163,7 @@ export const formLabels: FormField[] = [
         name: 'estadoCivil',
         idControll: 'estadoCivil',
         label: 'Estado Civil',
-        type: 'select',
+        type: 'estadoCivil',
         placeholder: 'Selecione o estado civil',
         required: true,
     },

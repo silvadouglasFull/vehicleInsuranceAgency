@@ -36,5 +36,9 @@ export const inputTypes: InputsType[] = [
     {
         type: 'possuiOutroVeic',
         component: (props?: Select2BootStrap | FormProps) => <SelectOutroVeiculo {...props as Select2BootStrap} />
+    },
+    {
+        type: 'estadoCivil',
+        component: (props?: Select2BootStrap | FormProps) => <SelectOutroVeiculo {...props as Select2BootStrap} />
     }
 ]
