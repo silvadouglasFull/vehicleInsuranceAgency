@@ -5,7 +5,7 @@ import type {
     RequestBodyOptions,
     ResponseFormOptions
 } from '@modules/formOptions/options/dtos';
-import type { IFormOptionsService } from '@modules/formOptions/options/vehicleData/services/instance/IInstance';
+import type { IFormOptionsService } from '@modules/formOptions/options/services/instance/IInstance';
 
 export class FormOptionsService implements IFormOptionsService {
     public http: AxiosHttpClient;
