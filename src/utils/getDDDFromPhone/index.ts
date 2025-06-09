@@ -5,5 +5,5 @@
  */
 export function getDDDFromPhone(phone: string): string | null {
     const match = phone.match(/\((\d{2})\)/);
-    return match?.length === 1 ? match[1] : phone.substring(0, 3);
+    return match ? match[1] : null;
 }

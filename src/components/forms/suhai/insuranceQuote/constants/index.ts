@@ -87,7 +87,7 @@ export const formLabels: FormField[] = [
         type: 'tel',
         placeholder: 'Digite seu telefone',
         required: false,
-        maxLength: 14
+        maxLength: 18
     },
     {
         id: 9,
@@ -270,8 +270,8 @@ export const formLabels: FormField[] = [
     },
     {
         id: 28,
-        name: 'cepPerinote',
-        idControll: 'cepPerinote',
+        name: 'cepPernoite',
+        idControll: 'cepPernoite',
         label: 'CEP',
         type: 'text',
         placeholder: 'Seu CEP',
@@ -343,7 +343,7 @@ export const states: States = {
     dtNascimento: '', // formato DD/MM/AAAA
     sexo: '', // "1" = Feminino, "2" = Masculino
     estadoCivil: '', // "1" = Casado, "2" = Solteiro, "3" = Outros
-    cepPerinote: '',
+    cepPernoite: '',
     modeloVeiculo: '',
     zeroKm: '',
     chassi: '',
@@ -373,4 +373,5 @@ export const states: States = {
     fator_Desconto: '',
     ddd_cel: '',
     num_cel: '',
+    anoFabricacao: '',
 }

@@ -31,7 +31,7 @@ export type States = {
     dtNascimento?: string; // formato DD/MM/AAAA
     sexo?: string; // "1" = Feminino, "2" = Masculino
     estadoCivil?: string; // "1" = Casado, "2" = Solteiro, "3" = Outros
-    cepPerinote?: string;
+    cepPernoite?: string;
     modeloVeiculo?: string;
     zeroKm?: string;
     chassi?: string;
@@ -61,6 +61,7 @@ export type States = {
     fator_Desconto?: string;
     ddd_cel?: string;
     num_cel?: string;
+    anoFabricacao?: string
 
 };
 

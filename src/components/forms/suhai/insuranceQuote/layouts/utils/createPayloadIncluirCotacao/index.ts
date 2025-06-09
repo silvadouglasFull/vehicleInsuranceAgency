@@ -1,5 +1,6 @@
 import type { CreatePayloadProps } from "@components/forms/suhai/insuranceQuote/layouts/utils/createPayloadIncluirCotacao/types";
 import type { IncluirCotacaoRequest } from "@modules/suhai/incluirCotacao/dtos/IncluirCotacao";
+import { formatPhoneNumber } from "@utils/form/mask/phone";
 import { getDDDFromPhone } from "@utils/getDDDFromPhone";
 import { sanitizeString } from "@utils/sanitizeString";
 import { convertToBrazilianDate } from "@utils/transformData";
@@ -8,11 +9,10 @@ import { convertToBrazilianDate } from "@utils/transformData";
 export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoRequest => {
     const {
         anoModelo,
-        cepPerinote,
+        cepPernoite,
         chassi,
         cpfCnpj,
         cpfCnpjPrincipalCondutor,
-        ddd_cel,
         dtNascimento,
         dtNascimentoPrincipalCondutor,
         email,
@@ -36,16 +36,17 @@ export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoR
         tipoContratacao,
         tipoSeguro,
         tipoUtilizacao,
-        utilizacaoDut,
-        zeroKm
+        zeroKm,
+        anoFabricacao,
     } = formData
-    return {
+    const payload = {
         anoModelo,
-        cepPerinote: cepPerinote ? sanitizeString(cepPerinote) : '',
+        cepPernoite: cepPernoite ? sanitizeString(cepPernoite) : '',
         chassi,
+        anoFabricacao: anoFabricacao ? anoFabricacao : '',
         cpfCnpj: cpfCnpj ? sanitizeString(cpfCnpj) : '',
         cpfCnpjPrincipalCondutor: cpfCnpjPrincipalCondutor ? sanitizeString(cpfCnpjPrincipalCondutor) : '',
-        ddd_cel: ddd_cel ? getDDDFromPhone(ddd_cel) : '',
+        ddd_cel: num_cel ? getDDDFromPhone(formatPhoneNumber(num_cel ?? '', 'pt')) : '',
         dtNascimento: dtNascimento ? convertToBrazilianDate(dtNascimento) : '',
         dtNascimentoPrincipalCondutor: dtNascimentoPrincipalCondutor ? convertToBrazilianDate(dtNascimentoPrincipalCondutor) : '',
         email,
@@ -69,7 +70,7 @@ export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoR
         tipoContratacao,
         tipoSeguro,
         tipoUtilizacao,
-        utilizacaoDut,
         zeroKm
-    } as IncluirCotacaoRequest
+    }
+    return payload as IncluirCotacaoRequest
 }

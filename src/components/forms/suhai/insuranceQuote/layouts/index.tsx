@@ -1,4 +1,3 @@
-import type { StatusCodeSuccess } from "@api/statusCode/types";
 import { formLabels } from "@components/forms/suhai/insuranceQuote/constants";
 import { FormGarageData } from "@components/forms/suhai/insuranceQuote/garageData";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
@@ -12,6 +11,7 @@ import { FormVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleD
 import { FormVehicleValue } from "@components/forms/suhai/insuranceQuote/vehicleValue";
 import { Toast } from "@components/toast";
 import { useToast } from "@components/toast/hooks/useToast";
+import type { IncluirCotacaoResponse } from "@modules/suhai/incluirCotacao/dtos/IncluirCotacao";
 import React from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { fetchIncluirCotacao } from "../modules/incluirCotacao";
@@ -29,13 +29,20 @@ export const FormLayout: React.FC = () => {
             setMessage(listToast)
             setStatusCode(420)
         } else {
+            let response = null
             const payload = createPayload({ formData })
-            const response = await fetchIncluirCotacao({ ...payload })
-            if (response?.error) {
-                setMessage(response.error)
+            try {
+                response = await fetchIncluirCotacao({ ...payload })
+            } catch (error) {
+                response = error as IncluirCotacaoResponse
             }
-            if (response.status) {
-                setStatusCode(response.status as StatusCodeSuccess)
+            const { status } = response
+            if (status === 200) {
+                setMessage('Enviado com sucesso')
+                setStatusCode(status)
+            } else {
+                const { data: { error } } = response?.response
+                setMessage(error)
             }
         }
     }

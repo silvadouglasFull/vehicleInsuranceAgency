@@ -1,3 +1,4 @@
+import type { StatusCode } from "@api/statusCode/types";
 
 /** Request body for including quotation */
 export type IncluirCotacaoRequest = {
@@ -6,7 +7,7 @@ export type IncluirCotacaoRequest = {
     dtNascimento: string; // formato DD/MM/AAAA
     sexo: string; // "1" = Feminino, "2" = Masculino
     estadoCivil: string; // "1" = Casado, "2" = Solteiro, "3" = Outros
-    cepPerinote: string;
+    cepPernoite: string;
     marca: string;
     modelo: string;
     modeloVeiculo: string;
@@ -33,6 +34,7 @@ export type IncluirCotacaoRequest = {
     ddd_cel: string;
     num_cel: string;
     email: string;
+    anoFabricacao: string
 };
 export type Data = {
     numeroCotacao: string;
@@ -45,5 +47,5 @@ export interface IncluirCotacaoResponse {
     data: Data
     success: boolean
     error: string
-    status: number
+    status: StatusCode
 }

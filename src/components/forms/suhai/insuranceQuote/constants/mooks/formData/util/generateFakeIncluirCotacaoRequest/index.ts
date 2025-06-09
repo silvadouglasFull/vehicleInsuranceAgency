@@ -15,7 +15,7 @@ export function generateFakeIncluirCotacaoRequest(): IncluirCotacaoRequest {
         dtNascimento: faker.date.birthdate({ min: 25, max: 55, mode: 'age' }).toLocaleDateString('pt-BR'),
         sexo: faker.helpers.arrayElement(['1', '2']),
         estadoCivil: faker.helpers.arrayElement(['1', '2', '3']),
-        cepPerinote: faker.location.zipCode('#####-###'),
+        cepPernoite: faker.location.zipCode('#####-###'),
         marca: faker.vehicle.manufacturer(),
         modelo: faker.vehicle.model(),
         modeloVeiculo: faker.vehicle.model(),
