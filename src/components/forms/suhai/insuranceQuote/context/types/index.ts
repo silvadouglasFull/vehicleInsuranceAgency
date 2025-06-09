@@ -33,13 +33,13 @@ export type States = {
     estadoCivil?: string; // "1" = Casado, "2" = Solteiro, "3" = Outros
     cepPerinote?: string;
     modeloVeiculo?: string;
-    zeroKm?: "N" | "I" | "S";
+    zeroKm?: string;
     chassi?: string;
     placa?: string;
     utilizacaoDut?: string;
-    tipoUtilizacao?: "1" | "2" | "3";
+    tipoUtilizacao?: string;
     possuiOutroVeic?: string; // "1" = Sim, "0" = Não
-    tipoContratacao?: "1" | "2" | "3";
+    tipoContratacao?: string;
     tabelaComissao?: string;
     classeBonus?: string;
     cpfCnpjPrincipalCondutor?: string;

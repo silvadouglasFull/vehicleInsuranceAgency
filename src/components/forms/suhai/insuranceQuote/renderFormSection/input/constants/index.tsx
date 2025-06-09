@@ -5,6 +5,9 @@ import { FormControllDoc } from "@components/forms/suhai/insuranceQuote/renderFo
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import { SelectBrand } from "../select/vehicleData/brand";
 import { SelectModel } from "../select/vehicleData/model";
+import { SelectOutroVeiculo } from "../select/vehicleData/outroVeiculo";
+import { SelectTipoUtilizacao } from "../select/vehicleData/tipoUtilizacao";
+import { SelectZero } from "../select/vehicleData/zeroKm";
 export const inputTypes: InputsType[] = [
     {
         type: 'marca',
@@ -21,5 +24,17 @@ export const inputTypes: InputsType[] = [
     {
         type: 'cpf',
         component: (props?: Select2BootStrap | FormProps) => <FormControllDoc {...props as FormProps} />
+    },
+    {
+        type: 'zeroKm',
+        component: (props?: Select2BootStrap | FormProps) => <SelectZero {...props as Select2BootStrap} />
+    },
+    {
+        type: 'tipoUtilizacao',
+        component: (props?: Select2BootStrap | FormProps) => <SelectTipoUtilizacao {...props as Select2BootStrap} />
+    },
+    {
+        type: 'possuiOutroVeic',
+        component: (props?: Select2BootStrap | FormProps) => <SelectOutroVeiculo {...props as Select2BootStrap} />
     }
 ]

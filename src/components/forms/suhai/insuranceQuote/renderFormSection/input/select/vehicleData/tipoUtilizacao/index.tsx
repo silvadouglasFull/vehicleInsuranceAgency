@@ -2,11 +2,11 @@
 
 import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/renderInput";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
-import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/zeroKm/hooks/useSelectInputVehichleData";
-import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/zeroKm/hooks/useSetOptions";
+import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/tipoUtilizacao/hooks/useSelectInputVehichleData";
+import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/tipoUtilizacao/hooks/useSetOptions";
 import React from "react";
 
-export const SelectZero: React.FC<Select2BootStrap> = ({
+export const SelectTipoUtilizacao: React.FC<Select2BootStrap> = ({
     isClearable = true,
     isSearchable = true,
     placeholder }: Select2BootStrap) => {

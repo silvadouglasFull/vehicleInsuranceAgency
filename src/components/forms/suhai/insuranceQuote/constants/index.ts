@@ -181,7 +181,7 @@ export const formLabels: FormField[] = [
         name: 'tipoUtilizacao',
         idControll: 'tipoUtilizacao',
         label: 'Tipo de Utilização',
-        type: 'select',
+        type: 'tipoUtilizacao',
         placeholder: 'Selecione a utilização',
         required: true,
     },
@@ -190,7 +190,7 @@ export const formLabels: FormField[] = [
         name: 'possuiOutroVeic',
         idControll: 'possuiOutroVeic',
         label: 'Possui outro veículo?',
-        type: 'select',
+        type: 'possuiOutroVeic',
         placeholder: 'Selecione',
         required: true,
     },
@@ -268,11 +268,11 @@ export const formLabels: FormField[] = [
     },
 ];
 export const personalData: GroupForms = [14, 15]; // sexo, estado civil
-export const vehicleData: GroupForms = [16, 17, 18, 19]; // zeroKm, tipoUtilizacao, possuiOutroVeic, tipoContratacao
+export const vehicleData: GroupForms = [16, 17, 18]; // zeroKm, tipoUtilizacao, possuiOutroVeic, tipoContratacao
 export const mainDriverData: GroupForms = [20, 21]; // sexoPrincipalCondutor, estadoCivilPrincipalCondutor
 export const garageData: GroupForms = [22, 23, 24, 25]; // pergunta1
 export const dadosCaminhao = [26]; // pergunta6
-
+export const paymentData = [19]
 export const states: States = {
     codigoFipe: '',
     marca: '',
