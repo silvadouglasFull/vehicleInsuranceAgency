@@ -1,6 +1,6 @@
 import type { FormField } from "@components/forms/suhai/insuranceQuote/constants/types";
 import type { Type } from "@flavor/links/types";
-import type { SelectBrandProps } from "../input/select/types";
+import type { Select2BootStrap } from "../input/select/types";
 
 export type TRenderFormSection = {
     title: string
@@ -8,5 +8,5 @@ export type TRenderFormSection = {
 }
 export type InputTypes = {
     type: Type
-    component: (props: SelectBrandProps) => 
+    component: (props: Select2BootStrap) => 
 }

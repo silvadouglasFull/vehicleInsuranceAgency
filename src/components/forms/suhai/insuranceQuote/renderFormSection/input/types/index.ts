@@ -1,6 +1,6 @@
 import type { FormField, FormProps, Type } from "@components/forms/suhai/insuranceQuote/constants/types";
-import type { SelectBrandProps } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
-export type PropsToSelect = FormProps & SelectBrandProps & FormField
+import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
+export type PropsToSelect = FormProps & Select2BootStrap & FormField
 export type RenderInputType = {
     type: Type,
     props: PropsToSelect | FormProps

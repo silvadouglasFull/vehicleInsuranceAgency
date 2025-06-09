@@ -172,7 +172,7 @@ export const formLabels: FormField[] = [
         name: 'zeroKm',
         idControll: 'zeroKm',
         label: 'Veículo Zero KM?',
-        type: 'select',
+        type: 'zeroKm',
         placeholder: 'Selecione',
         required: true,
     },

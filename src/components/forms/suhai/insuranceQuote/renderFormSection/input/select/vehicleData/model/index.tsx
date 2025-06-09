@@ -4,14 +4,14 @@ import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/
 import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/hooks/useSelectInputVehichleData";
 import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/hooks/useSetOptions";
 import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/renderInput";
-import { type Options, type SelectBrandProps } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
+import { type Options, type Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import type { Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe";
 import React, { useEffect, useState } from "react";
 
-export const SelectModel: React.FC<SelectBrandProps> = ({
+export const SelectModel: React.FC<Select2BootStrap> = ({
     isClearable = true,
     isSearchable = true,
-    placeholder }: SelectBrandProps) => {
+    placeholder }: Select2BootStrap) => {
     const { selectedOption, setSelectedOption } = useSelectInput()
     const { options } = useSetOptions()
     const [modelsOptions, setModelOptions] = useState<Options[]>([])
