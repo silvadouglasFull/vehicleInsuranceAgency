@@ -1,4 +1,4 @@
-import type { ITransformParseValue } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/hooks/useSelectInputVehichleData/utils/transformParseValue/intance/ITransformParseValue";
+import type { ITransformParseValue } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/brand/hooks/useSelectInputVehichleData/utils/transformParseValue/intance/ITransformParseValue";
 import type { Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe";
 export class TransformParseValue implements ITransformParseValue {
     init(value: string): Data[] {
