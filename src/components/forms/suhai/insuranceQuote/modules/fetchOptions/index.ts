@@ -1,4 +1,4 @@
-import type { ResponseFormOptions } from "@modules/formOptions/options/vehicleData/dtos"
+import type { ResponseFormOptions } from "@modules/formOptions/options/dtos"
 import { formOptions } from "@modules/formOptions/options/vehicleData/services"
 import type { FetchOptions } from "./types"
 

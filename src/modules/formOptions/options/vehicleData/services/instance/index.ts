@@ -4,8 +4,8 @@ import type { EndPoints, UrlString } from '@flavor/api/types';
 import type {
     RequestBodyOptions,
     ResponseFormOptions
-} from '@modules/formOptions/options/vehicleData/dtos';
-import type { IFormOptionsService } from '@modules/formOptions/options/vehicleData/services/instance/Instance';
+} from '@modules/formOptions/options/dtos';
+import type { IFormOptionsService } from '@modules/formOptions/options/vehicleData/services/instance/IInstance';
 
 export class FormOptionsService implements IFormOptionsService {
     public http: AxiosHttpClient;
