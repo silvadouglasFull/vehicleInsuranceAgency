@@ -1,0 +1,574 @@
+{
+    "protocolo": "416399",
+    "codMsgRet": "001",
+    "textoMsgRet": "Sucesso",
+    "premioLiquido": "1,775.42",
+    "premioTotalAVista": "1,906.45",
+    "parcelas": [
+        "953.22",
+        "635.48",
+        "503.60",
+        "411.01",
+        "353.70",
+        "309.60",
+        "280.92",
+        "255.45",
+        "235.14",
+        "218.59",
+        "204.85"
+    ],
+    "valorFipe": "30,341.00",
+    "fatorFipe": "100",
+    "valorFipexFator": "30,341.00",
+    "corretor": "suhai0030255",
+    "rastreador": null,
+    "cdCobertura": "1003",
+    "Calculo": {
+        "Automovel": {
+            "valorFipe": 30341,
+            "fatorFipe": 100,
+            "valorIS": 30341,
+            "rastreador": null
+        },
+        "RCF": {
+            "valorISDanosMateriais": 50000,
+            "premioDanosMateriais": 641.79,
+            "valorISDanosCorporais": 30000,
+            "premioDanosCorporais": 76.25,
+            "valorISDanosMorais": 10000,
+            "premioDanosMorais": 14.21
+        },
+        "Franquia": null,
+        "PremioCoberturas": {
+            "Cobertura": [
+                {
+                    "Parcelamento": {
+                        "Parcela": [
+                            {
+                                "_value_1": 1120.16,
+                                "quantidade": 1,
+                                "valorTotal": 1120.16,
+                                "valorJuros": 0,
+                                "valorIOF": 76.99,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 560.08,
+                                "quantidade": 2,
+                                "valorTotal": 1120.16,
+                                "valorJuros": 0,
+                                "valorIOF": 38.49,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 373.39,
+                                "quantidade": 3,
+                                "valorTotal": 1120.16,
+                                "valorJuros": 0,
+                                "valorIOF": 25.66,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 295.89,
+                                "quantidade": 4,
+                                "valorTotal": 1183.57,
+                                "valorJuros": 14.77,
+                                "valorIOF": 20.34,
+                                "percentualJuros": 5.6616
+                            },
+                            {
+                                "_value_1": 241.49,
+                                "quantidade": 5,
+                                "valorTotal": 1207.46,
+                                "valorJuros": 16.26,
+                                "valorIOF": 16.6,
+                                "percentualJuros": 7.794
+                            },
+                            {
+                                "_value_1": 207.82,
+                                "quantidade": 6,
+                                "valorTotal": 1246.94,
+                                "valorJuros": 19.68,
+                                "valorIOF": 14.28,
+                                "percentualJuros": 11.318
+                            },
+                            {
+                                "_value_1": 181.91,
+                                "quantidade": 7,
+                                "valorTotal": 1273.35,
+                                "valorJuros": 20.38,
+                                "valorIOF": 12.5,
+                                "percentualJuros": 13.6758
+                            },
+                            {
+                                "_value_1": 165.06,
+                                "quantidade": 8,
+                                "valorTotal": 1320.48,
+                                "valorJuros": 23.32,
+                                "valorIOF": 11.34,
+                                "percentualJuros": 17.8832
+                            },
+                            {
+                                "_value_1": 150.09,
+                                "quantidade": 9,
+                                "valorTotal": 1350.82,
+                                "valorJuros": 23.87,
+                                "valorIOF": 10.32,
+                                "percentualJuros": 20.5919
+                            },
+                            {
+                                "_value_1": 138.16,
+                                "quantidade": 10,
+                                "valorTotal": 1381.58,
+                                "valorJuros": 24.35,
+                                "valorIOF": 9.5,
+                                "percentualJuros": 23.338
+                            },
+                            {
+                                "_value_1": 128.43,
+                                "quantidade": 11,
+                                "valorTotal": 1412.76,
+                                "valorJuros": 24.77,
+                                "valorIOF": 8.83,
+                                "percentualJuros": 26.1216
+                            },
+                            {
+                                "_value_1": 120.36,
+                                "quantidade": 12,
+                                "valorTotal": 1444.37,
+                                "valorJuros": 25.16,
+                                "valorIOF": 8.27,
+                                "percentualJuros": 28.9436
+                            }
+                        ]
+                    },
+                    "id": 1003,
+                    "nome": "Seguro Roubo/Furto Total + Assistência 24h - 200 km",
+                    "premioLiquido": 1043.17
+                },
+                {
+                    "Parcelamento": {
+                        "Parcela": [
+                            {
+                                "_value_1": 1402.52,
+                                "quantidade": 1,
+                                "valorTotal": 1402.52,
+                                "valorJuros": 0,
+                                "valorIOF": 96.39,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 701.26,
+                                "quantidade": 2,
+                                "valorTotal": 1402.52,
+                                "valorJuros": 0,
+                                "valorIOF": 48.2,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 467.51,
+                                "quantidade": 3,
+                                "valorTotal": 1402.52,
+                                "valorJuros": 0,
+                                "valorIOF": 32.13,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 370.48,
+                                "quantidade": 4,
+                                "valorTotal": 1481.93,
+                                "valorJuros": 18.49,
+                                "valorIOF": 25.46,
+                                "percentualJuros": 5.6616
+                            },
+                            {
+                                "_value_1": 302.37,
+                                "quantidade": 5,
+                                "valorTotal": 1511.83,
+                                "valorJuros": 20.36,
+                                "valorIOF": 20.78,
+                                "percentualJuros": 7.794
+                            },
+                            {
+                                "_value_1": 260.21,
+                                "quantidade": 6,
+                                "valorTotal": 1561.26,
+                                "valorJuros": 24.64,
+                                "valorIOF": 17.88,
+                                "percentualJuros": 11.318
+                            },
+                            {
+                                "_value_1": 227.76,
+                                "quantidade": 7,
+                                "valorTotal": 1594.33,
+                                "valorJuros": 25.52,
+                                "valorIOF": 15.65,
+                                "percentualJuros": 13.6758
+                            },
+                            {
+                                "_value_1": 206.67,
+                                "quantidade": 8,
+                                "valorTotal": 1653.34,
+                                "valorJuros": 29.2,
+                                "valorIOF": 14.2,
+                                "percentualJuros": 17.8832
+                            },
+                            {
+                                "_value_1": 187.93,
+                                "quantidade": 9,
+                                "valorTotal": 1691.33,
+                                "valorJuros": 29.88,
+                                "valorIOF": 12.92,
+                                "percentualJuros": 20.5919
+                            },
+                            {
+                                "_value_1": 172.98,
+                                "quantidade": 10,
+                                "valorTotal": 1729.84,
+                                "valorJuros": 30.48,
+                                "valorIOF": 11.89,
+                                "percentualJuros": 23.338
+                            },
+                            {
+                                "_value_1": 160.81,
+                                "quantidade": 11,
+                                "valorTotal": 1768.88,
+                                "valorJuros": 31.02,
+                                "valorIOF": 11.05,
+                                "percentualJuros": 26.1216
+                            },
+                            {
+                                "_value_1": 150.71,
+                                "quantidade": 12,
+                                "valorTotal": 1808.46,
+                                "valorJuros": 31.5,
+                                "valorIOF": 10.36,
+                                "percentualJuros": 28.9436
+                            }
+                        ]
+                    },
+                    "id": 1009,
+                    "nome": "Seguro Roubo/Furto Total e de Perda Total por Colisão/Danos + Assistência 24h - 200 km",
+                    "premioLiquido": 1306.13
+                },
+                {
+                    "Parcelamento": {
+                        "Parcela": [
+                            {
+                                "_value_1": 1906.45,
+                                "quantidade": 1,
+                                "valorTotal": 1906.45,
+                                "valorJuros": 0,
+                                "valorIOF": 131.03,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 953.22,
+                                "quantidade": 2,
+                                "valorTotal": 1906.45,
+                                "valorJuros": 0,
+                                "valorIOF": 65.51,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 635.48,
+                                "quantidade": 3,
+                                "valorTotal": 1906.45,
+                                "valorJuros": 0,
+                                "valorIOF": 43.68,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 503.6,
+                                "quantidade": 4,
+                                "valorTotal": 2014.38,
+                                "valorJuros": 25.13,
+                                "valorIOF": 34.61,
+                                "percentualJuros": 5.6616
+                            },
+                            {
+                                "_value_1": 411.01,
+                                "quantidade": 5,
+                                "valorTotal": 2055.03,
+                                "valorJuros": 27.68,
+                                "valorIOF": 28.25,
+                                "percentualJuros": 7.794
+                            },
+                            {
+                                "_value_1": 353.7,
+                                "quantidade": 6,
+                                "valorTotal": 2122.22,
+                                "valorJuros": 33.49,
+                                "valorIOF": 24.31,
+                                "percentualJuros": 11.318
+                            },
+                            {
+                                "_value_1": 309.6,
+                                "quantidade": 7,
+                                "valorTotal": 2167.17,
+                                "valorJuros": 34.69,
+                                "valorIOF": 21.28,
+                                "percentualJuros": 13.6758
+                            },
+                            {
+                                "_value_1": 280.92,
+                                "quantidade": 8,
+                                "valorTotal": 2247.38,
+                                "valorJuros": 39.69,
+                                "valorIOF": 19.31,
+                                "percentualJuros": 17.8832
+                            },
+                            {
+                                "_value_1": 255.45,
+                                "quantidade": 9,
+                                "valorTotal": 2299.02,
+                                "valorJuros": 40.62,
+                                "valorIOF": 17.56,
+                                "percentualJuros": 20.5919
+                            },
+                            {
+                                "_value_1": 235.14,
+                                "quantidade": 10,
+                                "valorTotal": 2351.37,
+                                "valorJuros": 41.43,
+                                "valorIOF": 16.16,
+                                "percentualJuros": 23.338
+                            },
+                            {
+                                "_value_1": 218.59,
+                                "quantidade": 11,
+                                "valorTotal": 2404.44,
+                                "valorJuros": 42.16,
+                                "valorIOF": 15.02,
+                                "percentualJuros": 26.1216
+                            },
+                            {
+                                "_value_1": 204.85,
+                                "quantidade": 12,
+                                "valorTotal": 2458.24,
+                                "valorJuros": 42.82,
+                                "valorIOF": 14.08,
+                                "percentualJuros": 28.9436
+                            }
+                        ]
+                    },
+                    "id": 10031,
+                    "nome": "Seguro Roubo/Furto Total + Assistência 24h - 200 km + RCF",
+                    "premioLiquido": 1775.42
+                },
+                {
+                    "Parcelamento": {
+                        "Parcela": [
+                            {
+                                "_value_1": 2188.81,
+                                "quantidade": 1,
+                                "valorTotal": 2188.81,
+                                "valorJuros": 0,
+                                "valorIOF": 150.43,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 1094.41,
+                                "quantidade": 2,
+                                "valorTotal": 2188.81,
+                                "valorJuros": 0,
+                                "valorIOF": 75.22,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 729.6,
+                                "quantidade": 3,
+                                "valorTotal": 2188.81,
+                                "valorJuros": 0,
+                                "valorIOF": 50.14,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 578.18,
+                                "quantidade": 4,
+                                "valorTotal": 2312.73,
+                                "valorJuros": 28.85,
+                                "valorIOF": 39.74,
+                                "percentualJuros": 5.6616
+                            },
+                            {
+                                "_value_1": 471.88,
+                                "quantidade": 5,
+                                "valorTotal": 2359.41,
+                                "valorJuros": 31.77,
+                                "valorIOF": 32.43,
+                                "percentualJuros": 7.794
+                            },
+                            {
+                                "_value_1": 406.09,
+                                "quantidade": 6,
+                                "valorTotal": 2436.54,
+                                "valorJuros": 38.45,
+                                "valorIOF": 27.91,
+                                "percentualJuros": 11.318
+                            },
+                            {
+                                "_value_1": 355.45,
+                                "quantidade": 7,
+                                "valorTotal": 2488.15,
+                                "valorJuros": 39.82,
+                                "valorIOF": 24.43,
+                                "percentualJuros": 13.6758
+                            },
+                            {
+                                "_value_1": 322.53,
+                                "quantidade": 8,
+                                "valorTotal": 2580.24,
+                                "valorJuros": 45.57,
+                                "valorIOF": 22.17,
+                                "percentualJuros": 17.8832
+                            },
+                            {
+                                "_value_1": 293.28,
+                                "quantidade": 9,
+                                "valorTotal": 2639.53,
+                                "valorJuros": 46.64,
+                                "valorIOF": 20.16,
+                                "percentualJuros": 20.5919
+                            },
+                            {
+                                "_value_1": 269.96,
+                                "quantidade": 10,
+                                "valorTotal": 2699.64,
+                                "valorJuros": 47.57,
+                                "valorIOF": 18.55,
+                                "percentualJuros": 23.338
+                            },
+                            {
+                                "_value_1": 250.96,
+                                "quantidade": 11,
+                                "valorTotal": 2760.57,
+                                "valorJuros": 48.41,
+                                "valorIOF": 17.25,
+                                "percentualJuros": 26.1216
+                            },
+                            {
+                                "_value_1": 235.19,
+                                "quantidade": 12,
+                                "valorTotal": 2822.33,
+                                "valorJuros": 49.17,
+                                "valorIOF": 16.16,
+                                "percentualJuros": 28.9436
+                            }
+                        ]
+                    },
+                    "id": 10091,
+                    "nome": "Seguro Roubo/Furto Total e de Perda Total por Colisão/Danos + Assistência 24h - 200 km + RCF",
+                    "premioLiquido": 2038.38
+                },
+                {
+                    "Parcelamento": {
+                        "Parcela": [
+                            {
+                                "_value_1": 1216.05,
+                                "quantidade": 1,
+                                "valorTotal": 1216.05,
+                                "valorJuros": 0,
+                                "valorIOF": 83.58,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 608.02,
+                                "quantidade": 2,
+                                "valorTotal": 1216.05,
+                                "valorJuros": 0,
+                                "valorIOF": 41.79,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 405.35,
+                                "quantidade": 3,
+                                "valorTotal": 1216.05,
+                                "valorJuros": 0,
+                                "valorIOF": 27.86,
+                                "percentualJuros": 0
+                            },
+                            {
+                                "_value_1": 321.22,
+                                "quantidade": 4,
+                                "valorTotal": 1284.89,
+                                "valorJuros": 16.03,
+                                "valorIOF": 22.08,
+                                "percentualJuros": 5.6616
+                            },
+                            {
+                                "_value_1": 262.16,
+                                "quantidade": 5,
+                                "valorTotal": 1310.82,
+                                "valorJuros": 17.65,
+                                "valorIOF": 18.02,
+                                "percentualJuros": 7.794
+                            },
+                            {
+                                "_value_1": 225.61,
+                                "quantidade": 6,
+                                "valorTotal": 1353.68,
+                                "valorJuros": 21.36,
+                                "valorIOF": 15.51,
+                                "percentualJuros": 11.318
+                            },
+                            {
+                                "_value_1": 197.48,
+                                "quantidade": 7,
+                                "valorTotal": 1382.35,
+                                "valorJuros": 22.12,
+                                "valorIOF": 13.57,
+                                "percentualJuros": 13.6758
+                            },
+                            {
+                                "_value_1": 179.19,
+                                "quantidade": 8,
+                                "valorTotal": 1433.51,
+                                "valorJuros": 25.32,
+                                "valorIOF": 12.32,
+                                "percentualJuros": 17.8832
+                            },
+                            {
+                                "_value_1": 162.94,
+                                "quantidade": 9,
+                                "valorTotal": 1466.45,
+                                "valorJuros": 25.91,
+                                "valorIOF": 11.2,
+                                "percentualJuros": 20.5919
+                            },
+                            {
+                                "_value_1": 149.98,
+                                "quantidade": 10,
+                                "valorTotal": 1499.85,
+                                "valorJuros": 26.43,
+                                "valorIOF": 10.31,
+                                "percentualJuros": 23.338
+                            },
+                            {
+                                "_value_1": 139.43,
+                                "quantidade": 11,
+                                "valorTotal": 1533.7,
+                                "valorJuros": 26.89,
+                                "valorIOF": 9.58,
+                                "percentualJuros": 26.1216
+                            },
+                            {
+                                "_value_1": 130.67,
+                                "quantidade": 12,
+                                "valorTotal": 1568.01,
+                                "valorJuros": 27.31,
+                                "valorIOF": 8.98,
+                                "percentualJuros": 28.9436
+                            }
+                        ]
+                    },
+                    "id": 10010,
+                    "nome": "Terceiros (RCF) + Assistência 24h - 200 km",
+                    "premioLiquido": 1132.47
+                }
+            ]
+        },
+        "id": 416399,
+        "numero": "265305"
+    }
+}
