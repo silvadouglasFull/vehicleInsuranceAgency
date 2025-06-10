@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { StatusCode } from "@api/statusCode/types";
 
 /** Request body for including quotation */
@@ -36,11 +37,51 @@ export type IncluirCotacaoRequest = {
     cdCobertura: string
 };
 export type Data = {
-    numeroCotacao: string;
-    status: string;
-    validade: string;
+    protocolo: string;
+    codMsgRet: string;
+    textoMsgRet: string;
+    premioLiquido: string;
+    premioTotalAVista: string;
+    premioParcela1: string;
+    premioParcela2: string;
+    premioParcela3: string;
+    premioParcela4: string;
+    premioParcela5: string;
+    premioParcela6: string;
+    premioParcela7: string;
+    premioParcela8: string;
+    premioParcela9: string;
+    premioParcela10: string;
+    premioParcela11: string;
+    valorFipe: string;
+    fatorFipe: string;
+    valorFipexFator: string;
+    corretor: string;
+    rastreador: string | null;
+    cdCobertura: string;
+    Calculo: {
+        Automovel: {
+            valorFipe: number;
+            fatorFipe: number;
+            valorIS: number;
+            rastreador: string | null;
+        };
+        RCF: {
+            valorISDanosMateriais: number;
+            premioDanosMateriais: number;
+            valorISDanosCorporais: number;
+            premioDanosCorporais: number;
+            valorISDanosMorais: number;
+            premioDanosMorais: number;
+        };
+        Franquia: unknown; // pode substituir por tipo correto se conhecido
+        PremioCoberturas: {
+            Cobertura: any[]; // defina a estrutura se conhecida
+        };
+        id: number;
+        numero: string;
+    };
 }
-
 /** Response for quotation inclusion */
 export interface IncluirCotacaoResponse {
     data: Data
