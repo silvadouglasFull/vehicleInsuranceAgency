@@ -58,3 +58,7 @@ export const fetchGaragemPergunta4 = async ({ signal }: FetchOptions): Promise<R
     const response: ResponseFormOptions = await formOptions.options({ signal, key: 'garagemPergunta4' })
     return { ...response }
 }
+export const fetchCodigoCobertura = async ({ signal }: FetchOptions): Promise<ResponseFormOptions> => {
+    const response: ResponseFormOptions = await formOptions.options({ signal, key: 'codigoCobertura' })
+    return { ...response }
+}

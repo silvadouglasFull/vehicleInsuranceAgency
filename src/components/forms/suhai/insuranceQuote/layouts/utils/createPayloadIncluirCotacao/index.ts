@@ -1,9 +1,8 @@
 import type { CreatePayloadProps } from "@components/forms/suhai/insuranceQuote/layouts/utils/createPayloadIncluirCotacao/types";
 import type { IncluirCotacaoRequest } from "@modules/suhai/incluirCotacao/dtos/IncluirCotacao";
-import { formatPhoneNumber } from "@utils/form/mask/phone";
-import { getDDDFromPhone } from "@utils/getDDDFromPhone";
 import { sanitizeString } from "@utils/sanitizeString";
-import { convertToBrazilianDate } from "@utils/transformData";
+import { formatDatesToPayload } from "./formaDatesToPayload";
+import { formatPhoneToPayload } from "./formaPhoneToPayload";
 
 
 export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoRequest => {
@@ -38,7 +37,10 @@ export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoR
         tipoUtilizacao,
         zeroKm,
         anoFabricacao,
+        ddd_cel,
+        cdCobertura,
     } = formData
+    const dates = formatDatesToPayload({ dtNascimento, dtNascimentoPrincipalCondutor })
     const payload = {
         anoModelo,
         cepPernoite: cepPernoite ? sanitizeString(cepPernoite) : '',
@@ -46,9 +48,8 @@ export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoR
         anoFabricacao: anoFabricacao ? anoFabricacao : '',
         cpfCnpj: cpfCnpj ? sanitizeString(cpfCnpj) : '',
         cpfCnpjPrincipalCondutor: cpfCnpjPrincipalCondutor ? sanitizeString(cpfCnpjPrincipalCondutor) : '',
-        ddd_cel: num_cel ? getDDDFromPhone(formatPhoneNumber(num_cel ?? '', 'pt')) : '',
-        dtNascimento: dtNascimento ? convertToBrazilianDate(dtNascimento) : '',
-        dtNascimentoPrincipalCondutor: dtNascimentoPrincipalCondutor ? convertToBrazilianDate(dtNascimentoPrincipalCondutor) : '',
+        ddd_cel,
+        ...dates,
         email,
         estadoCivil,
         estadoCivilPrincipalCondutor,
@@ -58,7 +59,7 @@ export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoR
         nome,
         nomePrincipalCondutor,
         nro_apolice_ant,
-        num_cel: num_cel ? sanitizeString(num_cel) : '',
+        num_cel: (num_cel && ddd_cel) ? formatPhoneToPayload({ ddd_cel, num_cel }) : '',
         pergunta1,
         pergunta2,
         pergunta3,
@@ -70,7 +71,8 @@ export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoR
         tipoContratacao,
         tipoSeguro,
         tipoUtilizacao,
-        zeroKm
+        zeroKm,
+        cdCobertura
     }
     return payload as IncluirCotacaoRequest
 }

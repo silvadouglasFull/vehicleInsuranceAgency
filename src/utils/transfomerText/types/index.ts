@@ -14,3 +14,6 @@ export type SplitString = ({ fullString, separator }: SplitStringProps) => Funct
 export type FormatCPF = {
     cpf: string
 }
+export type FormatCEP = {
+    cep: string
+}

@@ -3,7 +3,7 @@ export type States = {
     codigoFipe?: string;
     marca?: string;
     modelo?: string;
-    anoModelo?: number;
+    anoModelo?: string;
     cpf?: string;
     nome?: string;
     email?: string;
@@ -62,7 +62,7 @@ export type States = {
     ddd_cel?: string;
     num_cel?: string;
     anoFabricacao?: string
-
+    cdCobertura?: string
 };
 
 export type ReducerParams = {

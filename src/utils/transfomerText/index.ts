@@ -1,4 +1,4 @@
-import type { FormatCPF, FunctionSplitString, MaskCodFipe, SplitStringProps, TransformerInFirstWord } from "@utils/transfomerText/types"
+import type { FormatCEP, FormatCPF, FunctionSplitString, MaskCodFipe, SplitStringProps, TransformerInFirstWord } from "@utils/transfomerText/types"
 export const transformerInFirstWord = ({ world }: TransformerInFirstWord): string => {
     return String(world).substring(0, 1)
 }
@@ -63,4 +63,13 @@ export function formatCpf({ cpf }: FormatCPF): string {
         return cpf;
     }
     return digits.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+}
+/**
+ * Formata uma string para o padrão de CEP brasileiro (00000-000).
+ * @param params.cep CEP não formatado
+ * @returns CEP formatado
+ */
+export function formatCep({ cep }: FormatCEP): string {
+    const digits = cep.replace(/\D/g, '').slice(0, 8); // Remove não-dígitos e limita a 8 caracteres
+    return digits.replace(/^(\d{5})(\d{0,3})$/, '$1-$2');
 }

@@ -1,5 +1,6 @@
 import type { FormField, GroupForms } from "@components/forms/suhai/insuranceQuote/constants/types";
 import type { States } from "@components/forms/suhai/insuranceQuote/context/types";
+import { formatPhoneNumber } from "@utils/form/mask/phone";
 
 export const formLabels: FormField[] = [
     {
@@ -42,12 +43,10 @@ export const formLabels: FormField[] = [
         idControll: 'anoModelo',
         label: 'Ano do Modelo',
         name: 'anoModelo',
-        type: 'number',
-        placeholder: 'Digite o ano do modelo',
+        type: 'text',
+        placeholder: String(new Date().getFullYear()),
         required: true,
-        maxLength: 6,
-        min: 0,
-        max: 2025
+        maxLength: 4
     },
     {
         id: 5,
@@ -84,8 +83,8 @@ export const formLabels: FormField[] = [
         idControll: 'telefone',
         label: 'Telefone',
         name: 'telefone',
-        type: 'tel',
-        placeholder: 'Digite seu telefone',
+        type: 'telefone',
+        placeholder: formatPhoneNumber('0000000000', 'pt') ?? 'Digite seu Celular',
         required: false,
         maxLength: 18
     },
@@ -273,8 +272,8 @@ export const formLabels: FormField[] = [
         name: 'cepPernoite',
         idControll: 'cepPernoite',
         label: 'CEP',
-        type: 'text',
-        placeholder: 'Seu CEP',
+        type: 'cepPernoite',
+        placeholder: '00000-000',
         required: true
     },
     {
@@ -303,6 +302,15 @@ export const formLabels: FormField[] = [
         type: 'text',
         placeholder: 'Placa do Veículo',
         required: true
+    },
+    {
+        id: 32,
+        name: 'cdCobertura',
+        idControll: 'cdCobertura',
+        label: 'Tipo de Cobertura',
+        type: 'cdCobertura',
+        placeholder: 'Tipo de Cobertura',
+        required: true
     }
 ];
 export const personalData: GroupForms = [14, 15, 27, 28, 29]; // sexo, estado civil
@@ -310,12 +318,12 @@ export const vehicleData: GroupForms = [16, 17, 18, 31]; // zeroKm, tipoUtilizac
 export const mainDriverData: GroupForms = [20, 21, 30]; // sexoPrincipalCondutor, estadoCivilPrincipalCondutor
 export const garageData: GroupForms = [22, 23, 24, 25]; // pergunta1
 export const dadosCaminhao = [26]; // pergunta6
-export const paymentData = [19]
+export const paymentData = [19, 32]
 export const states: States = {
     codigoFipe: '',
     marca: '',
     modelo: '',
-    anoModelo: 0,
+    anoModelo: '',
     cpf: '',
     nome: '',
     email: '',
@@ -374,4 +382,5 @@ export const states: States = {
     ddd_cel: '',
     num_cel: '',
     anoFabricacao: '',
+    cdCobertura: ''
 }

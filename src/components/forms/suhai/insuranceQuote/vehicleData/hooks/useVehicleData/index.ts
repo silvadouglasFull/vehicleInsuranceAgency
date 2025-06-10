@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote"
 import type { UseVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData/hooks/useVehicleData/types"
@@ -14,30 +15,29 @@ export const useVehicleData = (): UseVehicleData => {
     const [items, setItems] = useState<Record<string, Data[]> | null>(null)
     const { state } = useInsuranceQuote()
     const { codigoFipe } = state
-
+    const fetchInfo = async (controller: AbortController) => {
+        setLoading(true)
+        try {
+            const response = await fetchVehicleData({ codigoFipe: codigoFipe ?? '', signal: controller.signal })
+            if (response?.data) {
+                setItems(response.data)
+            } else {
+                setItems(null)
+            }
+        } catch (error) {
+            if (typeof error === "object" && error !== null && "name" in error && (error as { name: string }).name !== 'AbortError') {
+                console.error('Failed to fetch vehicle data:', error)
+                setItems(null)
+            }
+        } finally {
+            setLoading(false)
+        }
+    }
     useEffect(() => {
         const controller = new AbortController()
-        const fetchInfo = async () => {
-            if (codigoFipe?.length === 8) {
-                setLoading(true)
-                try {
-                    const response = await fetchVehicleData({ codigoFipe: codigoFipe ?? '', signal: controller.signal })
-                    if (response?.data) {
-                        setItems(response.data)
-                    } else {
-                        setItems(null)
-                    }
-                } catch (error) {
-                    if (typeof error === "object" && error !== null && "name" in error && (error as { name: string }).name !== 'AbortError') {
-                        console.error('Failed to fetch vehicle data:', error)
-                        setItems(null)
-                    }
-                } finally {
-                    setLoading(false)
-                }
-            }
+        if (codigoFipe?.length === 8) {
+            fetchInfo(controller)
         }
-        fetchInfo()
         return () => {
             controller.abort()
         }
@@ -46,5 +46,6 @@ export const useVehicleData = (): UseVehicleData => {
     return {
         loading,
         items,
+        fetchInfo
     }
 }

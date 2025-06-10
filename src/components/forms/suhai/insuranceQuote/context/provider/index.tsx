@@ -15,7 +15,7 @@ export const Provider: React.FC<React.PropsWithChildren> = ({ children }) => {
             nomePrincipalCondutor: nome,
             modeloVeiculo: modelo,
             num_cel: telefone,
-            anoFabricacao: String(anoModelo)
+            anoFabricacao: String(anoModelo),
         })
     }, [cpf, nome, modelo, telefone, anoModelo])
     const onChange = (event: Event) => {

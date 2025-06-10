@@ -11,11 +11,10 @@ export type IncluirCotacaoRequest = {
     marca: string;
     modelo: string;
     modeloVeiculo: string;
-    anoModelo: number;
+    anoModelo: string;
     zeroKm: string;
     chassi: string;
     placa: string;
-    utilizacaoDut: string;
     tipoUtilizacao: string;
     possuiOutroVeic: string; // "1" = Sim, "0" = Não
     tipoContratacao: string;
@@ -28,13 +27,13 @@ export type IncluirCotacaoRequest = {
     pergunta2: string; // trabalho
     pergunta3: string; // faculdade
     pergunta4: string; // fora de serviço
-    codProduto: string;
     tipoSeguro: string;
     nro_apolice_ant: string;
     ddd_cel: string;
     num_cel: string;
     email: string;
     anoFabricacao: string
+    cdCobertura: string
 };
 export type Data = {
     numeroCotacao: string;

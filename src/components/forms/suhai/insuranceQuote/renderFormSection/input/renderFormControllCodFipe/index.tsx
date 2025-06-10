@@ -3,11 +3,14 @@ import type { FormProps } from "@components/forms/suhai/insuranceQuote/constants
 import { useFormatCodFipe } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllCodFipe/hooks/useFormatCodFipe";
 import type React from "react";
 import { Form } from "react-bootstrap";
-
 export const FormControllCodFipe: React.FC<FormProps> = (props: FormProps) => {
     const { value } = useFormatCodFipe()
     const { type, ...rest } = props
+
     return (
-        <Form.Control value={value} type="text" {...rest} />
+        <Form.Control
+            value={value}
+            type="text"
+            {...rest} />
     )
 }
