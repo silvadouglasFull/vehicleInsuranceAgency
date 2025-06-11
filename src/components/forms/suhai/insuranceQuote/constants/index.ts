@@ -109,17 +109,6 @@ export const formLabels: FormField[] = [
         maxLength: 100
     },
     {
-        id: 11,
-        idControll: 'quantidadeParcelas',
-        label: 'Quantidade de Parcelas',
-        name: 'quantidadeParcelas',
-        type: 'number',
-        placeholder: 'Digite o número de parcelas',
-        required: true,
-        min: 0,
-        max: 12
-    },
-    {
         id: 12,
         idControll: 'nome',
         label: 'Nome do Segurado',
@@ -333,7 +322,6 @@ export const states: States = {
     status: '',
     validade: '',
     formaPagamento: '',
-    quantidadeParcelas: 0,
     endereco: '',
     numeroProposta: '',
     pdfPropostaBase64: '',
