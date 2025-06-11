@@ -1,7 +1,7 @@
 import { DefaultLayout } from "@components/accordion/suhai/layouts";
 import React from "react";
 import { Container } from "react-bootstrap";
-export const CotacaoResumo: React.FC = () => {
+export const Proposta: React.FC = () => {
 
     return (
         <Container className="my-4">

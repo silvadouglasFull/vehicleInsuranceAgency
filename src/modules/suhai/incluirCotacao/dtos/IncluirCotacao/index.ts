@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 import type { StatusCode } from "@api/statusCode/types";
 
 /** Request body for including quotation */
@@ -87,5 +88,5 @@ export interface IncluirCotacaoResponse {
     data: Data
     success: boolean
     error: string
-    status: StatusCode
+    status?: StatusCode
 }

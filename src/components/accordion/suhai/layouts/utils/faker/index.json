@@ -5,17 +5,50 @@
     "premioLiquido": "1,775.42",
     "premioTotalAVista": "1,906.45",
     "parcelas": [
-        "953.22",
-        "635.48",
-        "503.60",
-        "411.01",
-        "353.70",
-        "309.60",
-        "280.92",
-        "255.45",
-        "235.14",
-        "218.59",
-        "204.85"
+        {
+            "numeroParcela": 0,
+            "valor": "953.22"
+        },
+        {
+            "numeroParcela": 0,
+            "valor": "635.48"
+        },
+        {
+            "numeroParcela": 0,
+            "valor": "503.60"
+        },
+        {
+            "numeroParcela": 0,
+            "valor": "411.01"
+        },
+        {
+            "numeroParcela": 0,
+            "valor": "353.70"
+        },
+        {
+            "numeroParcela": 0,
+            "valor": "309.60"
+        },
+        {
+            "numeroParcela": 0,
+            "valor": "280.92"
+        },
+        {
+            "numeroParcela": 0,
+            "valor": "255.45"
+        },
+        {
+            "numeroParcela": 0,
+            "valor": "235.14"
+        },
+        {
+            "numeroParcela": 0,
+            "valor": "218.59"
+        },
+        {
+            "numeroParcela": 0,
+            "valor": "204.85"
+        }
     ],
     "valorFipe": "30,341.00",
     "fatorFipe": "100",

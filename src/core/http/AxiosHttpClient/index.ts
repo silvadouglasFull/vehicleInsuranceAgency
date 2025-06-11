@@ -10,16 +10,25 @@ export class AxiosHttpClient implements IAxiosHttpClient {
             headers: {
                 'Content-Type': 'application/json',
                 Accept: 'application/json'
-            }
+            },
+            validateStatus: () => true
         });
     }
 
     async post<T = any, R = AxiosResponse<T>>(url: string, data?: object, config?: AxiosRequestConfig): Promise<T> {
         const response = await this.client.post<T>(url, data, config);
-        return response.data;
+        const { data: responseData, status } = response
+        return {
+            ...responseData,
+            status
+        };
     }
     async get<T = any, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig): Promise<T> {
         const response = await this.client.get<T>(url, config);
-        return response.data;
+        const { data: responseData, status } = response
+        return {
+            ...responseData,
+            status
+        };
     }
 }

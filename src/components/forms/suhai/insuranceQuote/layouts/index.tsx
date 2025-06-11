@@ -1,3 +1,4 @@
+import type { StatusCode } from "@api/statusCode/types";
 import { formLabels } from "@components/forms/suhai/insuranceQuote/constants";
 import { FormGarageData } from "@components/forms/suhai/insuranceQuote/garageData";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
@@ -11,16 +12,16 @@ import { FormVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleD
 import { FormVehicleValue } from "@components/forms/suhai/insuranceQuote/vehicleValue";
 import { Toast } from "@components/toast";
 import { useToast } from "@components/toast/hooks/useToast";
-import type { IncluirCotacaoResponse } from "@modules/suhai/incluirCotacao/dtos/IncluirCotacao";
 import React from "react";
 import { Button, Container, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { fetchIncluirCotacao } from "../modules/incluirCotacao";
 import { createPayload } from "./utils/createPayloadIncluirCotacao";
 
 export const FormLayout: React.FC = () => {
     const { state: formData } = useInsuranceQuote();
     const { onClose, show, setMessage, setStatusCode, statusCode, message: messageResponse } = useToast()
-
+    const navigate = useNavigate()
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         const requiredFields = requiredFormsFields({ formFiels: formLabels })
@@ -29,20 +30,15 @@ export const FormLayout: React.FC = () => {
             setMessage(listToast)
             setStatusCode(420)
         } else {
-            let response = null
             const payload = createPayload({ formData })
-            try {
-                response = await fetchIncluirCotacao({ ...payload })
-            } catch (error) {
-                response = error as IncluirCotacaoResponse
+            const response = await fetchIncluirCotacao({ ...payload })
+            const { data, error, success, status } = response
+            if (error && (!success)) {
+                setMessage(error ?? 'Não foi possível completar sua solicitação')
             }
-            const { status } = response
-            if (status === 200) {
-                setMessage('Enviado com sucesso')
-                setStatusCode(status)
-            } else {
-                const { data: { error } } = response?.response
-                setMessage(error)
+            setStatusCode(status as StatusCode)
+            if (data) {
+                navigate('/proposta', { state: { ...data } })
             }
         }
     }
