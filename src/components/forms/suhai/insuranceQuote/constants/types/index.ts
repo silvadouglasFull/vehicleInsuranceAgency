@@ -92,6 +92,7 @@ export type Type = "text"
     | "cepPernoite"
     | "telefone"
     | "cdCobertura"
+    | "endereco"
 export type FormField = {
     id: number
     name: Name

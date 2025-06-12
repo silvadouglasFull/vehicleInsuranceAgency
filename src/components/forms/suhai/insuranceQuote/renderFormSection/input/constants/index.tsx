@@ -20,6 +20,7 @@ import { SelectModel } from "@components/forms/suhai/insuranceQuote/renderFormSe
 import { SelectOutroVeiculo } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/outroVeiculo";
 import { SelectTipoUtilizacao } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/tipoUtilizacao";
 import { SelectZero } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/zeroKm";
+import { RenderFormControllAdress } from "../renderFormControllAddress";
 export const inputTypes: InputsType[] = [
     {
         type: 'marca',
@@ -96,5 +97,9 @@ export const inputTypes: InputsType[] = [
     {
         type: 'cdCobertura',
         component: (props?: Select2BootStrap | FormProps) => <SelectCodigoCobertura {...props as Select2BootStrap} />
+    },
+    {
+        type: 'endereco',
+        component: (props?: Select2BootStrap | FormProps) => <RenderFormControllAdress {...props as FormProps} />
     }
 ];

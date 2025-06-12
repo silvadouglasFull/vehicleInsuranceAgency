@@ -73,3 +73,12 @@ export function formatCep({ cep }: FormatCEP): string {
     const digits = cep.replace(/\D/g, '').slice(0, 8); // Remove não-dígitos e limita a 8 caracteres
     return digits.replace(/^(\d{5})(\d{0,3})$/, '$1-$2');
 }
+
+/**
+ * Remove todos os caracteres não numéricos de uma string.
+ * @param input Texto de entrada
+ * @returns Apenas os dígitos numéricos
+ */
+export function onlyNumbers(input: string): string {
+    return input.replace(/\D/g, '');
+}

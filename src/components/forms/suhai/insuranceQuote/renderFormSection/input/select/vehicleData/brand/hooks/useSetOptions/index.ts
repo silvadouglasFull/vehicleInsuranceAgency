@@ -15,5 +15,6 @@ export const useSetOptions = (): UseSetOptions => {
     }, [items, loading])
     return {
         options,
+        loading
     }
 }

@@ -1,4 +1,4 @@
-import { AxiosHttpClient } from '@core/http/AxiosHttpClient';
+import { AxiosHttpClient } from '@core/suhai/http/AxiosHttpClient';
 import { endPoints, host } from '@flavor/api';
 import type { EndPoints, UrlString } from '@flavor/api/types';
 import type {

@@ -134,7 +134,7 @@ export const formLabels: FormField[] = [
         idControll: 'endereco',
         label: 'Endereço do Segurado',
         name: 'endereco',
-        type: 'text',
+        type: 'endereco',
         placeholder: 'Digite o endereço do segurado',
         required: true,
         maxLength: 100
