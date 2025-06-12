@@ -10,7 +10,6 @@ import { useGetParamsSecreen } from "./hooks/useGetParamsScreen";
 export const DefaultLayout: React.FC = () => {
     const { data } = useGetParamsSecreen()
     const { awardCoverage, infoFipe, installments, rcf, summary } = useDataAccordion(data ?? null)
-    console.log(data)
     return (
         <>
             {summary && (<BasicInfo {...summary} />)}
