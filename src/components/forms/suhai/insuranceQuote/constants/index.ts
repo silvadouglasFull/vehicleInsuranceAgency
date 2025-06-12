@@ -127,7 +127,7 @@ export const formLabels: FormField[] = [
         placeholder: 'Digite o CPF do segurado',
         required: true,
         maxLength: 11,
-        readOnly: true
+        readOnly: false
     },
     {
         id: 14,
