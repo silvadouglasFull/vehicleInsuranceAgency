@@ -35,7 +35,7 @@ export const Input: React.FC<FormField> = ({
                         cursor: 'pointer'
                     }} bg="success"
                         title={title} onClick={handleLink}>
-                        <Icon name="fa-solid fa-circle-question" />
+                        <Icon name="fa-solid fa-circle-question text-light" />
                     </Badge>}
                 </Form.Label>
                 <RenderInputType

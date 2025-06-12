@@ -52,4 +52,9 @@ export const breadCrumps: BreadCrumps[] = [
         midia: slide3,
         url: '/cotacao'
     },
+    {
+        id: 2,
+        midia: slide2,
+        url: '/proposta'
+    },
 ]

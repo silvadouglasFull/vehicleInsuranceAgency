@@ -1,4 +1,4 @@
-export type TRoute = '/' | '/contato' | '/cotacao';
+export type TRoute = '/' | '/contato' | '/cotacao' | '/proposta';
 export type NamePage = 'Home' | 'Cotação' | 'Contato'
 export type Link = {
     id: number | string;
