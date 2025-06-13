@@ -9,7 +9,7 @@ export const CovaragePlans: React.FC<Calculo> = ({ PremioCoberturas }: Calculo) 
             <Card.Title className="text-success">Planos de Cobertura</Card.Title>
             <Row>
                 {Cobertura.length ? Cobertura.map(item => (
-                    <Col key={item.id} md={4}>
+                    <Col key={item.id} sm={12} md={4}>
                         <Coverage {...item} />
                     </Col>
                 )) : null}

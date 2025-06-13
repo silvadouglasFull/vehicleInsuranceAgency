@@ -1,5 +1,5 @@
 import type { ISuhaiServices } from "@modules/suhai/services/ISuhaiServices"
-import { SuhaiService } from "@modules/suhai/services/SuhaiService/transmitirProposta/instance"
+import { SuhaiService } from "@modules/suhai/transmitirProposta/services/instance"
 export const container = (): ISuhaiServices => {
     const suhaiService: ISuhaiServices = new SuhaiService()
     return suhaiService

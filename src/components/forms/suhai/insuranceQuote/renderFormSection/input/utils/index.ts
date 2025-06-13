@@ -1,5 +1,5 @@
 import type { TypeData } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/utils/types";
-import type { Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe";
+import type { Data } from "@modules/suhai/consultarFipe/dtos";
 
 export function isVehicleData(data: Data[]): TypeData {
     if (Array.isArray(data) &&

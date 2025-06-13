@@ -1,4 +1,4 @@
-import type { Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe"
+import type { Data } from "@modules/suhai/consultarFipe/dtos"
 
 export type UseVehicleData = {
     loading: boolean

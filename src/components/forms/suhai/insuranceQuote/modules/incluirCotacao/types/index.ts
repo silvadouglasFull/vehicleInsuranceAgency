@@ -1,3 +1,3 @@
-import type { IncluirCotacaoRequest } from "@modules/suhai/incluirCotacao/dtos/IncluirCotacao";
+import type { IncluirCotacaoRequest } from "@modules/suhai/incluirCotacao/dtos";
 
 export type FetchOptions = IncluirCotacaoRequest

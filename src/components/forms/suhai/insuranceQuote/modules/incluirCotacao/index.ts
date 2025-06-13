@@ -1,5 +1,5 @@
-import type { IncluirCotacaoResponse } from "@modules/suhai/incluirCotacao/dtos/IncluirCotacao"
-import { incluirCotacao } from "@modules/suhai/incluirCotacao/services/incluirCotacao"
+import type { IncluirCotacaoResponse } from "@modules/suhai/incluirCotacao/dtos"
+import { incluirCotacao } from "@modules/suhai/incluirCotacao/services"
 import type { FetchOptions } from "./types"
 
 export const fetchIncluirCotacao = async (payload: FetchOptions): Promise<IncluirCotacaoResponse> => {

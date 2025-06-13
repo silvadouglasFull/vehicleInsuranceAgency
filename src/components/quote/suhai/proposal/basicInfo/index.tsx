@@ -7,17 +7,17 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({ premioLiquido, premioTotal
         <Container>
             <Card.Title className="text-success">Informações Básicas</Card.Title>
             <Row>
-                <Col>
+                <Col sm={12} md={4}>
                     <Card.Text>
                         <strong className="text-secondary">Protocolo:</strong> {protocolo}
                     </Card.Text>
                 </Col>
-                <Col>
+                <Col sm={12} md={4}>
                     <Card.Text>
                         <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-success" />  Prêmio Líquido:</strong> <span className="text-success">R$ {premioLiquido}</span>
                     </Card.Text>
                 </Col>
-                <Col>
+                <Col sm={12} md={4}>
                     <Card.Text>
                         <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-success" />  Prêmio Total à Vista:</strong> <span className="text-success">R$ {premioTotalAVista}</span>
                     </Card.Text>

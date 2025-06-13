@@ -2,7 +2,7 @@ import type { GetTransformOptions, ITransformOptions, Strategies, TransformData,
 import type { ITransformBrandVehicleData } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/modules/transformOptions/transformVehicleData/ITransformBrandVehicleData"
 import { whatIsDataType } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/modules/whatIsDataType"
 import type { Options } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types"
-import type { AgroupedConsultaFipe } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe"
+import type { AgroupedConsultaFipe } from "@modules/suhai/consultarFipe/dtos"
 
 export class TransformOptions implements ITransformOptions {
     private typeTransform!: Strategies

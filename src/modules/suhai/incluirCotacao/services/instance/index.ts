@@ -4,7 +4,7 @@ import type { EndPoints, UrlString } from '@flavor/api/types';
 import type {
     IncluirCotacaoRequest,
     IncluirCotacaoResponse
-} from '@modules/suhai/incluirCotacao/dtos/IncluirCotacao';
+} from '@modules/suhai/incluirCotacao/dtos';
 import type { ISuhaiServices } from '@modules/suhai/services/ISuhaiServices';
 
 export class SuhaiService implements ISuhaiServices {

@@ -1,6 +1,6 @@
-import type { ConsultarFipeRequest, ResponseConsultaFipe } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe";
-import type { IncluirCotacaoRequest, IncluirCotacaoResponse } from "@modules/suhai/incluirCotacao/dtos/IncluirCotacao";
-import type { TransmitirPropostaRequest, TransmitirPropostaResponse } from "@modules/suhai/transmitirProposta/dtos/TransmitirProposta";
+import type { ConsultarFipeRequest, ResponseConsultaFipe } from "@modules/suhai/consultarFipe/dtos";
+import type { IncluirCotacaoRequest, IncluirCotacaoResponse } from "@modules/suhai/incluirCotacao/dtos";
+import type { TransmitirPropostaRequest, TransmitirPropostaResponse } from "@modules/suhai/transmitirProposta/dtos";
 
 export interface ISuhaiServices {
     post(data: ConsultarFipeRequest | IncluirCotacaoRequest | TransmitirPropostaRequest): Promise<ResponseConsultaFipe | IncluirCotacaoResponse | TransmitirPropostaResponse>

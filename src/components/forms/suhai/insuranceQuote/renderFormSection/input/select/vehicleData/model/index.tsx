@@ -5,7 +5,7 @@ import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormS
 import { type Options, type Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/brand/hooks/useSetOptions";
 import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/model/hooks/useSelectInputVehichleData";
-import type { Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe";
+import type { Data } from "@modules/suhai/consultarFipe/dtos";
 import React, { useEffect, useState } from "react";
 
 export const SelectModel: React.FC<Select2BootStrap> = ({

@@ -1,5 +1,5 @@
-import type { ResponseConsultaFipe } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe"
-import { consultaFipe } from "@modules/suhai/consultarFipe/services/consultafipe"
+import type { ResponseConsultaFipe } from "@modules/suhai/consultarFipe/dtos"
+import { consultaFipe } from "@modules/suhai/consultarFipe/services"
 import type { FetchVehicleData } from "./types"
 
 

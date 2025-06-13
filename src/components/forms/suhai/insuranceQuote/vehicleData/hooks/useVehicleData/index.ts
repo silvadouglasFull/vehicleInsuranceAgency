@@ -3,7 +3,7 @@
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote"
 import type { UseVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData/hooks/useVehicleData/types"
 import { fetchVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData/modules/fetchVehicleData"
-import type { Data } from "@modules/suhai/consultarFipe/dtos/ConsultarFipe"
+import type { Data } from "@modules/suhai/consultarFipe/dtos"
 import { useEffect, useState } from "react"
 
 /**

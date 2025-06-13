@@ -1,8 +1,8 @@
 import type {
     ConsultarFipeRequest,
     ResponseConsultaFipe
-} from '@modules/suhai/consultarFipe/dtos/ConsultarFipe';
-import { container } from "@modules/suhai/consultarFipe/services/consultafipe/container";
+} from '@modules/suhai/consultarFipe/dtos';
+import { container } from "@modules/suhai/consultarFipe/services/container";
 export const consultaFipe = {
     consultation: async ({ codigoFipe, signal }: ConsultarFipeRequest): Promise<ResponseConsultaFipe> => {
         const response = await container().post({ codigoFipe, signal }) as ResponseConsultaFipe;

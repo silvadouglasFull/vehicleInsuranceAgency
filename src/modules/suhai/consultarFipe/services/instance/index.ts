@@ -4,7 +4,7 @@ import type { EndPoints, UrlString } from '@flavor/api/types';
 import type {
     ConsultarFipeRequest,
     ResponseConsultaFipe
-} from '@modules/suhai/consultarFipe/dtos/ConsultarFipe';
+} from '@modules/suhai/consultarFipe/dtos';
 import type { ISuhaiServices } from '@modules/suhai/services/ISuhaiServices';
 
 export class SuhaiService implements ISuhaiServices {

@@ -1,5 +1,5 @@
 import type { CreatePayloadProps } from "@components/forms/suhai/insuranceQuote/layouts/utils/createPayloadIncluirCotacao/types";
-import type { IncluirCotacaoRequest } from "@modules/suhai/incluirCotacao/dtos/IncluirCotacao";
+import type { IncluirCotacaoRequest } from "@modules/suhai/incluirCotacao/dtos";
 import { sanitizeString } from "@utils/sanitizeString";
 import { formatDatesToPayload } from "./formaDatesToPayload";
 import { formatPhoneToPayload } from "./formaPhoneToPayload";
