@@ -1,4 +1,4 @@
-import { DefaultLayout } from "@components/quote/suhai/layouts";
+import { DefaultLayout } from "@pages/quote/layouts";
 import React from "react";
 import { Container } from "react-bootstrap";
 export const Proposta: React.FC = () => {

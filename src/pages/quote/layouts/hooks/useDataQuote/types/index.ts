@@ -20,7 +20,7 @@ export type Installments = PlotProps[]
 export type AwardCoverage = {
     Cobertura: CoberturaItem[];
 }
-export type UseDataAccordion = {
+export type UseDataQuote = {
     summary: Summary | null;
     infoFipe: InfoFipe | null;
     rcf: RCF | null;

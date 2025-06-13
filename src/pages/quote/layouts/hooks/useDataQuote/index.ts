@@ -1,7 +1,7 @@
-import type { AwardCoverage, InfoFipe, Installments, RCF, Summary, UseDataAccordion } from "@components/quote/suhai/layouts/hooks/useDataAccordion/types";
-import type { State } from "@components/quote/suhai/layouts/hooks/useGetParamsScreen/types";
+import type { AwardCoverage, InfoFipe, Installments, RCF, Summary, UseDataQuote } from "@pages/quote/layouts/hooks/useDataQuote/types";
+import type { State } from "@pages/quote/layouts/hooks/useGetParamsScreen/types";
 import { useEffect, useState } from "react";
-export const useDataAccordion = (data: State | null): UseDataAccordion => {
+export const useDataQuote = (data: State | null): UseDataQuote => {
     const [summary, setSummary] = useState<Summary | null>(null)
     const [infoFipe, setInfoFipe] = useState<InfoFipe | null>(null)
     const [rcf, setRfc] = useState<RCF | null>(null)
