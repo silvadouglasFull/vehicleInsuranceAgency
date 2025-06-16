@@ -6,21 +6,21 @@ export const RFC: React.FC<Calculo> = ({ RFC }: Calculo) => {
     const { premioDanosCorporais, premioDanosMateriais, premioDanosMorais } = RFC
     return (
         <Container className="mt-3">
-            <Card.Title className="text-success">RCF (Responsabilidade Civil Facultativa)</Card.Title>
+            <Card.Title className="text-info">RCF (Responsabilidade Civil Facultativa)</Card.Title>
             <Row>
                 <Col>
                     <Card.Text>
-                        <strong className="text-secondary">Materiais:</strong> <span className="text-success font-weight-bold">R$ {premioDanosMateriais}</span>
+                        <strong className="text-secondary">Materiais:</strong> <span className="text-info font-weight-bold">R$ {premioDanosMateriais}</span>
                     </Card.Text>
                 </Col>
                 <Col>
                     <Card.Text>
-                        <strong className="text-secondary">Corporais:</strong> <span className="text-success font-weight-bold">R$ {premioDanosCorporais}</span>
+                        <strong className="text-secondary">Corporais:</strong> <span className="text-info font-weight-bold">R$ {premioDanosCorporais}</span>
                     </Card.Text>
                 </Col>
                 <Col>
                     <Card.Text>
-                        <strong className="text-secondary">Morais:</strong> <span className="text-success font-weight-bold">R$ {premioDanosMorais}</span>
+                        <strong className="text-secondary">Morais:</strong> <span className="text-info font-weight-bold">R$ {premioDanosMorais}</span>
                     </Card.Text>
                 </Col>
             </Row>

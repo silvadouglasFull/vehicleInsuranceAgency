@@ -9,7 +9,7 @@ export const FormInsuranceQuote: React.FC = () => {
                 <Row className="justify-content-center">
                     <Col xs={12} xl={10}>
                         <div className="text-center mb-5">
-                            <Card.Title className="display-4 text-success fw-bold mb-3">
+                            <Card.Title className="display-4 text-info fw-bold mb-3">
                                 Cotação de Seguro Auto
                             </Card.Title>
                             <Card.Text className="lead text-muted">

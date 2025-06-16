@@ -6,7 +6,7 @@ import { Button, Container } from 'react-bootstrap';
 
 const CallToAction = () => {
     return (
-        <section className="bg-success text-dark py-5 text-center">
+        <section className="bg-info text-dark py-5 text-center">
             <Container>
                 <h2 className="fw-bold text-light">Faça sua cotação agora mesmo!</h2>
                 <Button variant="dark" href="#cotacao" className="mt-3">

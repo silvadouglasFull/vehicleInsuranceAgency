@@ -9,14 +9,14 @@ export const CarouselItem: React.FC<Slide> = ({ midia, subtitle, textButton, tit
             <Carousel.Caption className='d-none d-md-block' style={captionStyle ? { ...captionStyle.desktop } : {}}>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{subtitle}</Card.Text>
-                <Button variant='success'>
+                <Button variant='info'>
                     {textButton}
                 </Button>
             </Carousel.Caption>
             <Carousel.Caption className='d-block d-md-none' style={captionStyle ? { ...captionStyle?.mobile } : {}}>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{subtitle}</Card.Text>
-                <Button variant='success'>
+                <Button variant='info'>
                     {textButton}
                 </Button>
             </Carousel.Caption>

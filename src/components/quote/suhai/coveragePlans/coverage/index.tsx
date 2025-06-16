@@ -19,7 +19,7 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
     const titleValorIOF = useGetExplanationForKeys({ key: 'valorIOF' })
     const titlepremioLiquido = useGetExplanationForKeys({ key: 'premioLiquido' })
     const onMouseEnter = () => {
-        setClassNameCard('mb-4 border-success')
+        setClassNameCard('mb-4 border-info')
     }
     const onMouseLeave = () => {
         setClassNameCard('mb-4')
@@ -42,7 +42,7 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
             height: 500,
             cursor: 'pointer'
         }} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-            <Card.Header className="bg-success text-center border border-top-0 border-right-0 border-left-0"
+            <Card.Header className="bg-info text-center border border-top-0 border-right-0 border-left-0"
                 style={{
                     ...backGroundCard,
                     height: 100
@@ -55,25 +55,25 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
                 }}
                     title={titlepremioLiquido}
                 >
-                    <Icon name="fa-solid fa-trophy text-success" /> <strong className="text-secondary">Retorno do valor liquido do seguro:</strong> <span className="text-success">R$ {premioLiquido}</span>
+                    <Icon name="fa-solid fa-trophy text-info" /> <strong className="text-secondary">Retorno do valor liquido do seguro:</strong> <span className="text-info">R$ {premioLiquido}</span>
                 </Card.Text>
                 {plot && (
                     <>
                         <Card.Text className="text-secondary" title={titleValorIOF}>
-                            <Icon name="fa fa-solid fa-star text-success" /> IOF de <span className="text-success">R$ {plot?.valorIOF}</span>
+                            <Icon name="fa fa-solid fa-star text-info" /> IOF de <span className="text-info">R$ {plot?.valorIOF}</span>
                         </Card.Text>
                     </>
                 )}
                 {Parcela.length && (<Card.Text>
-                    <Link onClick={handleShow} to={'#'} className="text-decoration-none text-success font-weight-bold">
-                        <Icon name="fa fa-solid fa-eye text-success" /> Ver todas as possíveis parcelas
+                    <Link onClick={handleShow} to={'#'} className="text-decoration-none text-info font-weight-bold">
+                        <Icon name="fa fa-solid fa-eye text-info" /> Ver todas as possíveis parcelas
                     </Link>
                 </Card.Text>)}
             </Card.Body>
             {plot && (
                 <Card.Footer className="text-center border border-bottom-0 border-right-0 border-left-0" style={backGroundCard}>
                     <div className="d-flex justify-content-center align-items-center">
-                        <Card.Title className="text-success mr-2 mt-2">
+                        <Card.Title className="text-info mr-2 mt-2">
                             R$ {plot.valorTotal.toLocaleString()}
                         </Card.Title>
                         <span className="text-secondary">à vista</span>
@@ -82,7 +82,7 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
                         Em até {plot.quantidade}x de R$ {plot._value_1.toLocaleString()}
                     </small>
                     <div className="d-grid gap-2 w-100">
-                        <Button variant="success" className="w-100" size="lg" onClick={onSubmit}>
+                        <Button variant="info" className="w-100" size="lg" onClick={onSubmit}>
                             Aceitar Proposta
                         </Button>
                     </div>

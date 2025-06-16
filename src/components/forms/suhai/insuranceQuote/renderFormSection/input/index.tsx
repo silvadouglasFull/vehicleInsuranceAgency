@@ -33,7 +33,7 @@ export const Input: React.FC<FormField> = ({
                     {required && <span className="text-danger ms-1" >* </span>}
                     {helperLink && title && <Badge style={{
                         cursor: 'pointer'
-                    }} bg="success"
+                    }} bg="info"
                         title={title} onClick={handleLink}>
                         <Icon name="fa-solid fa-circle-question text-light" />
                     </Badge>}

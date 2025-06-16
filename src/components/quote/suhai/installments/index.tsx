@@ -6,7 +6,7 @@ import { Card, Container, Row } from "react-bootstrap";
 export const InstallMents: React.FC<InstallMentsProps> = ({ installments }: InstallMentsProps) => {
     return (
         <Container className="mt-5">
-            <Card.Title className="text-success">Parcelas Individuais</Card.Title>
+            <Card.Title className="text-info">Parcelas Individuais</Card.Title>
             <Row>
                 {installments.length ? installments.map(item => (
                     <Plot {...item} key={item.numberPlot} />

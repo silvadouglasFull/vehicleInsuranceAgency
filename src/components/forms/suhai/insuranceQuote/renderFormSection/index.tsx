@@ -6,7 +6,7 @@ import { Card, Row } from 'react-bootstrap';
 export const RenderFormSection: React.FC<TRenderFormSection> = ({ fields, title }: TRenderFormSection) => {
     return (
         <Card bg="light" className="mb-4 shadow-sm">
-            <Card.Header className="bg-success text-white">
+            <Card.Header className="bg-info text-white">
                 <Card.Title className="mb-0">{title}</Card.Title>
             </Card.Header>
             <Card.Body>

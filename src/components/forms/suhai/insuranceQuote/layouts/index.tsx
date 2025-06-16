@@ -36,9 +36,9 @@ export const FormLayout: React.FC = () => {
             setLoading(true)
             const payload = createPayload({ formData })
             const response = await fetchIncluirCotacao({ ...payload })
-            const { data, error, success, status } = response
+            const { data, error, info, status } = response
             setLoading(false)
-            if (error && (!success)) {
+            if (error && (!info)) {
                 setMessage(error ?? 'Não foi possível completar sua solicitação')
             }
             setStatusCode(status as StatusCode)
@@ -76,7 +76,7 @@ export const FormLayout: React.FC = () => {
                     <div className="text-center mt-4">
                         <Button
                             type="submit"
-                            variant="success"
+                            variant="info"
                             size="lg"
                             className="px-5 py-3 fw-bold shadow"
                         >

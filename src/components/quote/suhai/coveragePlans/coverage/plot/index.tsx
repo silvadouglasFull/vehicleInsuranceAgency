@@ -26,7 +26,7 @@ export const Plot = ({ _value_1, quantidade, valorIOF, valorJuros, valorTotal }:
             </Row>
             <Row className="text-center">
                 <Col className="mb-3">
-                    <Card.Title className="text-success">
+                    <Card.Title className="text-info">
                         R$ {valorTotal.toFixed(2)}
                     </Card.Title>
                 </Col>

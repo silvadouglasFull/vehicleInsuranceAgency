@@ -40,7 +40,7 @@ export const DefaultLayout: React.FC = () => {
                 sendProposal={sendProposal}
                 PremioCoberturas={awardCoverage} />)}
             <Container>
-                <Card.Text className="text-success">
+                <Card.Text className="text-info">
                     Outras informações
                 </Card.Text>
             </Container>

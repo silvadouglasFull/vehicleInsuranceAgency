@@ -6,7 +6,7 @@ export const CovaragePlans: React.FC<Calculo> = ({ PremioCoberturas, sendProposa
     const { Cobertura } = PremioCoberturas
     return (
         <Container className="mt-5">
-            <Card.Title className="text-success">Planos de Cobertura</Card.Title>
+            <Card.Title className="text-info">Planos de Cobertura</Card.Title>
             <Row>
                 {Cobertura.length ? Cobertura.map(item => (
                     <Col key={item.id} sm={12} md={4}>

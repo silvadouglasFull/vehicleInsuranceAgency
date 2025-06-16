@@ -5,7 +5,7 @@ import { Card, Col, Container, Row } from "react-bootstrap"
 export const BasicInfo: React.FC<BasicInfoProps> = ({ premioLiquido, premioTotalAVista, protocolo }: BasicInfoProps) => {
     return (
         <Container>
-            <Card.Title className="text-success">Informações Básicas</Card.Title>
+            <Card.Title className="text-info">Informações Básicas</Card.Title>
             <Row>
                 <Col sm={12} md={4}>
                     <Card.Text>
@@ -14,12 +14,12 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({ premioLiquido, premioTotal
                 </Col>
                 <Col sm={12} md={4}>
                     <Card.Text>
-                        <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-success" />  Retorno do valor liquido do seguro:</strong> <span className="text-success">R$ {premioLiquido}</span>
+                        <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-info" />  Retorno do valor liquido do seguro:</strong> <span className="text-info">R$ {premioLiquido}</span>
                     </Card.Text>
                 </Col>
                 <Col sm={12} md={4}>
                     <Card.Text>
-                        <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-success" />  Retorno do valor total do seguro:</strong> <span className="text-success">R$ {premioTotalAVista}</span>
+                        <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-info" />  Retorno do valor total do seguro:</strong> <span className="text-info">R$ {premioTotalAVista}</span>
                     </Card.Text>
                 </Col>
             </Row>
