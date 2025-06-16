@@ -1,5 +1,5 @@
-import type { AwardCoverage, InfoFipe, Installments, RCF, Summary, UseDataQuote } from "@pages/quote/layouts/hooks/useDataQuote/types";
-import type { State } from "@pages/quote/layouts/hooks/useGetParamsScreen/types";
+import type { AwardCoverage, InfoFipe, Installments, RCF, Summary, UseDataQuote } from "@pages/proposal/layouts/hooks/useDataQuote/types";
+import type { State } from "@pages/proposal/layouts/hooks/useGetParamsScreen/types";
 import { useEffect, useState } from "react";
 export const useDataQuote = (data: State | null): UseDataQuote => {
     const [summary, setSummary] = useState<Summary | null>(null)

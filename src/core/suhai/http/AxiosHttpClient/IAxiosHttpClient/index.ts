@@ -1,6 +1,6 @@
-import type { AxiosRequestConfig, AxiosResponse } from 'axios';
+import type { AxiosRequestConfig } from 'axios';
 
 export interface IAxiosHttpClient {
-    get<T = any, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig): Promise<T>
-    post<T = any, R = AxiosResponse<T>>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>
+    get<T = unknown>(url: string, config?: AxiosRequestConfig): Promise<T>
+    post<T = unknown>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<T>
 }

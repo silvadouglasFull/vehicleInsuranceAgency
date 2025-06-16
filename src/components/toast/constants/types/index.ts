@@ -1,4 +1,4 @@
-import type { StatusCode } from "@api/types";
+import type { StatusCode } from "@api/statusCode/types";
 import type { Variant } from "react-bootstrap/esm/types";
 export type Item = {
     statusCode: StatusCode

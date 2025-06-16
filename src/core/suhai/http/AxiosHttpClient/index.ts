@@ -1,5 +1,5 @@
 import type { IAxiosHttpClient } from '@core/suhai/http/AxiosHttpClient/IAxiosHttpClient';
-import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import type { AxiosInstance, AxiosRequestConfig } from 'axios';
 import axios from 'axios';
 export class AxiosHttpClient implements IAxiosHttpClient {
     private readonly client: AxiosInstance;
@@ -15,7 +15,7 @@ export class AxiosHttpClient implements IAxiosHttpClient {
         });
     }
 
-    async post<T = any, R = AxiosResponse<T>>(url: string, data?: object, config?: AxiosRequestConfig): Promise<T> {
+    async post<T = unknown>(url: string, data?: object, config?: AxiosRequestConfig): Promise<T> {
         const response = await this.client.post<T>(url, data, config);
         const { data: responseData, status } = response
         return {
@@ -23,7 +23,7 @@ export class AxiosHttpClient implements IAxiosHttpClient {
             status
         };
     }
-    async get<T = any, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig): Promise<T> {
+    async get<T = unknown>(url: string, config?: AxiosRequestConfig): Promise<T> {
         const response = await this.client.get<T>(url, config);
         const { data: responseData, status } = response
         return {
