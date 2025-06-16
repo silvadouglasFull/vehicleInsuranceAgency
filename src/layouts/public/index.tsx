@@ -21,6 +21,9 @@ export const PublicLayout = () => {
     useEffect(() => {
         window.document.title = titlePage
     }, [titlePage])
+    useEffect(() => {
+        window.scrollTo({ behavior: 'smooth', left: 0, top: 0 })
+    }, [titlePage])
     return (
         <>
             <NavigationBar />
