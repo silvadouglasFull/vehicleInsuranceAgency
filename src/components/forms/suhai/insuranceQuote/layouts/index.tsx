@@ -12,9 +12,10 @@ import { FormPaymentDetails } from "@components/forms/suhai/insuranceQuote/payme
 import { FormPersonalData } from "@components/forms/suhai/insuranceQuote/personalData";
 import { FormVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData";
 import { FormVehicleValue } from "@components/forms/suhai/insuranceQuote/vehicleValue";
+import { Spinner } from "@components/spinner";
 import { Toast } from "@components/toast";
 import { useToast } from "@components/toast/hooks/useToast";
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
@@ -22,6 +23,7 @@ export const FormLayout: React.FC = () => {
     const { state: formData } = useInsuranceQuote();
     const { onClose, show, setMessage, setStatusCode, statusCode, message: messageResponse } = useToast()
     const navigate = useNavigate()
+    const [loading, setLoading] = useState<boolean>(false)
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         const requiredFields = requiredFormsFields({ formFiels: formLabels })
@@ -30,9 +32,11 @@ export const FormLayout: React.FC = () => {
             setMessage(listToast)
             setStatusCode(420)
         } else {
+            setLoading(true)
             const payload = createPayload({ formData })
             const response = await fetchIncluirCotacao({ ...payload })
             const { data, error, success, status } = response
+            setLoading(false)
             if (error && (!success)) {
                 setMessage(error ?? 'Não foi possível completar sua solicitação')
             }
@@ -60,7 +64,7 @@ export const FormLayout: React.FC = () => {
                         size="lg"
                         className="px-5 py-3 fw-bold shadow"
                     >
-                        Solicitar Cotação
+                        Solicitar Cotação {loading && <Spinner animation="border" />}
                     </Button>
                 </div>
             </Form>

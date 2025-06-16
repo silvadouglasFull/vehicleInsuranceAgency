@@ -1,4 +1,4 @@
-import { DefaultLayout } from "@pages/quote/layouts";
+import { DefaultLayout } from "@pages/proposal/layouts";
 import React from "react";
 import { Container } from "react-bootstrap";
 export const Proposta: React.FC = () => {

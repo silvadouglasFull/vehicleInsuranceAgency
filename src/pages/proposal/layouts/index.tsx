@@ -6,10 +6,10 @@ import { RFC } from "@components/quote/suhai/rcf";
 import { Toast } from "@components/toast";
 import { useToast } from "@components/toast/hooks/useToast";
 import { useCreatePayloadSendProposal } from "@pages/proposal/hooks/useCreatePayloadSendProposal";
+import { useDataQuote } from "@pages/proposal/layouts/hooks/useDataQuote";
+import { useGetParamsSecreen } from "@pages/proposal/layouts/hooks/useGetParamsScreen";
+import type { State } from "@pages/proposal/layouts/hooks/useGetParamsScreen/types";
 import { fetchEnviarProposta } from "@pages/proposal/modules/fetchTransmitirProposta";
-import { useDataQuote } from "@pages/quote/layouts/hooks/useDataQuote";
-import { useGetParamsSecreen } from "@pages/quote/layouts/hooks/useGetParamsScreen";
-import type { State } from "@pages/quote/layouts/hooks/useGetParamsScreen/types";
 import React from "react";
 import { Card, Container } from "react-bootstrap";
 
@@ -46,6 +46,11 @@ export const DefaultLayout: React.FC = () => {
             </Container>
             {rcf && (<RFC RFC={rcf} />)}
             <Toast message={messageResponse} onclose={onClose} show={show} statusCode={statusCode} />
+            {payload && (Object.keys(payload) as Array<keyof typeof payload>).map(item => (
+                <Card.Text key={String(item)}>
+                    {item}: {payload[item]}
+                </Card.Text>
+            ))}
         </>
     )
 }

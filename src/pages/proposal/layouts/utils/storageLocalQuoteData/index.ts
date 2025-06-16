@@ -1,5 +1,5 @@
-import type { State } from "@pages/quote/layouts/hooks/useGetParamsScreen/types";
-import { keysToLocalStorageData } from "@pages/quote/layouts/utils/storageLocalQuoteData/constants";
+import type { State } from "@pages/proposal/layouts/hooks/useGetParamsScreen/types";
+import { keysToLocalStorageData } from "@pages/proposal/layouts/utils/storageLocalQuoteData/constants";
 import { localStorage } from "@utils/persisteRetrieveLocalData/localStorage/persiteData";
 import type { TRetrieve } from "@utils/persisteRetrieveLocalData/localStorage/persiteData/instance/types";
 export const storageLocalQuoteData = async (data: State | null): Promise<void> => {

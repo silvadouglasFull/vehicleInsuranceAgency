@@ -1,6 +1,6 @@
 import type { States } from "@components/forms/suhai/insuranceQuote/context/types"
-import type { State, UseGetParamsSecreen } from "@pages/quote/layouts/hooks/useGetParamsScreen/types"
-import { retrieveLocalQuoteData, storageLocalQuoteData } from "@pages/quote/layouts/utils/storageLocalQuoteData"
+import type { State, UseGetParamsSecreen } from "@pages/proposal/layouts/hooks/useGetParamsScreen/types"
+import { retrieveLocalQuoteData, storageLocalQuoteData } from "@pages/proposal/layouts/utils/storageLocalQuoteData"
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 

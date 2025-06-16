@@ -3,5 +3,5 @@ import { container } from "@modules/suhai/transmitirProposta/services/util/trans
 import type { TransformToRequestProposta } from "@modules/suhai/transmitirProposta/services/util/transformToRequestProposta/types";
 
 export const transformToRequestProposta = {
-    transform: ({ stateOfContext, stateOfScreenParams }: TransformToRequestProposta): TransmitirPropostaRequest => container(stateOfContext).execute(stateOfScreenParams)
+    transform: ({ stateOfContext, stateOfScreenParams }: TransformToRequestProposta): Promise<TransmitirPropostaRequest> => container(stateOfContext).execute(stateOfScreenParams)
 }

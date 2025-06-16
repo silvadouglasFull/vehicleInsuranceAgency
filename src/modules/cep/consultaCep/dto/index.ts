@@ -16,5 +16,5 @@ export type ResponseConsultaCEP = {
 }
 export type RequestConsultaCEP = {
     cep: string
-    signal: AbortSignal
+    signal?: AbortSignal
 }
