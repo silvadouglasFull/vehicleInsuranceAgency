@@ -32,7 +32,7 @@ export class TransformToRequestProposta implements ITransformToRequestProposta {
             ramal_com: '',
             ramal_res: '',
             end_nom_log: endereco ?? '',
-            end_num: '',
+            end_num: '0',
             bairro: bairro ?? '',
             end_compl: endereco ?? '',
             uf: uf ?? '',

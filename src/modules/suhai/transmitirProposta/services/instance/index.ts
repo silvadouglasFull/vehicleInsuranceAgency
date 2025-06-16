@@ -17,6 +17,7 @@ export class SuhaiService implements ISuhaiServices {
         this.http = new AxiosHttpClient(this.host);
     }
     async post(data: TransmitirPropostaRequest): Promise<TransmitirPropostaResponse> {
-        return this.http.post<TransmitirPropostaResponse>(`${this.endPoints.transmitirproposta}`, data);
+        const response = await this.http.post<TransmitirPropostaResponse>(`${this.endPoints.transmitirproposta}`, data);
+        return response
     }
 }

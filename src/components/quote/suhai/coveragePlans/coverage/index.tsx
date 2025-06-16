@@ -6,6 +6,7 @@ import { backGroundCard } from "@components/quote/suhai/coveragePlans/coverage/s
 import type { CoberturaItem } from "@components/quote/suhai/coveragePlans/types";
 import ModalQuote from "@components/quote/suhai/modal";
 import { useShowModal } from '@components/quote/suhai/modal/hooks/useShowModal';
+import { Spinner } from "@components/spinner";
 import type React from "react";
 import { useState } from "react";
 import { Button, Card } from "react-bootstrap";
@@ -18,6 +19,7 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
     const { handleShow, handleClose, show } = useShowModal()
     const titleValorIOF = useGetExplanationForKeys({ key: 'valorIOF' })
     const titlepremioLiquido = useGetExplanationForKeys({ key: 'premioLiquido' })
+    const [loading, setLoading] = useState<boolean>(false)
     const onMouseEnter = () => {
         setClassNameCard('mb-4 border-info')
     }
@@ -32,9 +34,11 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
         }
         return <Card.Text>Não há parcelas para serem exibidas</Card.Text>
     }
-    const onSubmit = () => {
+    const onSubmit = async () => {
         if (sendProposal) {
-            sendProposal()
+            setLoading(true)
+            await sendProposal()
+            setLoading(false)
         }
     }
     return (
@@ -83,7 +87,7 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
                     </small>
                     <div className="d-grid gap-2 w-100">
                         <Button variant="info" className="w-100" size="lg" onClick={onSubmit}>
-                            Aceitar Proposta
+                            {loading ? (<Spinner animation="border" />) : 'Aceitar Proposta'}
                         </Button>
                     </div>
                 </Card.Footer>

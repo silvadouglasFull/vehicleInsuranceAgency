@@ -1,7 +1,7 @@
+import { Coverage } from "@components/quote/suhai/coveragePlans/coverage";
 import type { Calculo } from "@components/quote/suhai/coveragePlans/types";
 import type React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import { Coverage } from "./coverage";
 export const CovaragePlans: React.FC<Calculo> = ({ PremioCoberturas, sendProposal }: Calculo) => {
     const { Cobertura } = PremioCoberturas
     return (
