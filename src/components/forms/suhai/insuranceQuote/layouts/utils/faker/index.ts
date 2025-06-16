@@ -1,6 +1,6 @@
 import type { States } from "@components/forms/suhai/insuranceQuote/context/types"
+import type { FakerFormProps } from "@components/forms/suhai/insuranceQuote/layouts/utils/faker/types"
 import type { IncluirCotacaoRequest } from "@modules/suhai/incluirCotacao/dtos"
-import type { FakerFormProps } from "./types"
 
 export const fakerForm = ({ handleForm }: FakerFormProps): IncluirCotacaoRequest => {
     const data: IncluirCotacaoRequest = {
