@@ -1,10 +1,10 @@
-import cardService1 from '@assets/suhai/imagens/cards/1.png';
-import cardService2 from "@assets/suhai/imagens/cards/2.png";
-import cardService3 from "@assets/suhai/imagens/cards/3.png";
-import logo from "@assets/suhai/imagens/logo.png";
-import slide1 from "@assets/suhai/imagens/slides/1.png";
-import slide2 from "@assets/suhai/imagens/slides/2.jpg";
-import slide3 from "@assets/suhai/imagens/slides/3.png";
+import cardService1 from '@assets/seuSeguroNoClick/imagens/cards/1.png';
+import cardService2 from "@assets/seuSeguroNoClick/imagens/cards/2.png";
+import cardService3 from "@assets/seuSeguroNoClick/imagens/cards/3.png";
+import logo from "@assets/seuSeguroNoClick/imagens/logo.png";
+import slide1 from "@assets/seuSeguroNoClick/imagens/slides/1.png";
+import slide2 from "@assets/seuSeguroNoClick/imagens/slides/2.jpg";
+import slide3 from "@assets/seuSeguroNoClick/imagens/slides/3.png";
 import type { BreadCrumps, Slide } from "@flavor/assets/types";
 export { cardService1, cardService2, cardService3, logo };
 export const slides: Slide[] = [
