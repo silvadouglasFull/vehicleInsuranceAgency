@@ -8,7 +8,7 @@ const CallToAction = () => {
     return (
         <section className="bg-success text-dark py-5 text-center">
             <Container>
-                <h2 className="fw-bold">Faça sua cotação agora mesmo!</h2>
+                <h2 className="fw-bold text-light">Faça sua cotação agora mesmo!</h2>
                 <Button variant="dark" href="#cotacao" className="mt-3">
                     Fazer Cotação
                 </Button>
