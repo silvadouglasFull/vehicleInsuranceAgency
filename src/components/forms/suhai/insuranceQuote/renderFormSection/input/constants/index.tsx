@@ -1,5 +1,6 @@
 import type { FormProps } from "@components/forms/suhai/insuranceQuote/constants/types";
 import type { InputsType } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/constants/types";
+import { RenderFormControllAdress } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllAddress";
 import { FormControllCEP } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllCep";
 import { FormControllCodFipe } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllCodFipe";
 import { FormControllDoc } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllDoc";
@@ -11,6 +12,7 @@ import { SelectPergunta4 } from "@components/forms/suhai/insuranceQuote/renderFo
 import { SelectEstadoCivilPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/maritalStatus";
 import { SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/sexo";
 import { SelectCodigoCobertura } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/codigoCobertura";
+import { SelectFormaPagamento } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/formaPagamento";
 import { SelectTipoContratacao } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/tipoContratacao";
 import { SelectEstadoCivil } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData";
 import { SelectSexo } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData/sexo";
@@ -20,7 +22,6 @@ import { SelectModel } from "@components/forms/suhai/insuranceQuote/renderFormSe
 import { SelectOutroVeiculo } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/outroVeiculo";
 import { SelectTipoUtilizacao } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/tipoUtilizacao";
 import { SelectZero } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/zeroKm";
-import { RenderFormControllAdress } from "../renderFormControllAddress";
 export const inputTypes: InputsType[] = [
     {
         type: 'marca',
@@ -101,5 +102,8 @@ export const inputTypes: InputsType[] = [
     {
         type: 'endereco',
         component: (props?: Select2BootStrap | FormProps) => <RenderFormControllAdress {...props as FormProps} />
+    }, {
+        type: 'formaPagamento',
+        component: (props?: Select2BootStrap | FormProps) => <SelectFormaPagamento {...props as Select2BootStrap} />
     }
 ];

@@ -20,6 +20,7 @@ export type Key =
     | 'garagemPergunta3'
     | 'garagemPergunta4'
     | 'codigoCobertura'
+    | 'formaPagamento'
 export type RequestBodyOptions = {
     key: Key
     signal?: AbortSignal

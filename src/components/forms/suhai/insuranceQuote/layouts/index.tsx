@@ -12,7 +12,6 @@ import { fetchIncluirCotacao } from "@components/forms/suhai/insuranceQuote/modu
 import { FormPaymentDetails } from "@components/forms/suhai/insuranceQuote/paymentDetails";
 import { FormPersonalData } from "@components/forms/suhai/insuranceQuote/personalData";
 import { FormVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData";
-import { FormVehicleValue } from "@components/forms/suhai/insuranceQuote/vehicleValue";
 import { Spinner } from "@components/spinner";
 import { Toast } from "@components/toast";
 import { useToast } from "@components/toast/hooks/useToast";
@@ -36,9 +35,9 @@ export const FormLayout: React.FC = () => {
             setLoading(true)
             const payload = createPayload({ formData })
             const response = await fetchIncluirCotacao({ ...payload })
-            const { data, error, info, status } = response
+            const { data, error, status } = response
             setLoading(false)
-            if (error && (!info)) {
+            if (error) {
                 setMessage(error ?? 'Não foi possível completar sua solicitação')
             }
             setStatusCode(status as StatusCode)
@@ -55,7 +54,6 @@ export const FormLayout: React.FC = () => {
                     <FormVehicleData />
                 </AnimationSlide>
                 <AnimationSlide direction="right">
-                    <FormVehicleValue />
                 </AnimationSlide>
                 <AnimationSlide direction="left">
                     <FormPersonalData />

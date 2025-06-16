@@ -103,7 +103,7 @@ export const formLabels: FormField[] = [
         idControll: 'formaPagamento',
         label: 'Forma de Pagamento',
         name: 'formaPagamento',
-        type: 'text',
+        type: 'formaPagamento',
         placeholder: 'Ex: boleto, cartão',
         required: true,
         maxLength: 100
@@ -300,10 +300,20 @@ export const formLabels: FormField[] = [
         type: 'cdCobertura',
         placeholder: 'Tipo de Cobertura',
         required: true
+    },
+    {
+        id: 33,
+        name: 'chassi',
+        idControll: 'chassi',
+        label: 'Chassi do Veículo',
+        type: 'text',
+        placeholder: 'Chassi do Veículo',
+        required: true,
+        maxLength: 17
     }
 ];
 export const personalData: GroupForms = [14, 15, 27, 28, 29]; // sexo, estado civil
-export const vehicleData: GroupForms = [16, 17, 18, 31]; // zeroKm, tipoUtilizacao, possuiOutroVeic, tipoContratacao
+export const vehicleData: GroupForms = [9, 16, 17, 18, 31, 33]; // zeroKm, tipoUtilizacao, possuiOutroVeic, tipoContratacao
 export const mainDriverData: GroupForms = [20, 21, 30]; // sexoPrincipalCondutor, estadoCivilPrincipalCondutor
 export const garageData: GroupForms = [22, 23, 24, 25]; // pergunta1
 export const dadosCaminhao = [26]; // pergunta6

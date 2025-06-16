@@ -6,7 +6,7 @@ export const fakerForm = ({ handleForm }: FakerFormProps): IncluirCotacaoRequest
     const data: IncluirCotacaoRequest = {
         anoModelo: "2011",
         cepPernoite: "63900425",
-        chassi: "",
+        chassi: "5AFFB55P3E7895",
         anoFabricacao: "2011",
         cpfCnpj: "13434163883",
         cpfCnpjPrincipalCondutor: "13434163883",

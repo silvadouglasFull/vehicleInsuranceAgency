@@ -62,3 +62,7 @@ export const fetchCodigoCobertura = async ({ signal }: FetchOptions): Promise<Re
     const response: ResponseFormOptions = await formOptions.options({ signal, key: 'codigoCobertura' })
     return { ...response }
 }
+export const fetchFormaPagamento = async ({ signal }: FetchOptions) => {
+    const response: ResponseFormOptions = await formOptions.options({ key: 'formaPagamento', signal })
+    return { ...response }
+}
