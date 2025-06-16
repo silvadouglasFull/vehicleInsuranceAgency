@@ -1,8 +1,4 @@
 export type FormatParams = {
-    firstWord: string
-    secoundWord: string
+    estado: string
 }
-export type Format = {
-    firstLatterOfFirstWord: string;
-    firstLatterOfSecoundWord: string;
-}
+export type Format = string

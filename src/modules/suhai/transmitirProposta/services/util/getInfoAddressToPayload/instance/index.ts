@@ -10,6 +10,7 @@ export class GetInfoAddressToPayload implements IInstance {
     async getInfoToPayload({ cep }: GetInfoToPayloadParams): Promise<GetInfoToPayload> {
         const response = await this.htpp.get({ cep })
         return {
+            endereco: response.logradouro,
             cidade: response.localidade,
             uf: response.estado,
             bairro: response.bairro,

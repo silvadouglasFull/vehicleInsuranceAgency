@@ -1,0 +1,31 @@
+import type { EstadoBrasil } from "@modules/cep/consultaCep/services/util/formatEstado/constants/types";
+
+export const estadosBrasil: EstadoBrasil[] = [
+    { estado: "Acre", codigoEstado: "AC" },
+    { estado: "Alagoas", codigoEstado: "AL" },
+    { estado: "Amapá", codigoEstado: "AP" },
+    { estado: "Amazonas", codigoEstado: "AM" },
+    { estado: "Bahia", codigoEstado: "BA" },
+    { estado: "Ceará", codigoEstado: "CE" },
+    { estado: "Distrito Federal", codigoEstado: "DF" },
+    { estado: "Espírito Santo", codigoEstado: "ES" },
+    { estado: "Goiás", codigoEstado: "GO" },
+    { estado: "Maranhão", codigoEstado: "MA" },
+    { estado: "Mato Grosso", codigoEstado: "MT" },
+    { estado: "Mato Grosso do Sul", codigoEstado: "MS" },
+    { estado: "Minas Gerais", codigoEstado: "MG" },
+    { estado: "Pará", codigoEstado: "PA" },
+    { estado: "Paraíba", codigoEstado: "PB" },
+    { estado: "Paraná", codigoEstado: "PR" },
+    { estado: "Pernambuco", codigoEstado: "PE" },
+    { estado: "Piauí", codigoEstado: "PI" },
+    { estado: "Rio de Janeiro", codigoEstado: "RJ" },
+    { estado: "Rio Grande do Norte", codigoEstado: "RN" },
+    { estado: "Rio Grande do Sul", codigoEstado: "RS" },
+    { estado: "Rondônia", codigoEstado: "RO" },
+    { estado: "Roraima", codigoEstado: "RR" },
+    { estado: "Santa Catarina", codigoEstado: "SC" },
+    { estado: "São Paulo", codigoEstado: "SP" },
+    { estado: "Sergipe", codigoEstado: "SE" },
+    { estado: "Tocantins", codigoEstado: "TO" }
+];

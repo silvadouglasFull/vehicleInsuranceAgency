@@ -4,5 +4,8 @@
  * @returns A string limpa
  */
 export function sanitizeString(value: string): string {
-    return value.replace(/[^a-zA-Z0-9]/g, '');
+    return value
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+        .replace(/[^a-zA-Z0-9]/g, '');  // Remove não alfanuméricos
 }

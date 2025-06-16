@@ -15,7 +15,7 @@ export class TransformToRequestProposta implements ITransformToRequestProposta {
 
     async execute(state: State): Promise<TransmitirPropostaRequest> {
         const ctx = this.contextState;
-        const { bairro, cidade, ddd_cel: dddCel, ddd_res, uf } = await this.getInfoAdressToPayload.getInfoToPayload({ cep: ctx.cepPernoite ?? '' })
+        const { bairro, cidade, ddd_cel: dddCel, ddd_res, uf, endereco: end } = await this.getInfoAdressToPayload.getInfoToPayload({ cep: ctx.cepPernoite ?? '' })
         const ddd_cel = ctx?.ddd_cel ?? dddCel ?? ''
         const { endereco, num_cel } = ctx
         const celular = formatPhoneToPayload({ ddd_cel, num_cel: num_cel ?? '' })
@@ -31,10 +31,10 @@ export class TransformToRequestProposta implements ITransformToRequestProposta {
             num_res: celular ?? '',
             ramal_com: '',
             ramal_res: '',
-            end_nom_log: endereco ?? '',
+            end_nom_log: endereco ?? end ?? '',
             end_num: '0',
             bairro: bairro ?? '',
-            end_compl: endereco ?? '',
+            end_compl: endereco ?? end ?? '',
             uf: uf ?? '',
             cidade: cidade ?? '',
             cep: ctx?.cepPernoite ?? '',

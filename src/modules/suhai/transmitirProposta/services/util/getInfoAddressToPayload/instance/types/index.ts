@@ -7,4 +7,5 @@ export type GetInfoToPayload = {
     bairro?: string
     ddd_cel?: string
     ddd_res?: string
+    endereco?: string
 }
