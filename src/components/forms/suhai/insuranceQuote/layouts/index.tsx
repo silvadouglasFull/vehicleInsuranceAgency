@@ -1,4 +1,5 @@
 import type { StatusCode } from "@api/statusCode/types";
+import { AnimationSlide } from "@components/animationSlide/slideLeftRight";
 import { formLabels } from "@components/forms/suhai/insuranceQuote/constants";
 import { FormGarageData } from "@components/forms/suhai/insuranceQuote/garageData";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
@@ -50,23 +51,39 @@ export const FormLayout: React.FC = () => {
         <Container>
             <Toast message={messageResponse} onclose={onClose} show={show} statusCode={statusCode} />
             <Form onSubmit={handleSubmit}>
-                <FormVehicleData />
-                <FormVehicleValue />
-                <FormPersonalData />
-                <FormInsuredData />
-                <FormMainDriveData />
-                <FormGarageData />
-                <FormPaymentDetails />
-                <div className="text-center mt-4">
-                    <Button
-                        type="submit"
-                        variant="success"
-                        size="lg"
-                        className="px-5 py-3 fw-bold shadow"
-                    >
-                        Solicitar Cotação {loading && <Spinner animation="border" />}
-                    </Button>
-                </div>
+                <AnimationSlide direction="left">
+                    <FormVehicleData />
+                </AnimationSlide>
+                <AnimationSlide direction="right">
+                    <FormVehicleValue />
+                </AnimationSlide>
+                <AnimationSlide direction="left">
+                    <FormPersonalData />
+                </AnimationSlide>
+                <AnimationSlide direction="right">
+                    <FormInsuredData />
+                </AnimationSlide>
+                <AnimationSlide direction="left">
+                    <FormMainDriveData />
+                </AnimationSlide>
+                <AnimationSlide direction="right">
+                    <FormGarageData />
+                </AnimationSlide>
+                <AnimationSlide direction="left">
+                    <FormPaymentDetails />
+                </AnimationSlide>
+                <AnimationSlide direction="right">
+                    <div className="text-center mt-4">
+                        <Button
+                            type="submit"
+                            variant="success"
+                            size="lg"
+                            className="px-5 py-3 fw-bold shadow"
+                        >
+                            Solicitar Cotação {loading && <Spinner animation="border" />}
+                        </Button>
+                    </div>
+                </AnimationSlide>
             </Form>
         </Container>
     );
