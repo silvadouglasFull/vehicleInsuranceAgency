@@ -1,5 +1,7 @@
 import { Icon } from "@components/icons";
 import { useGetMaxInstallments } from "@components/quote/suhai/coveragePlans/coverage/hooks/useGetMaxInstallments";
+import { useGetExplanationForKeys } from "@components/quote/suhai/coveragePlans/coverage/hooks/useGetTitleExplanationForKeys";
+import { Plot } from "@components/quote/suhai/coveragePlans/coverage/plot";
 import { backGroundCard } from "@components/quote/suhai/coveragePlans/coverage/styles";
 import type { CoberturaItem } from "@components/quote/suhai/coveragePlans/types";
 import ModalQuote from "@components/quote/suhai/modal";
@@ -8,13 +10,14 @@ import type React from "react";
 import { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { Plot } from "./plot";
 
 export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLiquido }: CoberturaItem) => {
     const { Parcela } = Parcelamento
     const { plot } = useGetMaxInstallments(Parcela)
     const [classNameCard, setClassNameCard] = useState<string>('mb-4')
     const { handleShow, handleClose, show } = useShowModal()
+    const titleValorIOF = useGetExplanationForKeys({ key: 'valorIOF' })
+    const titlepremioLiquido = useGetExplanationForKeys({ key: 'premioLiquido' })
     const onMouseEnter = () => {
         setClassNameCard('mb-4 border-success')
     }
@@ -44,12 +47,14 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
             <Card.Body className="text-center">
                 <Card.Text style={{
                     paddingTop: '20%'
-                }}>
-                    <Icon name="fa-solid fa-trophy text-success" /> <strong className="text-secondary">Prêmio Líquido:</strong> <span className="text-success">R$ {premioLiquido}</span>
+                }}
+                    title={titlepremioLiquido}
+                >
+                    <Icon name="fa-solid fa-trophy text-success" /> <strong className="text-secondary">Retorno do valor liquido do seguro:</strong> <span className="text-success">R$ {premioLiquido}</span>
                 </Card.Text>
                 {plot && (
                     <>
-                        <Card.Text className="text-secondary">
+                        <Card.Text className="text-secondary" title={titleValorIOF}>
                             <Icon name="fa fa-solid fa-star text-success" /> IOF de <span className="text-success">R$ {plot?.valorIOF}</span>
                         </Card.Text>
                     </>
@@ -73,7 +78,7 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
                     </small>
                     <div className="d-grid gap-2 w-100">
                         <Button variant="success" className="w-100" size="lg">
-                            Comprar
+                            Aceitar Proposta
                         </Button>
                     </div>
                 </Card.Footer>

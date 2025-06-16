@@ -13,6 +13,7 @@ export const DefaultLayout: React.FC = () => {
     return (
         <>
             {summary && (<BasicInfo {...summary} />)}
+            {infoFipe && (<InfoFipe {...infoFipe} />)}
             {awardCoverage?.Cobertura?.length && (<CovaragePlans PremioCoberturas={awardCoverage} />)}
             <Container>
                 <Card.Text className="text-success">
@@ -20,7 +21,6 @@ export const DefaultLayout: React.FC = () => {
                 </Card.Text>
             </Container>
             {installments?.length && (<InstallMents installments={installments} />)}
-            {infoFipe && (<InfoFipe {...infoFipe} />)}
             {rcf && (<RFC RFC={rcf} />)}
         </>
     )

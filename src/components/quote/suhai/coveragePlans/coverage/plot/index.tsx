@@ -1,6 +1,8 @@
 import type { Parcela } from "@components/quote/suhai/coveragePlans/types";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { useGetExplanationForKeys } from "../hooks/useGetTitleExplanationForKeys";
 export const Plot = ({ _value_1, quantidade, valorIOF, valorJuros, valorTotal }: Parcela) => {
+    const titleValorJuros = useGetExplanationForKeys({ key: 'valorJuros' })
     return (
         <Container fluid>
             <Row>
@@ -15,7 +17,11 @@ export const Plot = ({ _value_1, quantidade, valorIOF, valorJuros, valorTotal }:
                         </strong> R$ {valorIOF.toFixed(2)}</Card.Text>
                 </Col>
                 <Col sm={4} className="mb-3">
-                    <Card.Text> <strong className="text-secondary">Juros:</strong> R$ {valorJuros.toFixed(2)}</Card.Text>
+                    <Card.Text
+                        title={titleValorJuros}
+                    > <strong className="text-secondary">Juros:</strong>
+                        R$ {valorJuros.toFixed(2)}
+                    </Card.Text>
                 </Col>
             </Row>
             <Row className="text-center">

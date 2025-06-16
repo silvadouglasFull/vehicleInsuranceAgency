@@ -8,49 +8,52 @@ export const useDataQuote = (data: State | null): UseDataQuote => {
     const [installments, setInstallments] = useState<Installments | null>(null)
     const [awardCoverage, setAwardCoverage] = useState<AwardCoverage | null>(null)
     useEffect(() => {
-        if (!data) {
-            return
-        }
-        const {
-            premioLiquido,
-            premioTotalAVista,
-            protocolo,
-            textoMsgRet,
-            fatorFipe,
-            valorFipe,
-            valorFipexFator,
-            parcelas,
-            Calculo: {
-                RCF: {
-                    premioDanosCorporais,
-                    premioDanosMateriais,
-                    premioDanosMorais
+        try {
+            if (!data) {
+                return
+            }
+            const {
+                premioLiquido,
+                premioTotalAVista,
+                protocolo,
+                textoMsgRet,
+                fatorFipe,
+                valorFipe,
+                valorFipexFator,
+                parcelas,
+                Calculo: {
+                    RCF: {
+                        premioDanosCorporais,
+                        premioDanosMateriais,
+                        premioDanosMorais
+                    },
+                    PremioCoberturas
                 },
-                PremioCoberturas
-            },
-        } = data
-        setAwardCoverage(PremioCoberturas)
-        setSummary({
-            premioLiquido,
-            premioTotalAVista,
-            protocolo,
-            textoMsgRet
-        })
-        setInfoFipe({
-            fatorFipe,
-            valorFipe,
-            valorFipexFator
-        })
-        setRfc({
-            premioDanosCorporais,
-            premioDanosMateriais,
-            premioDanosMorais
-        })
-        setInstallments(parcelas.map((item) => ({
-            numberPlot: item.numeroParcela,
-            plot: Number(item.valor)
-        })))
-
+            } = data
+            setAwardCoverage(PremioCoberturas)
+            setSummary({
+                premioLiquido,
+                premioTotalAVista,
+                protocolo,
+                textoMsgRet
+            })
+            setInfoFipe({
+                fatorFipe,
+                valorFipe,
+                valorFipexFator
+            })
+            setRfc({
+                premioDanosCorporais,
+                premioDanosMateriais,
+                premioDanosMorais
+            })
+            setInstallments(parcelas.map((item) => ({
+                numberPlot: item.numeroParcela,
+                plot: Number(item.valor)
+            })))
+        } catch (error) {
+            console.log(error)
+        }
     }, [data])
     return {
         summary,

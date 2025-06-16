@@ -14,12 +14,12 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({ premioLiquido, premioTotal
                 </Col>
                 <Col sm={12} md={4}>
                     <Card.Text>
-                        <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-success" />  Prêmio Líquido:</strong> <span className="text-success">R$ {premioLiquido}</span>
+                        <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-success" />  Retorno do valor liquido do seguro:</strong> <span className="text-success">R$ {premioLiquido}</span>
                     </Card.Text>
                 </Col>
                 <Col sm={12} md={4}>
                     <Card.Text>
-                        <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-success" />  Prêmio Total à Vista:</strong> <span className="text-success">R$ {premioTotalAVista}</span>
+                        <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-success" />  Retorno do valor total do seguro:</strong> <span className="text-success">R$ {premioTotalAVista}</span>
                     </Card.Text>
                 </Col>
             </Row>
