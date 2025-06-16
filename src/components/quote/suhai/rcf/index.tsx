@@ -10,17 +10,17 @@ export const RFC: React.FC<Calculo> = ({ RFC }: Calculo) => {
             <Row>
                 <Col>
                     <Card.Text>
-                        <strong className="text-secondary">Materiais:</strong> R$ {premioDanosMateriais}
+                        <strong className="text-secondary">Materiais:</strong> <span className="text-success font-weight-bold">R$ {premioDanosMateriais}</span>
                     </Card.Text>
                 </Col>
                 <Col>
                     <Card.Text>
-                        <strong className="text-secondary">Corporais:</strong> R$ {premioDanosCorporais}
+                        <strong className="text-secondary">Corporais:</strong> <span className="text-success font-weight-bold">R$ {premioDanosCorporais}</span>
                     </Card.Text>
                 </Col>
                 <Col>
                     <Card.Text>
-                        <strong className="text-secondary">Morais:</strong> R$ {premioDanosMorais}
+                        <strong className="text-secondary">Morais:</strong> <span className="text-success font-weight-bold">R$ {premioDanosMorais}</span>
                     </Card.Text>
                 </Col>
             </Row>
