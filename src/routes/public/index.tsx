@@ -1,5 +1,6 @@
 import { useChangeTitlePage } from '@hooks/useChangeTitlePage'
 import { PublicLayout } from '@layouts/public'
+import { Contacts } from '@pages/contacts'
 import { Home } from '@pages/home'
 import { Proposta } from '@pages/proposal'
 import { Quote } from '@pages/quote'
@@ -18,6 +19,7 @@ export const PublicRouter: React.FC = () => {
                 <Route index element={<Home />} />
                 <Route path='/cotacao' element={<Quote />} />
                 <Route path='/proposta' element={<Proposta />} />
+                <Route path='/contato' element={<Contacts />} />
             </Route>
         </Routes>
     )
