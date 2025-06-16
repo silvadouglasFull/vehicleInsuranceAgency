@@ -1,5 +1,5 @@
-import type { CoberturaItem } from "@components/quote/suhai/coveragePlans/types";
-import type { PlotProps } from "@components/quote/suhai/installments/plot/types";
+import type { CoberturaItem } from "@components/proposal/suhai/coveragePlans/types";
+import type { PlotProps } from "@components/proposal/suhai/installments/plot/types";
 export type Summary = {
     premioLiquido: string;
     premioTotalAVista: string;

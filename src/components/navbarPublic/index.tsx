@@ -19,7 +19,7 @@ const NavigationBar = () => {
             style={hasBackground ? styles.bgDefault : styles.bgTransparent}>
             <Container>
                 <Navbar.Brand className='d-none d-md-block' as={Link} to={'/'}>
-                    <Logo />
+                    <Logo width={'100%'} height={'100%'} />
                 </Navbar.Brand>
                 <Navbar.Brand className='d-block d-md-none' as={Link} to={'/'}>
                     <Logo height={'50%'} width={'60%'} />

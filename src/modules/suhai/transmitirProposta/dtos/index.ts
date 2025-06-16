@@ -34,14 +34,19 @@ export interface TransmitirPropostaRequest {
     cdCobertura: string;
     data_saida_concessionaria: string;
 }
-export type Data = {
-    numeroProposta: string;
-    pdfPropostaBase64: string;
+export type TransmitirProposta = {
+    protocolo: string;
+    codMsgRet: string;
+    textoMsgRet: string;
+    recusa_reavaliavel_aut: string | null;
+    data_atualizacao_status: string | null;
+    parecer: []; // ou defina tipo específico se souber a estrutura
+    proposta: string;
 
 }
 /** Response for proposal transmission */
 export interface TransmitirPropostaResponse {
-    data?: Data
+    data?: TransmitirProposta
     status: StatusCode
     error?: string
     success: boolean

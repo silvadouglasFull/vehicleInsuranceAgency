@@ -9,7 +9,7 @@ export const useChangeTitlePage = (): UseChangeTitlePageReturn => {
     const { pathname } = useLocation()
     useEffect(() => {
         const changeTitlePage = () => {
-            setTitlePage(`${flavor}`)
+            setTitlePage(`${flavor} | ${pathname.replace('/', '')}`)
         }
         changeTitlePage()
     }, [pathname])

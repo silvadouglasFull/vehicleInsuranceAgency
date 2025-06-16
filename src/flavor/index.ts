@@ -1,1 +1,1 @@
-export const nameFlavor = 'Suhai Seguros'
+export const nameFlavor = 'Seu Seguro no Click'

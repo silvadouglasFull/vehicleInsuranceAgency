@@ -1,6 +1,6 @@
 import type { States } from "@components/forms/suhai/insuranceQuote/context/types";
-import type { CoberturaItem } from "@components/quote/suhai/coveragePlans/types";
-import type { RFC } from "@components/quote/suhai/rcf/types";
+import type { CoberturaItem } from "@components/proposal/suhai/coveragePlans/types";
+import type { RFC } from "@components/proposal/suhai/rcf/types";
 
 export type State = {
     protocolo: string;
