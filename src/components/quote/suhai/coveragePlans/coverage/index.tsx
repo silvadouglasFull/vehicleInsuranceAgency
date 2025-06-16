@@ -11,7 +11,7 @@ import { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLiquido }: CoberturaItem) => {
+export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLiquido, sendProposal }: CoberturaItem) => {
     const { Parcela } = Parcelamento
     const { plot } = useGetMaxInstallments(Parcela)
     const [classNameCard, setClassNameCard] = useState<string>('mb-4')
@@ -31,6 +31,11 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
             ))
         }
         return <Card.Text>Não há parcelas para serem exibidas</Card.Text>
+    }
+    const onSubmit = () => {
+        if (sendProposal) {
+            sendProposal()
+        }
     }
     return (
         <Card className={classNameCard} style={{
@@ -77,7 +82,7 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
                         Em até {plot.quantidade}x de R$ {plot._value_1.toLocaleString()}
                     </small>
                     <div className="d-grid gap-2 w-100">
-                        <Button variant="success" className="w-100" size="lg">
+                        <Button variant="success" className="w-100" size="lg" onClick={onSubmit}>
                             Aceitar Proposta
                         </Button>
                     </div>

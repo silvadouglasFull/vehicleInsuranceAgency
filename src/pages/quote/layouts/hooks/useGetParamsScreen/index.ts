@@ -1,3 +1,4 @@
+import type { States } from "@components/forms/suhai/insuranceQuote/context/types"
 import type { State, UseGetParamsSecreen } from "@pages/quote/layouts/hooks/useGetParamsScreen/types"
 import { retrieveLocalQuoteData, storageLocalQuoteData } from "@pages/quote/layouts/utils/storageLocalQuoteData"
 import { useEffect, useState } from "react"
@@ -5,6 +6,7 @@ import { useLocation } from "react-router-dom"
 
 export const useGetParamsSecreen = (): UseGetParamsSecreen => {
     const [data, setData] = useState<State | null>(null)
+    const [formData, setFormData] = useState<States | null>(null)
     useEffect(() => {
         const storage = async (): Promise<void> => {
             await storageLocalQuoteData(data)
@@ -23,11 +25,14 @@ export const useGetParamsSecreen = (): UseGetParamsSecreen => {
             if (pathname !== '/proposta') {
                 return !state && getStoragedLocalParamsScreen()
             }
-            setData({ ...state as State })
+            const { formData, ...rest } = state
+            setFormData(formData)
+            setData({ ...rest as State })
         }
         getParams()
     }, [state, pathname])
     return {
-        data
+        data,
+        formData
     }
 }

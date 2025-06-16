@@ -27,7 +27,7 @@ export class TransformToRequestProposta implements ITransformToRequestProposta {
             end_nom_log: ctx.endereco ?? '',
             end_num: '',
             bairro: '',
-            end_compl: '',
+            end_compl: ctx.endereco ?? '',
             uf: '',
             cidade: '',
             cep: ctx.cepPernoite ?? '',

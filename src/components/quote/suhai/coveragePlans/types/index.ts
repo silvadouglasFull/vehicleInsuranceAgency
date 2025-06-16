@@ -9,14 +9,17 @@ export type Parcela = {
 export type Parcelamento = {
     Parcela: Parcela[]
 }
+export type SendProposal = () => Promise<void>
 export type CoberturaItem = {
     Parcelamento: Parcelamento
     id: number
     nome: string
     premioLiquido: number
+    sendProposal?: SendProposal
 }
 export type Calculo = {
     PremioCoberturas: {
         Cobertura: CoberturaItem[]
     }
+    sendProposal?: SendProposal
 }

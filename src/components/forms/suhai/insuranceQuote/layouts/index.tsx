@@ -4,8 +4,10 @@ import { FormGarageData } from "@components/forms/suhai/insuranceQuote/garageDat
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { FormInsuredData } from "@components/forms/suhai/insuranceQuote/insuredData";
 import { requiredFormsFields } from "@components/forms/suhai/insuranceQuote/layouts//utils/requiredFormsFields";
+import { createPayload } from "@components/forms/suhai/insuranceQuote/layouts/utils/createPayloadIncluirCotacao";
 import { generateListMessageIncorrectFilling } from "@components/forms/suhai/insuranceQuote/layouts/utils/generateMessageIncorrectFilling";
 import { FormMainDriveData } from "@components/forms/suhai/insuranceQuote/mainDriverData";
+import { fetchIncluirCotacao } from "@components/forms/suhai/insuranceQuote/modules/incluirCotacao";
 import { FormPaymentDetails } from "@components/forms/suhai/insuranceQuote/paymentDetails";
 import { FormPersonalData } from "@components/forms/suhai/insuranceQuote/personalData";
 import { FormVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData";
@@ -15,8 +17,6 @@ import { useToast } from "@components/toast/hooks/useToast";
 import React from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { fetchIncluirCotacao } from "../modules/incluirCotacao";
-import { createPayload } from "./utils/createPayloadIncluirCotacao";
 
 export const FormLayout: React.FC = () => {
     const { state: formData } = useInsuranceQuote();
@@ -38,7 +38,7 @@ export const FormLayout: React.FC = () => {
             }
             setStatusCode(status as StatusCode)
             if (data) {
-                navigate('/proposta', { state: { ...data } })
+                navigate('/proposta', { state: { ...data, formData } })
             }
         }
     }

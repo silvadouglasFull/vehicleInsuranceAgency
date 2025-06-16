@@ -1,3 +1,4 @@
+import type { StatusCode } from "@api/statusCode/types";
 
 /** Request body for transmitting proposal */
 export interface TransmitirPropostaRequest {
@@ -33,10 +34,15 @@ export interface TransmitirPropostaRequest {
     cdCobertura: string;
     data_saida_concessionaria: string;
 }
+export type Data = {
+    numeroProposta: string;
+    pdfPropostaBase64: string;
 
+}
 /** Response for proposal transmission */
 export interface TransmitirPropostaResponse {
-    numeroProposta: string;
-    status: string;
-    pdfPropostaBase64: string;
+    data?: Data
+    status: StatusCode
+    error?: string
+    success: boolean
 }

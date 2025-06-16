@@ -1,3 +1,4 @@
+import type { States } from "@components/forms/suhai/insuranceQuote/context/types";
 import type { CoberturaItem } from "@components/quote/suhai/coveragePlans/types";
 import type { RFC } from "@components/quote/suhai/rcf/types";
 
@@ -35,4 +36,5 @@ export type State = {
 }
 export type UseGetParamsSecreen = {
     data: State | null;
+    formData: States | null
 }
