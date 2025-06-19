@@ -1,9 +1,8 @@
 
 export type States = {
-    pergunta1?: string; // residência
-    pergunta2?: string; // trabalho
-    pergunta3?: string; // faculdade
-    pergunta4?: string; // fora de serviço
+    cpf: string;
+    sexo: string; // "1" = Feminino, "2" = Masculino
+    endereco: string;
 };
 
 export type ReducerParams = {

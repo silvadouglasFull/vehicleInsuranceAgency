@@ -1,4 +1,4 @@
-import type { FormContextType } from "@components/forms/suhai/insuranceQuote/garageData/context/types";
+import type { FormContextType } from "@components/forms/suhai/insuranceQuote/context/types";
 import { createContext } from "react";
 
 

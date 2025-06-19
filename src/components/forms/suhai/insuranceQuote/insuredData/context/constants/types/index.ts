@@ -1,5 +1,5 @@
 
-import type { Event } from "../../context/types"
+import type { Event } from "@components/forms/suhai/insuranceQuote/insuredData/context/types"
 
 export type Name = "codigoFipe"
     | "marca"
