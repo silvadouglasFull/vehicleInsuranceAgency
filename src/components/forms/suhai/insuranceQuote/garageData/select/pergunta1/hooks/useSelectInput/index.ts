@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/garageData/hooks/insuranceQuote";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/garageData/context/hooks/insuranceQuote";
 import type { UseSelectInput } from "@components/forms/suhai/insuranceQuote/garageData/select/pergunta1/hooks/useSelectInput/types";
 import type { SelectedOption } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import { useEffect, useState } from "react";
