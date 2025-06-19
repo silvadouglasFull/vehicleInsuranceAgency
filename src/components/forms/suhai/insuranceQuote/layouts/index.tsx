@@ -15,6 +15,7 @@ import { fetchIncluirCotacao } from "@components/forms/suhai/insuranceQuote/modu
 import { FormPaymentDetails } from "@components/forms/suhai/insuranceQuote/paymentDetails";
 import { Provider as FormPaymentsDetailsProvider } from "@components/forms/suhai/insuranceQuote/paymentDetails/context/provider";
 import { FormPersonalData } from "@components/forms/suhai/insuranceQuote/personalData";
+import { Provider as FormPersonalDataProvider } from "@components/forms/suhai/insuranceQuote/personalData/context/provider";
 import { FormVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData";
 import { Spinner } from "@components/spinner";
 import { Toast } from "@components/toast";
@@ -62,7 +63,9 @@ export const FormLayout: React.FC = () => {
                     </FormGarageProvider>
                 </AnimationSlide>
                 <AnimationSlide direction="left">
-                    <FormPersonalData />
+                    <FormPersonalDataProvider>
+                        <FormPersonalData />
+                    </FormPersonalDataProvider>
                 </AnimationSlide>
                 <AnimationSlide direction="right">
                     <FormInsuredDataProvider>

@@ -1,6 +1,6 @@
 import { personalData } from "@components/forms/suhai/insuranceQuote/constants";
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/personalData/context/hooks/insuranceQuote";
 import { SelectEstadoCivil, SelectSexo } from "@components/forms/suhai/insuranceQuote/personalData/select";
 import { formatPhoneNumber } from "@utils/form/mask/phone";
 import { formatCep, formatCpf } from "@utils/transfomerText";
