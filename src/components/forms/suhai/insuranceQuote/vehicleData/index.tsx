@@ -1,12 +1,13 @@
 import { vehicleData } from "@components/forms/suhai/insuranceQuote/constants";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
-import { FormControllCodFipe } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllCodFipe";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/vehicleData/context/hooks/insuranceQuote";
 import { SelectBrand, SelectModel, SelectOutroVeiculo, SelectTipoUtilizacao, SelectZero } from "@components/forms/suhai/insuranceQuote/vehicleData/select";
 import { Icon } from "@components/icons";
+import { maskCodFipe } from "@utils/transfomerText";
 import type React from "react";
 import { useMemo } from "react";
 import { Badge, Card, Col, Form, Row } from "react-bootstrap";
+
 export const FormVehicleData: React.FC = () => {
     const additionalForms = useMemo(() => vehicleData, []);
     const sliceStart = useMemo(() => 0, []);
@@ -17,15 +18,23 @@ export const FormVehicleData: React.FC = () => {
         additionalForms,
         keyGet: 'name'
     });
-    const { state, onChange } = useInsuranceQuote()
+    const { state, onChange, handleForm } = useInsuranceQuote()
     const {
         valor,
         placa,
-        chassi
+        chassi,
+        codigoFipe
     } = state
     const handleLink = () => {
         if (props?.codigoFipe?.helperLink) {
             window.open(props?.codigoFipe?.helperLink)
+        }
+    }
+    const onBlurCodigoFipe = () => {
+        if (codigoFipe) {
+            handleForm({
+                codigoFipe: maskCodFipe({ codFipe: codigoFipe })
+            })
         }
     }
     return (
@@ -47,7 +56,13 @@ export const FormVehicleData: React.FC = () => {
                                     <Icon name="fa-solid fa-circle-question text-light" />
                                 </Badge>}
                             </Form.Label>
-                            <FormControllCodFipe {...props?.codigoFipe} onChange={onChange} />
+                            <Form.Control
+                                value={codigoFipe}
+                                {...props?.codigoFipe}
+                                id={props?.codigoFipe?.id.toString()}
+                                onChange={onChange}
+                                onBlur={onBlurCodigoFipe}
+                            />
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">

@@ -17,6 +17,7 @@ import { Provider as FormPaymentsDetailsProvider } from "@components/forms/suhai
 import { FormPersonalData } from "@components/forms/suhai/insuranceQuote/personalData";
 import { Provider as FormPersonalDataProvider } from "@components/forms/suhai/insuranceQuote/personalData/context/provider";
 import { FormVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData";
+import { Provider as FormVehicleDataProvider } from "@components/forms/suhai/insuranceQuote/vehicleData/context/provider";
 import { Spinner } from "@components/spinner";
 import { Toast } from "@components/toast";
 import { useToast } from "@components/toast/hooks/useToast";
@@ -55,7 +56,9 @@ export const FormLayout: React.FC = () => {
             <Toast message={messageResponse} onclose={onClose} show={show} statusCode={statusCode} />
             <Form onSubmit={handleSubmit}>
                 <AnimationSlide direction="left">
-                    <FormVehicleData />
+                    <FormVehicleDataProvider>
+                        <FormVehicleData />
+                    </FormVehicleDataProvider>
                 </AnimationSlide>
                 <AnimationSlide direction="right">
                     <FormGarageProvider>
