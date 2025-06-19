@@ -1,22 +1,11 @@
-import type { Event, HandleFormField, States } from "@components/forms/suhai/insuranceQuote/context/types";
-import { Context } from "@components/forms/suhai/insuranceQuote/garageData/context";
-import { states } from "@components/forms/suhai/insuranceQuote/garageData/context/constants";
+import { Context } from "@components/forms/suhai/insuranceQuote/insuredData/context";
+import { states } from "@components/forms/suhai/insuranceQuote/insuredData/context/constants";
+import type { Event, HandleFormField, States } from "@components/forms/suhai/insuranceQuote/insuredData/context/types";
 import { reducer } from "@utils/form/reducer";
-import React, { useEffect, useReducer } from "react";
+import React, { useReducer } from "react";
 
 export const Provider: React.FC<React.PropsWithChildren> = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, states)
-    const { cpf, nome, modelo, telefone, anoModelo }: States = state
-    useEffect(() => {
-        handleForm({
-            cpfCnpj: cpf,
-            cpfCnpjPrincipalCondutor: cpf,
-            nomePrincipalCondutor: nome,
-            modeloVeiculo: modelo,
-            num_cel: telefone,
-            anoFabricacao: String(anoModelo),
-        })
-    }, [cpf, nome, modelo, telefone, anoModelo])
     const onChange = (event: Event) => {
         const target = event.target as HTMLInputElement;
         const { name, value } = target;
