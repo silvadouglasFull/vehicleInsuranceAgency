@@ -1,6 +1,6 @@
 
 import { useFecthOptions } from "@components/forms/suhai/insuranceQuote/garageData/hooks/useFecthPerguntaGaragem2";
-import type { UseSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/garageData/pergunta1/hooks/useSetOptions/types";
+import type { UseSetOptions } from "@components/forms/suhai/insuranceQuote/garageData/select/pergunta2/hooks/useSetOptions/types";
 import type { Options } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import { useEffect, useState } from "react";
 export const useSetOptions = (): UseSetOptions => {
