@@ -1,8 +1,8 @@
+import { customStyles } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/styles"
+import type { RenderSelectProps } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types"
 import { Spinner } from "@components/spinner"
 import type React from "react"
 import Select from "react-select"
-import { customStyles } from "../styles"
-import type { RenderSelectProps } from "../types"
 
 export const RenderSelect: React.FC<RenderSelectProps> = ({
     placeholder,
