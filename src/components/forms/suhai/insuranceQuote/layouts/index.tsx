@@ -2,8 +2,10 @@ import type { StatusCode } from "@api/statusCode/types";
 import { AnimationSlide } from "@components/animationSlide/slideLeftRight";
 import { formLabels } from "@components/forms/suhai/insuranceQuote/constants";
 import { FormGarageData } from "@components/forms/suhai/insuranceQuote/garageData";
+import { Provider as FormGarageProvider } from "@components/forms/suhai/insuranceQuote/garageData/context/provider";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { FormInsuredData } from "@components/forms/suhai/insuranceQuote/insuredData";
+import { Provider as FormInsuredDataProvider } from "@components/forms/suhai/insuranceQuote/insuredData/context/provider";
 import { requiredFormsFields } from "@components/forms/suhai/insuranceQuote/layouts//utils/requiredFormsFields";
 import { createPayload } from "@components/forms/suhai/insuranceQuote/layouts/utils/createPayloadIncluirCotacao";
 import { generateListMessageIncorrectFilling } from "@components/forms/suhai/insuranceQuote/layouts/utils/generateMessageIncorrectFilling";
@@ -18,7 +20,6 @@ import { useToast } from "@components/toast/hooks/useToast";
 import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
 export const FormLayout: React.FC = () => {
     const { state: formData } = useInsuranceQuote();
     const { onClose, show, setMessage, setStatusCode, statusCode, message: messageResponse } = useToast()
@@ -54,13 +55,17 @@ export const FormLayout: React.FC = () => {
                     <FormVehicleData />
                 </AnimationSlide>
                 <AnimationSlide direction="right">
-                    <FormGarageData />
+                    <FormGarageProvider>
+                        <FormGarageData />
+                    </FormGarageProvider>
                 </AnimationSlide>
                 <AnimationSlide direction="left">
                     <FormPersonalData />
                 </AnimationSlide>
                 <AnimationSlide direction="right">
-                    <FormInsuredData />
+                    <FormInsuredDataProvider>
+                        <FormInsuredData />
+                    </FormInsuredDataProvider>
                 </AnimationSlide>
                 <AnimationSlide direction="left">
                     <FormMainDriveData />

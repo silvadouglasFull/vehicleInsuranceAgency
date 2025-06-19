@@ -10,7 +10,7 @@ import { useContext } from 'react';
 export const useInsuranceQuote = (): FormContextType => {
     const context = useContext(Context);
     if (!context) {
-        throw new Error('useInsuranceQuote must be used within a Provider');
+        throw new Error('garage data context must be used within a Provider');
     }
     return context;
 };
