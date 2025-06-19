@@ -1,7 +1,7 @@
 import { vehicleData } from "@components/forms/suhai/insuranceQuote/constants";
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import { FormControllCodFipe } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllCodFipe";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/vehicleData/context/hooks/insuranceQuote";
 import { SelectBrand, SelectModel, SelectOutroVeiculo, SelectTipoUtilizacao, SelectZero } from "@components/forms/suhai/insuranceQuote/vehicleData/select";
 import { Icon } from "@components/icons";
 import type React from "react";
