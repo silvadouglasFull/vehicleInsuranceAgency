@@ -4,6 +4,7 @@
 export interface ConsultarFipeRequest {
     codigoFipe: string;
     signal?: AbortSignal
+    categoria?: string
 }
 export type Data = {
     protocolo?: null | string,

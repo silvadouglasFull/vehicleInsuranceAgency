@@ -3,12 +3,6 @@ export const transformerInFirstWord = ({ world }: TransformerInFirstWord): strin
     return String(world).substring(0, 1)
 }
 export const maskCodFipe = ({ codFipe }: MaskCodFipe): string => {
-    if ((codFipe.length <= 6)) {
-        return codFipe
-    }
-    if (codFipe.length >= 7) {
-        return codFipe
-    }
     const lastDigit = codFipe.substring(codFipe.length - 1)
     const replacedTexy = codFipe.replace(lastDigit, `-${lastDigit}`)
     return replacedTexy

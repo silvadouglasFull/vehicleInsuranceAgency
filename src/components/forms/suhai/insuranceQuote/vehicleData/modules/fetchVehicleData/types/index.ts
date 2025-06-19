@@ -1,4 +1,3 @@
-export type FetchVehicleData = {
-    codigoFipe: string
-    signal?: AbortSignal
-}
+import type { ConsultarFipeRequest } from "@modules/suhai/consultarFipe/dtos";
+
+export type FetchVehicleData = ConsultarFipeRequest

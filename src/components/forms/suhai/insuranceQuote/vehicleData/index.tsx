@@ -3,7 +3,7 @@ import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/u
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/vehicleData/context/hooks/insuranceQuote";
 import { SelectBrand, SelectModel, SelectOutroVeiculo, SelectTipoUtilizacao, SelectZero } from "@components/forms/suhai/insuranceQuote/vehicleData/select";
 import { Icon } from "@components/icons";
-import { maskCodFipe } from "@utils/transfomerText";
+import { maskCodFipe, onlyNumbers } from "@utils/transfomerText";
 import type React from "react";
 import { useMemo } from "react";
 import { Badge, Card, Col, Form, Row } from "react-bootstrap";
@@ -34,6 +34,13 @@ export const FormVehicleData: React.FC = () => {
         if (codigoFipe) {
             handleForm({
                 codigoFipe: maskCodFipe({ codFipe: codigoFipe })
+            })
+        }
+    }
+    const onBlurValor = () => {
+        if (valor) {
+            handleForm({
+                valor: String(Number(onlyNumbers(valor ?? '0')).toLocaleString())
             })
         }
     }
@@ -94,6 +101,7 @@ export const FormVehicleData: React.FC = () => {
                                 {...props?.valor}
                                 id={props?.valor?.id.toString()}
                                 onChange={onChange}
+                                onBlur={onBlurValor}
                             />
                         </Form.Group>
                     </Col>

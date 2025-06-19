@@ -3,12 +3,13 @@ export type States = {
     codigoFipe?: string;
     marca?: string;
     modelo?: string;
-    valor?: number;
+    valor?: string;
     placa?: string;
     zeroKm?: string;
     chassi?: string;
     tipoUtilizacao?: string;
     possuiOutroVeic?: string; // "1" = Sim, "0" = Não
+    categoria?: string
 };
 
 export type ReducerParams = {

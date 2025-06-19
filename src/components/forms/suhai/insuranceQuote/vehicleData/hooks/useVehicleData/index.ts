@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote"
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/vehicleData/context/hooks/insuranceQuote"
 import type { UseVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData/hooks/useVehicleData/types"
 import { fetchVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData/modules/fetchVehicleData"
 import type { Data } from "@modules/suhai/consultarFipe/dtos"
@@ -14,11 +14,11 @@ export const useVehicleData = (): UseVehicleData => {
     const [loading, setLoading] = useState<boolean>(false)
     const [items, setItems] = useState<Record<string, Data[]> | null>(null)
     const { state } = useInsuranceQuote()
-    const { codigoFipe } = state
+    const { codigoFipe, categoria } = state
     const fetchInfo = async (controller: AbortController) => {
         setLoading(true)
         try {
-            const response = await fetchVehicleData({ codigoFipe: codigoFipe ?? '', signal: controller.signal })
+            const response = await fetchVehicleData({ codigoFipe: codigoFipe ?? '', categoria, signal: controller.signal })
             if (response?.data) {
                 setItems(response.data)
             } else {
@@ -35,7 +35,7 @@ export const useVehicleData = (): UseVehicleData => {
     }
     useEffect(() => {
         const controller = new AbortController()
-        if (codigoFipe?.length === 8) {
+        if ((codigoFipe?.length === 8) && (categoria)) {
             fetchInfo(controller)
         }
         return () => {

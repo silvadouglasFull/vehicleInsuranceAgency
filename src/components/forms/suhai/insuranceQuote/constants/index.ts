@@ -93,10 +93,10 @@ export const formLabels: FormField[] = [
         idControll: 'valor',
         label: 'Valor do Veículo',
         name: 'valor',
-        type: 'number',
+        type: 'text',
         placeholder: 'Digite o valor do veículo',
         required: true,
-        min: 0,
+        maxLength: 100000
     },
     {
         id: 10,
