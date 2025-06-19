@@ -1,6 +1,6 @@
 import { paymentData } from "@components/forms/suhai/insuranceQuote/constants";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
-import { SelectCodigoCobertura, SelectFormaPagamento, SelectTipoContratacao } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails";
+import { SelectCodigoCobertura, SelectFormaPagamento, SelectTipoContratacao } from "@components/forms/suhai/insuranceQuote/paymentDetails/select";
 import type React from "react";
 import { useMemo } from "react";
 import { Card, Col, Form, Row } from "react-bootstrap";
