@@ -14,7 +14,7 @@ import { SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQu
 import { SelectCodigoCobertura } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/codigoCobertura";
 import { SelectFormaPagamento } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/formaPagamento";
 import { SelectTipoContratacao } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/tipoContratacao";
-import { SelectEstadoCivil } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData";
+import { SelectEstadoCivil } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData/estadoCivil";
 import { SelectSexo } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData/sexo";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import { SelectBrand } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/brand";

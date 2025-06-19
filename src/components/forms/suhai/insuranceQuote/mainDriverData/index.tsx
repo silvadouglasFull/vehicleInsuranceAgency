@@ -1,11 +1,65 @@
-import { RenderFormSection } from "@components/forms/suhai/insuranceQuote/renderFormSection";
-import { listForms } from "@components/forms/suhai/insuranceQuote/utils/listForms";
+import { mainDriverData } from "@components/forms/suhai/insuranceQuote/constants";
+import type { Type } from "@components/forms/suhai/insuranceQuote/constants/types";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
+import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
+import { SelectEstadoCivilPrincipalCondutor, SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData";
 import type React from "react";
-import { mainDriverData } from "../constants";
-
+import { useMemo } from "react";
+import { Card, Col, Form, Row } from "react-bootstrap";
 export const FormMainDriveData: React.FC = () => {
-    const Fields = listForms({ additionalForms: mainDriverData });
-    return RenderFormSection({
-        fields: Fields, title: "Dados do Principal Condutor"
-    })
+    const types = useMemo<Type[]>(() => ['sexoPrincipalCondutor', 'estadoCivilPrincipalCondutor', 'date'] as Type[], []);
+    const additionalForms = useMemo(() => mainDriverData, []);
+    const props = useGetPropsInput({
+        types,
+        additionalForms
+    });
+    const { state: {
+        dtNascimentoPrincipalCondutor,
+    }, onChange } = useInsuranceQuote()
+    return (
+        <Card bg="light" className="mb-4 shadow-sm">
+            <Card.Header className="bg-info text-white">
+                <Card.Title className="mb-0">Dados do Principal Condutor</Card.Title>
+            </Card.Header>
+            <Card.Body>
+                <Row>
+                    <Col sm={12} md={4} className="mb-3 col-12">
+                        <Form.Group controlId={props?.date?.idControll}>
+                            <Form.Label className="fw-bold" >
+                                {props?.date?.label}
+                                {props?.date?.required && <span className="text-danger ms-1" >* </span>}
+                            </Form.Label>
+                            <Form.Control
+                                {...props?.date}
+                                id={props.date?.id?.toString()}
+                                value={dtNascimentoPrincipalCondutor}
+                                onChange={onChange} />
+                        </Form.Group>
+                    </Col>
+                    <Col sm={12} md={4} className="mb-3">
+                        <Form.Group controlId={props?.sexoPrincipalCondutor?.idControll}>
+                            <Form.Label className="fw-bold" >
+                                {props?.sexoPrincipalCondutor?.label}
+                                {props?.sexoPrincipalCondutor?.required && <span className="text-danger ms-1" >* </span>}
+                            </Form.Label>
+                            <SelectSexoPrincipalCondutor
+                                {...props?.sexoPrincipalCondutor}
+                            />
+                        </Form.Group>
+                    </Col>
+                    <Col sm={12} md={4} className="mb-3">
+                        <Form.Group controlId={props?.estadoCivilPrincipalCondutor?.idControll}>
+                            <Form.Label className="fw-bold" >
+                                {props?.estadoCivilPrincipalCondutor?.label}
+                                {props?.estadoCivilPrincipalCondutor?.required && <span className="text-danger ms-1" >* </span>}
+                            </Form.Label>
+                            <SelectEstadoCivilPrincipalCondutor
+                                {...props?.estadoCivilPrincipalCondutor}
+                            />
+                        </Form.Group>
+                    </Col>
+                </Row>
+            </Card.Body>
+        </Card >
+    )
 }
