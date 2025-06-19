@@ -1,10 +1,10 @@
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
+import { SelectSexo } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData/sexo";
 import { formatCpf } from "@utils/transfomerText";
 import type React from "react";
 import { useMemo } from "react";
 import { Card, Col, Form, Row } from "react-bootstrap";
-import { SelectSexo } from "../renderFormSection/input/select/personalData/sexo";
 
 export const FormInsuredData: React.FC = () => {
     const additionalForms = useMemo(() => [], []);
