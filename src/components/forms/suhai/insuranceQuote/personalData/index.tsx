@@ -1,7 +1,7 @@
 import { personalData } from "@components/forms/suhai/insuranceQuote/constants";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
-import { SelectEstadoCivil, SelectSexo } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData";
+import { SelectEstadoCivil, SelectSexo } from "@components/forms/suhai/insuranceQuote/personalData/select";
 import { formatPhoneNumber } from "@utils/form/mask/phone";
 import { formatCep, formatCpf } from "@utils/transfomerText";
 import type React from "react";
