@@ -10,6 +10,7 @@ import { requiredFormsFields } from "@components/forms/suhai/insuranceQuote/layo
 import { createPayload } from "@components/forms/suhai/insuranceQuote/layouts/utils/createPayloadIncluirCotacao";
 import { generateListMessageIncorrectFilling } from "@components/forms/suhai/insuranceQuote/layouts/utils/generateMessageIncorrectFilling";
 import { FormMainDriveData } from "@components/forms/suhai/insuranceQuote/mainDriverData";
+import { Provider as FormMainDriverDataProvider } from "@components/forms/suhai/insuranceQuote/mainDriverData/context/provider";
 import { fetchIncluirCotacao } from "@components/forms/suhai/insuranceQuote/modules/incluirCotacao";
 import { FormPaymentDetails } from "@components/forms/suhai/insuranceQuote/paymentDetails";
 import { FormPersonalData } from "@components/forms/suhai/insuranceQuote/personalData";
@@ -68,7 +69,9 @@ export const FormLayout: React.FC = () => {
                     </FormInsuredDataProvider>
                 </AnimationSlide>
                 <AnimationSlide direction="left">
-                    <FormMainDriveData />
+                    <FormMainDriverDataProvider>
+                        <FormMainDriveData />
+                    </FormMainDriverDataProvider>
                 </AnimationSlide>
                 <AnimationSlide direction="left">
                     <FormPaymentDetails />
