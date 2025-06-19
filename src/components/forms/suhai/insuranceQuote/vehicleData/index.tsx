@@ -1,3 +1,4 @@
+import { VehicleTypeCards } from "@components/cards/vehicleType";
 import { vehicleData } from "@components/forms/suhai/insuranceQuote/constants";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/vehicleData/context/hooks/insuranceQuote";
@@ -50,6 +51,8 @@ export const FormVehicleData: React.FC = () => {
                 <Card.Title className="mb-0">Dados do Seu Veículo</Card.Title>
             </Card.Header>
             <Card.Body>
+                <Card.Text className="text-info">Qual é o tipo do seu veículo?</Card.Text>
+                <VehicleTypeCards />
                 <Row>
                     <Col className="mb-3 col-12">
                         <Form.Group controlId={props?.codigoFipe?.idControll}>

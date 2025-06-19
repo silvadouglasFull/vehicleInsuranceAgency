@@ -6,6 +6,7 @@ import type {
     ResponseConsultaFipe
 } from '@modules/suhai/consultarFipe/dtos';
 import type { ISuhaiServices } from '@modules/suhai/services/ISuhaiServices';
+import { sanitizeString } from '@utils/transfomerText/sanitizeString';
 
 export class SuhaiService implements ISuhaiServices {
     public http: AxiosHttpClient;
@@ -18,7 +19,7 @@ export class SuhaiService implements ISuhaiServices {
     }
 
     async post({ codigoFipe, categoria, signal }: ConsultarFipeRequest): Promise<ResponseConsultaFipe> {
-        return this.http.get<ResponseConsultaFipe>(`${this.endPoints.consultafipe}/${codigoFipe}/${categoria}`, {
+        return this.http.get<ResponseConsultaFipe>(`${this.endPoints.consultafipe}/${codigoFipe}/${sanitizeString(categoria ?? '')}`, {
             signal
         });
     }
