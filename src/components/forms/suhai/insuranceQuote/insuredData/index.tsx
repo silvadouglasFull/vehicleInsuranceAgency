@@ -1,4 +1,3 @@
-import type { Type } from "@components/forms/suhai/insuranceQuote/constants/types";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import { formatCpf } from "@utils/transfomerText";
@@ -8,17 +7,22 @@ import { Card, Col, Form, Row } from "react-bootstrap";
 import { SelectSexo } from "../renderFormSection/input/select/personalData/sexo";
 
 export const FormInsuredData: React.FC = () => {
-    const types = useMemo<Type[]>(() => ['cpf', 'endereco', 'sexo'] as Type[], []);
     const additionalForms = useMemo(() => [], []);
     const sliceStart = useMemo(() => 11, [])
     const sliceEnd = useMemo(() => 14, [])
     const props = useGetPropsInput({
-        types,
         sliceStart,
         sliceEnd,
         additionalForms
     });
-    const { onChange, state: { cpf, endereco } } = useInsuranceQuote()
+    const { onChange, handleForm, state: { cpf, endereco } } = useInsuranceQuote()
+    const onBlurCPF = () => {
+        if (cpf) {
+            handleForm({
+                cpf: formatCpf({ cpf })
+            })
+        }
+    }
     return (
         <Card bg="light" className="mb-4 shadow-sm">
             <Card.Header className="bg-info text-white">
@@ -37,6 +41,7 @@ export const FormInsuredData: React.FC = () => {
                                 {...props?.cpf}
                                 id={String(props?.cpf?.id)}
                                 onChange={onChange}
+                                onBlur={onBlurCPF}
                             />
                         </Form.Group>
                     </Col>

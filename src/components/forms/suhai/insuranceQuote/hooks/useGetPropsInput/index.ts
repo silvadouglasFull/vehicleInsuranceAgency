@@ -3,17 +3,17 @@ import type { Props, UseGetPropsInput, UseGetPropsInputParams } from "@component
 import { listForms } from "@components/forms/suhai/insuranceQuote/utils/listForms";
 import { useEffect, useState } from "react";
 
-export const useGetPropsInput = ({ types, additionalForms, sliceEnd, sliceStart }: UseGetPropsInputParams): UseGetPropsInput => {
+export const useGetPropsInput = ({ keyGet = 'name', additionalForms, sliceEnd, sliceStart }: UseGetPropsInputParams): UseGetPropsInput => {
     const [props, setProps] = useState<Props>({})
     useEffect(() => {
         const temProps: Props = {}
         const inputs = listForms({ additionalForms, sliceEnd, sliceStart })
         if (inputs.length) {
             inputs.forEach(item => {
-                temProps[item.type] = { ...item }
+                temProps[keyGet ? item[keyGet] : item.type] = { ...item }
             })
             setProps(temProps)
         }
-    }, [additionalForms, types, sliceEnd, sliceStart])
+    }, [additionalForms, keyGet, sliceEnd, sliceStart])
     return props
 }

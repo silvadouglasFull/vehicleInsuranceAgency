@@ -1,5 +1,4 @@
 import { mainDriverData } from "@components/forms/suhai/insuranceQuote/constants";
-import type { Type } from "@components/forms/suhai/insuranceQuote/constants/types";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import { SelectEstadoCivilPrincipalCondutor, SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData";
@@ -7,10 +6,8 @@ import type React from "react";
 import { useMemo } from "react";
 import { Card, Col, Form, Row } from "react-bootstrap";
 export const FormMainDriveData: React.FC = () => {
-    const types = useMemo<Type[]>(() => ['sexoPrincipalCondutor', 'estadoCivilPrincipalCondutor', 'date'] as Type[], []);
     const additionalForms = useMemo(() => mainDriverData, []);
     const props = useGetPropsInput({
-        types,
         additionalForms
     });
     const { state: {
@@ -24,16 +21,18 @@ export const FormMainDriveData: React.FC = () => {
             <Card.Body>
                 <Row>
                     <Col sm={12} md={4} className="mb-3 col-12">
-                        <Form.Group controlId={props?.date?.idControll}>
+                        <Form.Group controlId={props?.dtNascimentoPrincipalCondutor?.idControll}>
                             <Form.Label className="fw-bold" >
-                                {props?.date?.label}
-                                {props?.date?.required && <span className="text-danger ms-1" >* </span>}
+                                {props?.dtNascimentoPrincipalCondutor?.label}
+                                {props?.dtNascimentoPrincipalCondutor?.required && <span className="text-danger ms-1" >* </span>}
                             </Form.Label>
                             <Form.Control
-                                {...props?.date}
-                                id={props.date?.id?.toString()}
+                                {...props?.dtNascimentoPrincipalCondutor}
+                                id={props.dtNascimentoPrincipalCondutor?.id?.toString()}
                                 value={dtNascimentoPrincipalCondutor}
-                                onChange={onChange} />
+                                onChange={onChange}
+                                max={new Date().toISOString().split("T")[0]}
+                            />
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={4} className="mb-3">

@@ -1,5 +1,4 @@
 import { garageData } from "@components/forms/suhai/insuranceQuote/constants";
-import type { Type } from "@components/forms/suhai/insuranceQuote/constants/types";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import { SelectPergunta1, SelectPergunta2, SelectPergunta3, SelectPergunta4 } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/garageData";
 import type React from "react";
@@ -7,11 +6,8 @@ import { useMemo } from "react";
 import { Card, Col, Form, Row } from "react-bootstrap";
 
 export const FormGarageData: React.FC = () => {
-    const types = useMemo<Type[]>(() => ['pergunta1', 'pergunta2', 'pergunta3', "pergunta4"] as Type[], []);
     const memoGarageData = useMemo(() => garageData, []);
-
     const props = useGetPropsInput({
-        types,
         additionalForms: memoGarageData
     });
     return (

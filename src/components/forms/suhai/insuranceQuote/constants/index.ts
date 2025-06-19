@@ -106,7 +106,6 @@ export const formLabels: FormField[] = [
         type: 'formaPagamento',
         placeholder: 'Ex: boleto, cartão',
         required: true,
-        maxLength: 100
     },
     {
         id: 12,
@@ -317,7 +316,7 @@ export const vehicleData: GroupForms = [9, 16, 17, 18, 31, 33]; // zeroKm, tipoU
 export const mainDriverData: GroupForms = [20, 21, 30]; // sexoPrincipalCondutor, estadoCivilPrincipalCondutor
 export const garageData: GroupForms = [22, 23, 24, 25];
 export const dadosCaminhao = [26]; // pergunta6
-export const paymentData = [19, 32]
+export const paymentData = [10, 19, 32]
 export const states: States = {
     codigoFipe: '',
     marca: '',

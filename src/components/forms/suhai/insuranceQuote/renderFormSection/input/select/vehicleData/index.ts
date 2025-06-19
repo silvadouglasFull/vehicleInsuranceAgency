@@ -1,0 +1,5 @@
+export * from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/brand"
+export * from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/model"
+export * from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/outroVeiculo"
+export * from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/tipoUtilizacao"
+export * from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/vehicleData/zeroKm"

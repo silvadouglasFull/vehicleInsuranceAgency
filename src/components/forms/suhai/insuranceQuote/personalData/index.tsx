@@ -1,18 +1,17 @@
 import { personalData } from "@components/forms/suhai/insuranceQuote/constants";
-import type { Type } from "@components/forms/suhai/insuranceQuote/constants/types";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import { SelectEstadoCivil, SelectSexo } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData";
+import { formatPhoneNumber } from "@utils/form/mask/phone";
+import { formatCep, formatCpf } from "@utils/transfomerText";
 import type React from "react";
 import { useMemo } from "react";
 import { Card, Col, Form, Row } from "react-bootstrap";
 export const FormPersonalData: React.FC = () => {
-    const types = useMemo<Type[]>(() => ['cpf', 'text', 'email', 'telefone', 'endereco', 'sexo', 'estadoCivil', 'cepPernoite', 'date'] as Type[], []);
     const additionalForms = useMemo(() => personalData, []);
     const sliceStart = useMemo(() => 4, []);
     const sliceEnd = useMemo(() => 8, []);
     const props = useGetPropsInput({
-        types,
         sliceStart,
         sliceEnd,
         additionalForms
@@ -25,8 +24,29 @@ export const FormPersonalData: React.FC = () => {
         endereco,
         dtNascimento,
         cepPernoite
-    }, onChange } = useInsuranceQuote()
-    console.log(props)
+    }, onChange, handleForm } = useInsuranceQuote()
+    const onBlurCPF = () => {
+        if (cpf) {
+            handleForm({
+                cpf: formatCpf({ cpf })
+            })
+        }
+    }
+    const onBlurCEP = () => {
+        if (cepPernoite) {
+            const cep = cepPernoite
+            handleForm({
+                cepPernoite: formatCep({ cep })
+            })
+        }
+    }
+    const onBlurTelefone = () => {
+        if (telefone) {
+            handleForm({
+                telefone: formatPhoneNumber(telefone, 'pt')
+            })
+        }
+    }
     return (
         <Card bg="light" className="mb-4 shadow-sm">
             <Card.Header className="bg-info text-white">
@@ -45,28 +65,29 @@ export const FormPersonalData: React.FC = () => {
                                 {...props?.cpf}
                                 id={props?.cpf?.id.toString()}
                                 onChange={onChange}
+                                onBlur={onBlurCPF}
                             />
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.date?.idControll}>
+                        <Form.Group controlId={props?.dtNascimento?.idControll}>
                             <Form.Label className="fw-bold" >
-                                {props?.date?.label}
-                                {props?.date?.required && <span className="text-danger ms-1" >* </span>}
+                                {props?.dtNascimento?.label}
+                                {props?.dtNascimento?.required && <span className="text-danger ms-1" >* </span>}
                             </Form.Label>
                             <Form.Control
                                 value={dtNascimento}
-                                {...props?.date}
-                                id={props?.date?.id.toString()}
+                                {...props?.dtNascimento}
+                                id={props?.dtNascimento?.id.toString()}
                                 onChange={onChange}
                             />
                         </Form.Group>
                     </Col>
                     <Col className="mb-3 col-12">
-                        <Form.Group controlId={props?.text?.idControll}>
+                        <Form.Group controlId={props?.nome?.idControll}>
                             <Form.Label className="fw-bold" >
-                                {props?.text?.label}
-                                {props?.text?.required && <span className="text-danger ms-1" >* </span>}
+                                {props?.nome?.label}
+                                {props?.nome?.required && <span className="text-danger ms-1" >* </span>}
                             </Form.Label>
                             <Form.Control
                                 value={nome}
@@ -87,6 +108,7 @@ export const FormPersonalData: React.FC = () => {
                                 {...props?.telefone}
                                 id={props?.telefone?.id.toString()}
                                 onChange={onChange}
+                                onBlur={onBlurTelefone}
                             />
                         </Form.Group>
                     </Col>
@@ -104,20 +126,6 @@ export const FormPersonalData: React.FC = () => {
                             />
                         </Form.Group>
                     </Col>
-                    <Col sm={12} md={9} className="mb-3">
-                        <Form.Group controlId={props?.endereco?.idControll}>
-                            <Form.Label className="fw-bold" >
-                                {props?.endereco?.label}
-                                {props?.endereco?.required && <span className="text-danger ms-1" >* </span>}
-                            </Form.Label>
-                            <Form.Control
-                                value={endereco}
-                                {...props?.endereco}
-                                id={props?.endereco?.id.toString()}
-                                onChange={onChange}
-                            />
-                        </Form.Group>
-                    </Col>
                     <Col sm={12} md={3} className="mb-3">
                         <Form.Group controlId={props?.cepPernoite?.idControll}>
                             <Form.Label className="fw-bold" >
@@ -128,6 +136,21 @@ export const FormPersonalData: React.FC = () => {
                                 value={cepPernoite}
                                 {...props?.cepPernoite}
                                 id={props?.cepPernoite?.id.toString()}
+                                onChange={onChange}
+                                onBlur={onBlurCEP}
+                            />
+                        </Form.Group>
+                    </Col>
+                    <Col sm={12} md={9} className="mb-3">
+                        <Form.Group controlId={props?.endereco?.idControll}>
+                            <Form.Label className="fw-bold" >
+                                {props?.endereco?.label}
+                                {props?.endereco?.required && <span className="text-danger ms-1" >* </span>}
+                            </Form.Label>
+                            <Form.Control
+                                value={endereco}
+                                {...props?.endereco}
+                                id={props?.endereco?.id.toString()}
                                 onChange={onChange}
                             />
                         </Form.Group>

@@ -54,6 +54,7 @@ export const FormLayout: React.FC = () => {
                     <FormVehicleData />
                 </AnimationSlide>
                 <AnimationSlide direction="right">
+                    <FormGarageData />
                 </AnimationSlide>
                 <AnimationSlide direction="left">
                     <FormPersonalData />
@@ -63,9 +64,6 @@ export const FormLayout: React.FC = () => {
                 </AnimationSlide>
                 <AnimationSlide direction="left">
                     <FormMainDriveData />
-                </AnimationSlide>
-                <AnimationSlide direction="right">
-                    <FormGarageData />
                 </AnimationSlide>
                 <AnimationSlide direction="left">
                     <FormPaymentDetails />
