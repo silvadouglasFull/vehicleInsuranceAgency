@@ -1,5 +1,5 @@
 import { garageData } from "@components/forms/suhai/insuranceQuote/constants";
-import { SelectPergunta1, SelectPergunta2, SelectPergunta3, SelectPergunta4 } from "@components/forms/suhai/insuranceQuote/garageData/select/garageData";
+import { SelectPergunta1, SelectPergunta2, SelectPergunta3, SelectPergunta4 } from "@components/forms/suhai/insuranceQuote/garageData/select";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import type React from "react";
 import { useMemo } from "react";

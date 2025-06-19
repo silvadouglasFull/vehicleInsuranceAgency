@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { useSelectInput } from "@components/forms/suhai/insuranceQuote/garageData/select/garageData/pergunta4/hooks/useSelectInput";
-import { useSetOptions } from "@components/forms/suhai/insuranceQuote/garageData/select/garageData/pergunta4/hooks/useSetOptions";
+import { useSelectInput } from "@components/forms/suhai/insuranceQuote/garageData/select/pergunta3/hooks/useSelectInput";
+import { useSetOptions } from "@components/forms/suhai/insuranceQuote/garageData/select/pergunta3/hooks/useSetOptions";
 import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/renderInput";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import React from "react";
 
-export const SelectPergunta4: React.FC<Select2BootStrap> = ({
+export const SelectPergunta3: React.FC<Select2BootStrap> = ({
     isClearable = true,
     isSearchable = true,
     placeholder }: Select2BootStrap) => {
