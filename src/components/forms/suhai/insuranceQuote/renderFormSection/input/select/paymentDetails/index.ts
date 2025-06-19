@@ -1,3 +1,4 @@
-export * from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/codigoCobertura"
-export * from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/formaPagamento"
-export * from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/tipoContratacao"
+export * from "@components/forms/suhai/insuranceQuote/paymentDetails/select/codigoCobertura"
+export * from "@components/forms/suhai/insuranceQuote/paymentDetails/select/formaPagamento"
+export * from "@components/forms/suhai/insuranceQuote/paymentDetails/select/tipoContratacao"
+

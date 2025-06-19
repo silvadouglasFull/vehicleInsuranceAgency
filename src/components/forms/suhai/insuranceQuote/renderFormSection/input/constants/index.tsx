@@ -5,15 +5,15 @@ import { SelectPergunta3 } from "@components/forms/suhai/insuranceQuote/garageDa
 import { SelectPergunta4 } from "@components/forms/suhai/insuranceQuote/garageData/select/pergunta4";
 import { SelectEstadoCivilPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/mainDriverData/select/maritalStatus";
 import { SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/mainDriverData/select/sexo";
+import { SelectCodigoCobertura } from "@components/forms/suhai/insuranceQuote/paymentDetails/select/codigoCobertura";
+import { SelectFormaPagamento } from "@components/forms/suhai/insuranceQuote/paymentDetails/select/formaPagamento";
+import { SelectTipoContratacao } from "@components/forms/suhai/insuranceQuote/paymentDetails/select/tipoContratacao";
 import type { InputsType } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/constants/types";
 import { RenderFormControllAdress } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllAddress";
 import { FormControllCEP } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllCep";
 import { FormControllCodFipe } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllCodFipe";
 import { FormControllDoc } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllDoc";
 import { RenderFormControllPhone } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllPhone";
-import { SelectCodigoCobertura } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/codigoCobertura";
-import { SelectFormaPagamento } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/formaPagamento";
-import { SelectTipoContratacao } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/tipoContratacao";
 import { SelectEstadoCivil } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData/estadoCivil";
 import { SelectSexo } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData/sexo";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
