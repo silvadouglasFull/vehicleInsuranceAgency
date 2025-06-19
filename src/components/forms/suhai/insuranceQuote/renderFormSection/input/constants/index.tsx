@@ -3,8 +3,8 @@ import { SelectPergunta1 } from "@components/forms/suhai/insuranceQuote/garageDa
 import { SelectPergunta2 } from "@components/forms/suhai/insuranceQuote/garageData/select/pergunta2";
 import { SelectPergunta3 } from "@components/forms/suhai/insuranceQuote/garageData/select/pergunta3";
 import { SelectPergunta4 } from "@components/forms/suhai/insuranceQuote/garageData/select/pergunta4";
-import { SelectEstadoCivilPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/mainDriverData/maritalStatus";
-import { SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/mainDriverData/sexo";
+import { SelectEstadoCivilPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/mainDriverData/select/maritalStatus";
+import { SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/mainDriverData/select/sexo";
 import type { InputsType } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/constants/types";
 import { RenderFormControllAdress } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllAddress";
 import { FormControllCEP } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllCep";

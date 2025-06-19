@@ -1,7 +1,7 @@
 import { mainDriverData } from "@components/forms/suhai/insuranceQuote/constants";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
-import { SelectEstadoCivilPrincipalCondutor, SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData";
+import { SelectEstadoCivilPrincipalCondutor, SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/mainDriverData/select";
 import type React from "react";
 import { useMemo } from "react";
 import { Card, Col, Form, Row } from "react-bootstrap";
