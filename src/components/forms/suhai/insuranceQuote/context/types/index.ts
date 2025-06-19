@@ -75,6 +75,5 @@ export type StateValue = States[keyof States]
 export type FormContextType = {
     state: States
     onChange: (event: Event) => void
-    onChangePhone: (event: Event) => void
     handleForm: (fields: HandleFormField) => void
 }
