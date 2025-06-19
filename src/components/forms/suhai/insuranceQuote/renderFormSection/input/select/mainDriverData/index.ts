@@ -1,3 +1,3 @@
-export * from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/maritalStatus"
-export * from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/sexo"
+export * from "@components/forms/suhai/insuranceQuote/mainDriverData/maritalStatus"
+export * from "@components/forms/suhai/insuranceQuote/mainDriverData/sexo"
 
