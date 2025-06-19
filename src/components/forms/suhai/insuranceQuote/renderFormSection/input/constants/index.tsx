@@ -1,4 +1,6 @@
 import type { FormProps } from "@components/forms/suhai/insuranceQuote/constants/types";
+import { SelectEstadoCivilPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/mainDriverData/maritalStatus";
+import { SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/mainDriverData/sexo";
 import type { InputsType } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/constants/types";
 import { RenderFormControllAdress } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllAddress";
 import { FormControllCEP } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllCep";
@@ -9,8 +11,6 @@ import { SelectPergunta1 } from "@components/forms/suhai/insuranceQuote/renderFo
 import { SelectPergunta2 } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/garageData/pergunta2";
 import { SelectPergunta3 } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/garageData/pergunta3";
 import { SelectPergunta4 } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/garageData/pergunta4";
-import { SelectEstadoCivilPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/maritalStatus";
-import { SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/sexo";
 import { SelectCodigoCobertura } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/codigoCobertura";
 import { SelectFormaPagamento } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/formaPagamento";
 import { SelectTipoContratacao } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/paymentDetails/tipoContratacao";

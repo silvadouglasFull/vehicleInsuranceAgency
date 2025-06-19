@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { useSelectInput } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/sexo/hooks/useSelectInput";
-import { useSetOptions } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/mainDriverData/sexo/hooks/useSetOptions";
+import { useSelectInput } from "@components/forms/suhai/insuranceQuote/mainDriverData/sexo/hooks/useSelectInput";
+import { useSetOptions } from "@components/forms/suhai/insuranceQuote/mainDriverData/sexo/hooks/useSetOptions";
 import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/renderInput";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import React from "react";
