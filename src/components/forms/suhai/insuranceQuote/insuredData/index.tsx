@@ -1,6 +1,6 @@
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/insuredData/context/hooks/insuranceQuote";
-import { SelectSexo } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/personalData/sexo";
+import { SelectSexo } from "@components/forms/suhai/insuranceQuote/personalData/select/sexo";
 import { formatCpf } from "@utils/transfomerText";
 import type React from "react";
 import { useMemo } from "react";

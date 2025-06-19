@@ -13,6 +13,7 @@ import { FormMainDriveData } from "@components/forms/suhai/insuranceQuote/mainDr
 import { Provider as FormMainDriverDataProvider } from "@components/forms/suhai/insuranceQuote/mainDriverData/context/provider";
 import { fetchIncluirCotacao } from "@components/forms/suhai/insuranceQuote/modules/incluirCotacao";
 import { FormPaymentDetails } from "@components/forms/suhai/insuranceQuote/paymentDetails";
+import { Provider as FormPaymentsDetailsProvider } from "@components/forms/suhai/insuranceQuote/paymentDetails/context/provider";
 import { FormPersonalData } from "@components/forms/suhai/insuranceQuote/personalData";
 import { FormVehicleData } from "@components/forms/suhai/insuranceQuote/vehicleData";
 import { Spinner } from "@components/spinner";
@@ -74,7 +75,9 @@ export const FormLayout: React.FC = () => {
                     </FormMainDriverDataProvider>
                 </AnimationSlide>
                 <AnimationSlide direction="left">
-                    <FormPaymentDetails />
+                    <FormPaymentsDetailsProvider>
+                        <FormPaymentDetails />
+                    </FormPaymentsDetailsProvider>
                 </AnimationSlide>
                 <AnimationSlide direction="right">
                     <div className="text-center mt-4">
