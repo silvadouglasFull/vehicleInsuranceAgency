@@ -11,6 +11,7 @@ export type Slide = {
     title: string;
     subtitle: string;
     captionStyle?: CaptionStyle
+    buttonLink?: string
 };
 
 export type BreadCrumps = {

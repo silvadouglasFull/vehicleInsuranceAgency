@@ -43,7 +43,8 @@ export const slides: Slide[] = [
                 width: '100%'
             },
             mobile: { margin: '0 auto', top: '50%' }
-        }
+        },
+        buttonLink: '/contato'
     },
 ];
 export const breadCrumps: BreadCrumps[] = [

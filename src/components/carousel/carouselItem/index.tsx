@@ -3,10 +3,10 @@ import type { Slide } from '@flavor/assets/types';
 import React from 'react';
 import { Button, Card, Carousel } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-export const CarouselItem: React.FC<Slide> = ({ midia, subtitle, textButton, title, captionStyle }) => {
+export const CarouselItem: React.FC<Slide> = ({ midia, subtitle, textButton, title, captionStyle, buttonLink }) => {
     const navigate = useNavigate()
     const handleClick = () => {
-        navigate('/cotacao')
+        navigate(buttonLink ?? '/cotacao')
     }
     return (
         <>
