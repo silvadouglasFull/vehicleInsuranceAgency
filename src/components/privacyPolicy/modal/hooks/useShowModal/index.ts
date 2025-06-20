@@ -1,4 +1,4 @@
-import type { UseShowModal } from "@components/proposal/suhai/modal/proposal/hooks/useShowModal/types";
+import type { UseShowModal } from "@components/privacyPolicy/modal/hooks/useShowModal/types";
 import { useState } from "react";
 
 export const useShowModal = (): UseShowModal => {

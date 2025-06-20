@@ -1,8 +1,10 @@
-import type { ModalProps } from '@components/proposal/suhai/modal/proposal/types';
+import { ChildrenModal } from '@components/privacyPolicy/modal/childrenModal';
+import type { ModalProps } from '@components/privacyPolicy/modal/types';
+import { privaciPolicy } from "@flavor/texts/privaciPolicy";
 import type React from 'react';
 import Modal from 'react-bootstrap/Modal';
+const ModalPrivaciPolicy: React.FC<ModalProps> = ({ title, onHide, show }: ModalProps) => {
 
-const ModalQuote: React.FC<ModalProps> = ({ children, title, onHide, show }: ModalProps) => {
     return (
         <Modal size='lg' show={show} onHide={onHide}>
             <Modal.Header closeButton>
@@ -11,10 +13,10 @@ const ModalQuote: React.FC<ModalProps> = ({ children, title, onHide, show }: Mod
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {children}
+                <ChildrenModal {...privaciPolicy} />
             </Modal.Body>
         </Modal>
     );
 }
 
-export default ModalQuote;
+export default ModalPrivaciPolicy;
