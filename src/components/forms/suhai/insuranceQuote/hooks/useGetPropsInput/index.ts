@@ -10,6 +10,7 @@ export const useGetPropsInput = ({ keyGet = 'name', additionalForms, sliceEnd, s
         const inputs = listForms({ additionalForms, sliceEnd, sliceStart })
         if (inputs.length) {
             inputs.forEach(item => {
+                delete item.idControll
                 temProps[keyGet ? item[keyGet] : item.type] = { ...item }
             })
             setProps(temProps)

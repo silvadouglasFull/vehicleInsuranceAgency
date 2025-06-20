@@ -99,7 +99,7 @@ export type Type = "text"
 export type FormField = {
     id: number
     name: Name
-    idControll: Name
+    idControll?: Name
     label: Label
     type: Type
     placeholder: string
