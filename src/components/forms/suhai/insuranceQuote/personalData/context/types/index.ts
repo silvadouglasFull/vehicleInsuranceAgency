@@ -4,6 +4,7 @@ export type States = {
     dtNascimento?: string;        // formato DD/MM/AAAA
     nome?: string;
     telefone?: string;
+    ddd_cel?: string
     email?: string;
     cepPernoite?: string;
     endereco?: string;

@@ -5,6 +5,7 @@ import { useFetchAddressInfo } from "@components/forms/suhai/insuranceQuote/pers
 import { SelectEstadoCivil, SelectSexo } from "@components/forms/suhai/insuranceQuote/personalData/select";
 import { Spinner } from "@components/spinner";
 import { formatPhoneNumber } from "@utils/form/mask/phone";
+import { getDDDFromPhone } from "@utils/getDDDFromPhone";
 import { formatCep, formatCpf } from "@utils/transfomerText";
 import type React from "react";
 import { useMemo } from "react";
@@ -46,9 +47,12 @@ export const FormPersonalData: React.FC = () => {
     }
     const onBlurTelefone = () => {
         if (telefone) {
+            const dd = getDDDFromPhone(telefone)
             handleForm({
-                telefone: formatPhoneNumber(telefone, 'pt')
+                telefone: formatPhoneNumber(telefone, 'pt'),
+                ddd_cel: dd ?? ''
             })
+
         }
     }
     return (

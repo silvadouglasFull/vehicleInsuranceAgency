@@ -9,4 +9,5 @@ export const states: States = {
     endereco: '',
     estadoCivil: '',
     sexo: '',
+    ddd_cel: '',
 }

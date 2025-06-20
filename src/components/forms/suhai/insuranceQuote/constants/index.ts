@@ -328,7 +328,7 @@ export const states: States = {
     nome: '',
     email: '',
     telefone: '',
-    valor: 0,
+    valor: '0',
     numeroCotacao: '',
     status: '',
     validade: '',
