@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/context/hooks/insuranceQuote";
 import { RenderSelect } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/renderInput";
 import type { Select2BootStrap } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/select/types";
 import { useSelectInput } from "@components/forms/suhai/insuranceQuote/vehicleData/select/brand/hooks/useSelectInputVehichleData";

@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/insuredData/context/hooks/insuranceQuote";
 import { fetchCep } from "@components/forms/suhai/insuranceQuote/modules/fetchCep";
+import type { UseFetchAddressInfo } from "@components/forms/suhai/insuranceQuote/personalData/hooks/useFetchAddressInfo/types";
 import type { ResponseConsultaCEP } from "@modules/cep/consultaCep/dto";
 import { onlyNumbers } from "@utils/transfomerText";
 import { useEffect, useState } from "react";
-import type { UseFetchAddressInfo } from "./types";
 
 export const useFetchAddressInfo = (): UseFetchAddressInfo => {
     const { state, handleForm } = useInsuranceQuote()
@@ -18,7 +18,7 @@ export const useFetchAddressInfo = (): UseFetchAddressInfo => {
                 const controller = new AbortController();
                 const stringFormated = onlyNumbers(cepPernoite)
                 try {
-                    const response = await fetchCep({ signal: controller.signal, cep: cepPernoite });
+                    const response = await fetchCep({ signal: controller.signal, cep: stringFormated });
                     const { logradouro } = response
                     handleForm({
                         endereco: logradouro
@@ -29,9 +29,6 @@ export const useFetchAddressInfo = (): UseFetchAddressInfo => {
                 } finally {
                     setLoading(false);
                 }
-                handleForm({
-                    endereco: stringFormated,
-                })
             }
         }
         fetchInfo()

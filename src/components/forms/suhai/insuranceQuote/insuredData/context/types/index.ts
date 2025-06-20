@@ -3,6 +3,7 @@ export type States = {
     cpf?: string;
     sexo?: string; // "1" = Feminino, "2" = Masculino
     endereco?: string;
+    cepPernoite?: string
 };
 
 export type ReducerParams = {

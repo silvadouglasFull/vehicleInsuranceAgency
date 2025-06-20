@@ -43,10 +43,12 @@ export const formLabels: FormField[] = [
         idControll: 'anoModelo',
         label: 'Ano do Modelo',
         name: 'anoModelo',
-        type: 'text',
+        type: 'number',
         placeholder: String(new Date().getFullYear()),
         required: true,
-        maxLength: 4
+        maxLength: 4,
+        min: 1,
+        max: (new Date().getFullYear())
     },
     {
         id: 5,

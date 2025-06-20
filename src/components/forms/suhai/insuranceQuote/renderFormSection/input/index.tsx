@@ -1,5 +1,5 @@
 import type { FormField } from "@components/forms/suhai/insuranceQuote/constants/types";
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/context/hooks/insuranceQuote";
 import { Icon } from "@components/icons";
 import { openLink } from "@utils/openLink";
 import type React from "react";

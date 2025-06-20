@@ -8,7 +8,7 @@ export type States = {
     nome?: string;
     email?: string;
     telefone?: string;
-    valor?: number;
+    valor?: string;
     numeroCotacao?: string;
     status?: string;
     validade?: string;
@@ -63,6 +63,7 @@ export type States = {
     num_cel?: string;
     anoFabricacao?: string
     cdCobertura?: string
+    categoria?: string
 };
 
 export type ReducerParams = {

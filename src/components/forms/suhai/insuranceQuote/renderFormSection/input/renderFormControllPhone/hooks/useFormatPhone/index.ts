@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/context/hooks/insuranceQuote";
 import { formatPhoneNumber } from "@utils/form/mask/phone";
 import { getDDDFromPhone } from "@utils/getDDDFromPhone";
 import { useEffect, useState } from "react";

@@ -10,6 +10,7 @@ export type States = {
     tipoUtilizacao?: string;
     possuiOutroVeic?: string; // "1" = Sim, "0" = Não
     categoria?: string
+    anoModelo?: string
 };
 
 export type ReducerParams = {

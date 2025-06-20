@@ -1,4 +1,4 @@
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/context/hooks/insuranceQuote";
 import { formatCep } from "@utils/transfomerText";
 import { useEffect, useState } from "react";
 import type { UseFormatCep } from "./types";

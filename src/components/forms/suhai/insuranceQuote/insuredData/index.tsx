@@ -1,13 +1,15 @@
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/insuredData/context/hooks/insuranceQuote";
+import { useFetchAddressInfo } from "@components/forms/suhai/insuranceQuote/insuredData/hooks/useFetchAddressInfo";
 import { SelectSexo } from "@components/forms/suhai/insuranceQuote/insuredData/select/sexo";
-import { formatCpf } from "@utils/transfomerText";
+import { Spinner } from "@components/spinner";
+import { formatCep, formatCpf } from "@utils/transfomerText";
 import type React from "react";
 import { useMemo } from "react";
-import { Card, Col, Form, Row } from "react-bootstrap";
+import { Card, Col, Form, InputGroup, Row } from "react-bootstrap";
 
 export const FormInsuredData: React.FC = () => {
-    const additionalForms = useMemo(() => [], []);
+    const additionalForms = useMemo(() => [28], []);
     const sliceStart = useMemo(() => 11, [])
     const sliceEnd = useMemo(() => 14, [])
     const props = useGetPropsInput({
@@ -15,11 +17,21 @@ export const FormInsuredData: React.FC = () => {
         sliceEnd,
         additionalForms
     });
-    const { onChange, handleForm, state: { cpf, endereco } } = useInsuranceQuote()
+    const { onChange, handleForm, state: { cpf, endereco, cepPernoite } } = useInsuranceQuote()
+    const { loading } = useFetchAddressInfo()
+
     const onBlurCPF = () => {
         if (cpf) {
             handleForm({
                 cpf: formatCpf({ cpf })
+            })
+        }
+    }
+    const onBlurCEP = () => {
+        if (cepPernoite) {
+            const cep = cepPernoite
+            handleForm({
+                cepPernoite: formatCep({ cep })
             })
         }
     }
@@ -54,18 +66,41 @@ export const FormInsuredData: React.FC = () => {
                             <SelectSexo {...props?.sexo} />
                         </Form.Group>
                     </Col>
-                    <Col className="mb-3 col-12">
+                    <Col sm={12} md={3} className="mb-3">
+                        <Form.Group controlId={props?.cepPernoite?.idControll}>
+                            <Form.Label className="fw-bold" >
+                                {props?.cepPernoite?.label}
+                                {props?.cepPernoite?.required && <span className="text-danger ms-1" >* </span>}
+                            </Form.Label>
+                            <Form.Control
+                                value={cepPernoite}
+                                {...props?.cepPernoite}
+                                id={String(props?.cepPernoite?.id)}
+                                onChange={onChange}
+                                onBlur={onBlurCEP}
+                            />
+                        </Form.Group>
+                    </Col>
+                    <Col sm={12} md={9} className="mb-3">
                         <Form.Group controlId={props?.endereco?.idControll}>
                             <Form.Label className="fw-bold" >
                                 {props?.endereco?.label}
                                 {props?.endereco?.required && <span className="text-danger ms-1" >* </span>}
                             </Form.Label>
-                            <Form.Control
-                                value={endereco}
-                                {...props?.endereco}
-                                id={String(props?.endereco?.id)}
-                                onChange={onChange}
-                            />
+                            <InputGroup className="mb-3">
+                                {loading ? (
+                                    <InputGroup.Text id="loading-icon-input">
+                                        <Spinner />
+                                    </InputGroup.Text>
+                                ) : null}
+                                <Form.Control
+                                    value={endereco}
+                                    {...props?.endereco}
+                                    id={props?.endereco?.id.toString()}
+                                    onChange={onChange}
+                                    aria-describedby="loading-icon-input"
+                                />
+                            </InputGroup>
                         </Form.Group>
                     </Col>
                 </Row>

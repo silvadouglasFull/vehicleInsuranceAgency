@@ -3,4 +3,5 @@ export const states: States = {
     cpf: '',
     sexo: '',
     endereco: '',
+    cepPernoite: '',
 }

@@ -1,12 +1,15 @@
 import { personalData } from "@components/forms/suhai/insuranceQuote/constants";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/personalData/context/hooks/insuranceQuote";
+import { useFetchAddressInfo } from "@components/forms/suhai/insuranceQuote/personalData/hooks/useFetchAddressInfo";
 import { SelectEstadoCivil, SelectSexo } from "@components/forms/suhai/insuranceQuote/personalData/select";
+import { Spinner } from "@components/spinner";
 import { formatPhoneNumber } from "@utils/form/mask/phone";
 import { formatCep, formatCpf } from "@utils/transfomerText";
 import type React from "react";
 import { useMemo } from "react";
-import { Card, Col, Form, Row } from "react-bootstrap";
+import { Card, Col, Form, InputGroup, Row } from "react-bootstrap";
+
 export const FormPersonalData: React.FC = () => {
     const additionalForms = useMemo(() => personalData, []);
     const sliceStart = useMemo(() => 4, []);
@@ -25,6 +28,7 @@ export const FormPersonalData: React.FC = () => {
         dtNascimento,
         cepPernoite
     }, onChange, handleForm } = useInsuranceQuote()
+    const { loading } = useFetchAddressInfo()
     const onBlurCPF = () => {
         if (cpf) {
             handleForm({
@@ -147,12 +151,20 @@ export const FormPersonalData: React.FC = () => {
                                 {props?.endereco?.label}
                                 {props?.endereco?.required && <span className="text-danger ms-1" >* </span>}
                             </Form.Label>
-                            <Form.Control
-                                value={endereco}
-                                {...props?.endereco}
-                                id={props?.endereco?.id.toString()}
-                                onChange={onChange}
-                            />
+                            <InputGroup className="mb-3">
+                                {loading ? (
+                                    <InputGroup.Text id="loading-icon-input">
+                                        <Spinner />
+                                    </InputGroup.Text>
+                                ) : null}
+                                <Form.Control
+                                    value={endereco}
+                                    {...props?.endereco}
+                                    id={props?.endereco?.id.toString()}
+                                    onChange={onChange}
+                                    aria-describedby="loading-icon-input"
+                                />
+                            </InputGroup>
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">

@@ -1,9 +1,9 @@
 import type { StatusCode } from "@api/statusCode/types";
 import { AnimationSlide } from "@components/animationSlide/slideLeftRight";
 import { formLabels } from "@components/forms/suhai/insuranceQuote/constants";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/context/hooks/insuranceQuote";
 import { FormGarageData } from "@components/forms/suhai/insuranceQuote/garageData";
 import { Provider as FormGarageProvider } from "@components/forms/suhai/insuranceQuote/garageData/context/provider";
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
 import { FormInsuredData } from "@components/forms/suhai/insuranceQuote/insuredData";
 import { Provider as FormInsuredDataProvider } from "@components/forms/suhai/insuranceQuote/insuredData/context/provider";
 import { requiredFormsFields } from "@components/forms/suhai/insuranceQuote/layouts//utils/requiredFormsFields";

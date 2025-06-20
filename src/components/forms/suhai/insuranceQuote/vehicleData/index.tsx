@@ -24,7 +24,8 @@ export const FormVehicleData: React.FC = () => {
         valor,
         placa,
         chassi,
-        codigoFipe
+        codigoFipe,
+        anoModelo
     } = state
     const handleLink = () => {
         if (props?.codigoFipe?.helperLink) {
@@ -32,9 +33,9 @@ export const FormVehicleData: React.FC = () => {
         }
     }
     const onBlurCodigoFipe = () => {
-        if (codigoFipe) {
+        if ((codigoFipe ?? '').length <= 7) {
             handleForm({
-                codigoFipe: maskCodFipe({ codFipe: codigoFipe })
+                codigoFipe: maskCodFipe({ codFipe: codigoFipe ?? '' })
             })
         }
     }
@@ -42,6 +43,13 @@ export const FormVehicleData: React.FC = () => {
         if (valor) {
             handleForm({
                 valor: String(Number(onlyNumbers(valor ?? '0')).toLocaleString())
+            })
+        }
+    }
+    const onBlurPlaca = () => {
+        if (placa) {
+            handleForm({
+                placa: placa.toUpperCase()
             })
         }
     }
@@ -75,7 +83,7 @@ export const FormVehicleData: React.FC = () => {
                             />
                         </Form.Group>
                     </Col>
-                    <Col sm={12} md={6} className="mb-3">
+                    <Col sm={12} md={4} className="mb-3">
                         <Form.Group controlId={props?.marca?.idControll}>
                             <Form.Label className="fw-bold" >
                                 {props?.marca?.label}
@@ -84,13 +92,27 @@ export const FormVehicleData: React.FC = () => {
                             <SelectBrand  {...props.marca} />
                         </Form.Group>
                     </Col>
-                    <Col sm={12} md={6} className="mb-3">
+                    <Col sm={12} md={4} className="mb-3">
                         <Form.Group controlId={props?.modelo?.idControll}>
                             <Form.Label className="fw-bold" >
                                 {props?.modelo?.label}
                                 {props?.modelo?.required && <span className="text-danger ms-1" >* </span>}
                             </Form.Label>
                             <SelectModel {...props?.modelo} />
+                        </Form.Group>
+                    </Col>
+                    <Col sm={12} md={4} className="mb-3">
+                        <Form.Group controlId={props?.anoModelo?.idControll}>
+                            <Form.Label className="fw-bold" >
+                                {props?.anoModelo?.label}
+                                {props?.anoModelo?.required && <span className="text-danger ms-1" >* </span>}
+                            </Form.Label>
+                            <Form.Control
+                                value={anoModelo}
+                                {...props?.anoModelo}
+                                id={props?.anoModelo?.id.toString()}
+                                onChange={onChange}
+                            />
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={3} className="mb-3">
@@ -119,6 +141,7 @@ export const FormVehicleData: React.FC = () => {
                                 {...props?.placa}
                                 id={props?.placa?.id.toString()}
                                 onChange={onChange}
+                                onBlur={onBlurPlaca}
                             />
                         </Form.Group>
                     </Col>

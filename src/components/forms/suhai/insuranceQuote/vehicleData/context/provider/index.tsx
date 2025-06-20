@@ -1,11 +1,12 @@
+import { } from "@components/forms/suhai/insuranceQuote/";
 import { Context } from "@components/forms/suhai/insuranceQuote/vehicleData/context";
 import { states } from "@components/forms/suhai/insuranceQuote/vehicleData/context/constants";
 import type { Event, HandleFormField, States } from "@components/forms/suhai/insuranceQuote/vehicleData/context/types";
 import { reducer } from "@utils/form/reducer";
 import React, { useReducer } from "react";
-
 export const Provider: React.FC<React.PropsWithChildren> = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, states)
+
     const onChange = (event: Event) => {
         const target = event.target as HTMLInputElement;
         const { name, value } = target;

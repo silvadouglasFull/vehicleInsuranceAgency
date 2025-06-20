@@ -1,5 +1,5 @@
 import { mainDriverData } from "@components/forms/suhai/insuranceQuote/constants";
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/context/hooks/insuranceQuote";
 import { useGetPropsInput } from "@components/forms/suhai/insuranceQuote/hooks/useGetPropsInput";
 import { SelectEstadoCivilPrincipalCondutor, SelectSexoPrincipalCondutor } from "@components/forms/suhai/insuranceQuote/mainDriverData/select";
 import type React from "react";

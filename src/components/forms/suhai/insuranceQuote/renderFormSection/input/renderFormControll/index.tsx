@@ -1,5 +1,5 @@
 import type { FormProps } from "@components/forms/suhai/insuranceQuote/constants/types";
-import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/hooks/insuranceQuote";
+import { useInsuranceQuote } from "@components/forms/suhai/insuranceQuote/context/hooks/insuranceQuote";
 import type React from "react";
 import { Form } from "react-bootstrap";
 

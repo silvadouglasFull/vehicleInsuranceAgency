@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type { FormProps } from "@components/forms/suhai/insuranceQuote/constants/types";
-import { useFetchAddressInfo } from "@components/forms/suhai/insuranceQuote/renderFormSection/input/renderFormControllAddress/hooks/useFetchAddressInfo";
+import { useFetchAddressInfo } from "@components/forms/suhai/insuranceQuote/personalData/hooks/useFetchAddressInfo";
 import type React from "react";
 import { Form } from "react-bootstrap";
 
