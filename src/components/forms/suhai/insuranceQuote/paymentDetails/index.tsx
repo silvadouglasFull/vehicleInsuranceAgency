@@ -17,7 +17,7 @@ export const FormPaymentDetails: React.FC = () => {
             <Card.Body>
                 <Row>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.tipoContratacao?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.tipoContratacao?.label}
                                 {props?.tipoContratacao?.required && <span className="text-danger ms-1" >* </span>}
@@ -28,7 +28,7 @@ export const FormPaymentDetails: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.formaPagamento?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.formaPagamento?.label}
                                 {props?.formaPagamento?.required && <span className="text-danger ms-1" >* </span>}
@@ -37,7 +37,7 @@ export const FormPaymentDetails: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col className="mb-3 col-12">
-                        <Form.Group controlId={props?.cdCobertura?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.cdCobertura?.label}
                                 {props?.cdCobertura?.required && <span className="text-danger ms-1" >* </span>}

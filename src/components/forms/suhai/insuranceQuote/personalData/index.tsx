@@ -59,7 +59,7 @@ export const FormPersonalData: React.FC = () => {
             <Card.Body>
                 <Row>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.cpf?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.cpf?.label}
                                 {props?.cpf?.required && <span className="text-danger ms-1" >* </span>}
@@ -74,7 +74,7 @@ export const FormPersonalData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.dtNascimento?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.dtNascimento?.label}
                                 {props?.dtNascimento?.required && <span className="text-danger ms-1" >* </span>}
@@ -88,7 +88,7 @@ export const FormPersonalData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col className="mb-3 col-12">
-                        <Form.Group controlId={props?.nome?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.nome?.label}
                                 {props?.nome?.required && <span className="text-danger ms-1" >* </span>}
@@ -102,7 +102,7 @@ export const FormPersonalData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.telefone?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.telefone?.label}
                                 {props?.telefone?.required && <span className="text-danger ms-1" >* </span>}
@@ -117,7 +117,7 @@ export const FormPersonalData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.email?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.email?.label}
                                 {props?.email?.required && <span className="text-danger ms-1" >* </span>}
@@ -131,7 +131,7 @@ export const FormPersonalData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={3} className="mb-3">
-                        <Form.Group controlId={props?.cepPernoite?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.cepPernoite?.label}
                                 {props?.cepPernoite?.required && <span className="text-danger ms-1" >* </span>}
@@ -146,7 +146,7 @@ export const FormPersonalData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={9} className="mb-3">
-                        <Form.Group controlId={props?.endereco?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.endereco?.label}
                                 {props?.endereco?.required && <span className="text-danger ms-1" >* </span>}
@@ -168,7 +168,7 @@ export const FormPersonalData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.estadoCivil?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.estadoCivil?.label}
                                 {props?.estadoCivil?.required && <span className="text-danger ms-1" >* </span>}
@@ -177,7 +177,7 @@ export const FormPersonalData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.sexo?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.sexo?.label}
                                 {props?.sexo?.required && <span className="text-danger ms-1" >* </span>}

@@ -63,7 +63,7 @@ export const FormVehicleData: React.FC = () => {
                 <VehicleTypeCards />
                 <Row>
                     <Col className="mb-3 col-12">
-                        <Form.Group controlId={props?.codigoFipe?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.codigoFipe?.label}
                                 {props?.codigoFipe?.required && <span className="text-danger ms-1" >* </span>}
@@ -84,7 +84,7 @@ export const FormVehicleData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={4} className="mb-3">
-                        <Form.Group controlId={props?.marca?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.marca?.label}
                                 {props?.marca?.required && <span className="text-danger ms-1" >* </span>}
@@ -93,7 +93,7 @@ export const FormVehicleData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={4} className="mb-3">
-                        <Form.Group controlId={props?.modelo?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.modelo?.label}
                                 {props?.modelo?.required && <span className="text-danger ms-1" >* </span>}
@@ -102,7 +102,7 @@ export const FormVehicleData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={4} className="mb-3">
-                        <Form.Group controlId={props?.anoModelo?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.anoModelo?.label}
                                 {props?.anoModelo?.required && <span className="text-danger ms-1" >* </span>}
@@ -116,7 +116,7 @@ export const FormVehicleData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={3} className="mb-3">
-                        <Form.Group controlId={props?.valor?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.valor?.label}
                                 {props?.valor?.required && <span className="text-danger ms-1" >* </span>}
@@ -131,7 +131,7 @@ export const FormVehicleData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={3} className="mb-3">
-                        <Form.Group controlId={props?.placa?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.placa?.label}
                                 {props?.placa?.required && <span className="text-danger ms-1" >* </span>}
@@ -146,7 +146,7 @@ export const FormVehicleData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={3} className="mb-3">
-                        <Form.Group controlId={props?.zeroKm?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.zeroKm?.label}
                                 {props?.zeroKm?.required && <span className="text-danger ms-1" >* </span>}
@@ -155,7 +155,7 @@ export const FormVehicleData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={3} className="mb-3">
-                        <Form.Group controlId={props?.chassi?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.chassi?.label}
                                 {props?.chassi?.required && <span className="text-danger ms-1" >* </span>}
@@ -169,7 +169,7 @@ export const FormVehicleData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.tipoUtilizacao?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.tipoUtilizacao?.label}
                                 {props?.tipoUtilizacao?.required && <span className="text-danger ms-1" >* </span>}
@@ -178,7 +178,7 @@ export const FormVehicleData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.possuiOutroVeic?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.possuiOutroVeic?.label}
                                 {props?.possuiOutroVeic?.required && <span className="text-danger ms-1" >* </span>}

@@ -21,7 +21,7 @@ export const FormMainDriveData: React.FC = () => {
             <Card.Body>
                 <Row>
                     <Col sm={12} md={4} className="mb-3 col-12">
-                        <Form.Group controlId={props?.dtNascimentoPrincipalCondutor?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.dtNascimentoPrincipalCondutor?.label}
                                 {props?.dtNascimentoPrincipalCondutor?.required && <span className="text-danger ms-1" >* </span>}
@@ -36,7 +36,7 @@ export const FormMainDriveData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={4} className="mb-3">
-                        <Form.Group controlId={props?.sexoPrincipalCondutor?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.sexoPrincipalCondutor?.label}
                                 {props?.sexoPrincipalCondutor?.required && <span className="text-danger ms-1" >* </span>}
@@ -47,7 +47,7 @@ export const FormMainDriveData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={4} className="mb-3">
-                        <Form.Group controlId={props?.estadoCivilPrincipalCondutor?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.estadoCivilPrincipalCondutor?.label}
                                 {props?.estadoCivilPrincipalCondutor?.required && <span className="text-danger ms-1" >* </span>}

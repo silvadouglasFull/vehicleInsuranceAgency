@@ -18,7 +18,7 @@ export const FormGarageData: React.FC = () => {
             <Card.Body>
                 <Row>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.pergunta1?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.pergunta1?.label}
                                 {props?.pergunta1?.required && <span className="text-danger ms-1" >* </span>}
@@ -27,7 +27,7 @@ export const FormGarageData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.pergunta2?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.pergunta2?.label}
                                 {props?.pergunta2?.required && <span className="text-danger ms-1" >* </span>}
@@ -36,7 +36,7 @@ export const FormGarageData: React.FC = () => {
                         </Form.Group>
                     </Col>
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.pergunta3?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.pergunta3?.label}
                                 {props?.pergunta3?.required && <span className="text-danger ms-1" >* </span>}
@@ -46,7 +46,7 @@ export const FormGarageData: React.FC = () => {
                     </Col>
 
                     <Col sm={12} md={6} className="mb-3">
-                        <Form.Group controlId={props?.pergunta4?.idControll}>
+                        <Form.Group>
                             <Form.Label className="fw-bold" >
                                 {props?.pergunta4?.label}
                                 {props?.pergunta4?.required && <span className="text-danger ms-1" >* </span>}
