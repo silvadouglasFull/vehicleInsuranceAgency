@@ -15,11 +15,9 @@ export type CoberturaItem = {
     id: number
     nome: string
     premioLiquido: number
-    sendProposal?: SendProposal
 }
 export type Calculo = {
     PremioCoberturas: {
         Cobertura: CoberturaItem[]
     }
-    sendProposal?: SendProposal
 }

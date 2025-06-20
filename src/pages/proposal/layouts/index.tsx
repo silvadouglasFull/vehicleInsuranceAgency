@@ -5,6 +5,7 @@ import ModalQuote from "@components/proposal/suhai/modal/proposal";
 import { useShowModal } from '@components/proposal/suhai/modal/proposal/useShowModal';
 import { BasicInfo } from "@components/proposal/suhai/proposal/basicInfo";
 import { RFC } from "@components/proposal/suhai/rcf";
+import { Spinner } from "@components/spinner";
 import { Toast } from "@components/toast";
 import { useToast } from "@components/toast/hooks/useToast";
 import type { TransmitirProposta } from "@modules/suhai/transmitirProposta/dtos";
@@ -14,7 +15,7 @@ import { useGetParamsSecreen } from "@pages/proposal/layouts/hooks/useGetParamsS
 import type { State } from "@pages/proposal/layouts/hooks/useGetParamsScreen/types";
 import { fetchEnviarProposta } from "@pages/proposal/modules/fetchTransmitirProposta";
 import React, { useState } from "react";
-import { Card, Container } from "react-bootstrap";
+import { Button, Card, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ChildrenModal } from "../childrenModal";
 import { useGetProposalResponse } from "../hooks/useGetResponseProposal";
@@ -27,8 +28,11 @@ export const DefaultLayout: React.FC = () => {
     const { handleShow, handleClose, show: ModalShow } = useShowModal()
     const [response, setResponse] = useState<TransmitirProposta | null>(null)
     const { proposta, protocolo } = useGetProposalResponse(response)
+    const [loading, setLoading] = useState<boolean>(false)
+
     const sendProposal = async () => {
         if (payload) {
+            setLoading(true)
             const response = await fetchEnviarProposta({ ...payload })
             const { status } = response
             if (status !== 200) {
@@ -41,7 +45,7 @@ export const DefaultLayout: React.FC = () => {
                 setResponse({ ...data })
                 handleShow()
             }
-            return
+            setLoading(false)
         }
     }
     return (
@@ -49,7 +53,6 @@ export const DefaultLayout: React.FC = () => {
             {summary && (<BasicInfo {...summary} />)}
             {infoFipe && (<InfoFipe {...infoFipe} />)}
             {awardCoverage?.Cobertura?.length && (<CovaragePlans
-                sendProposal={sendProposal}
                 PremioCoberturas={awardCoverage} />)}
             <Container>
                 <Card.Text className="text-info">
@@ -67,6 +70,13 @@ export const DefaultLayout: React.FC = () => {
                     handleCloseModal={handleClose}
                     protocolo={protocolo} />}
                 title={'Envio de Proposta'} />
+            <Container className="mt-3 mb-3">
+                <div className="d-grid gap-2 w-100">
+                    <Button variant="info" className="w-100" size="lg" onClick={sendProposal}>
+                        {loading ? (<Spinner animation="border" />) : 'Aceitar Proposta'}
+                    </Button>
+                </div>
+            </Container>
             <Container className="mt-3 mb-3 ">
                 <Link to={'/'} className="text-info text-decoration-none">Fazer outra Cotação?</Link>
             </Container>

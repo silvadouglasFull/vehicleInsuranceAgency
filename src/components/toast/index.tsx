@@ -1,10 +1,7 @@
-import { Icon } from '@components/icons';
 import { useSetVariant } from '@components/toast/hooks/useSetVariant';
 import type { ToastProps } from '@components/toast/types';
-import { logo } from "@flavor/assets";
-import { nameFlavor } from '@flavor/index';
-import { getTimeInHoursMinutes } from '@utils/date';
 import { ToastContainer, Toast as ToastReactBootstrap } from 'react-bootstrap';
+import { ToastHeader } from './header';
 export const Toast: React.FC<ToastProps> = ({ statusCode, message, show, onclose }: ToastProps) => {
     const { variant } = useSetVariant({ statusCode })
     const handleClose = () => {
@@ -31,15 +28,7 @@ export const Toast: React.FC<ToastProps> = ({ statusCode, message, show, onclose
                     bg={variant}
                 >
                     <ToastReactBootstrap.Header closeButton={false}>
-                        <img
-                            src={logo}
-                            className="rounded me-2"
-                            alt={`Logo da ${nameFlavor}`}
-                            style={{
-                                width: 100
-                            }}
-                        />
-                        <small className='d-flex d-flex-nowrap align-items-center'><Icon name='fa-solid fa-clock' /> {getTimeInHoursMinutes()}</small>
+                        <ToastHeader />
                     </ToastReactBootstrap.Header>
                     <ToastReactBootstrap.Body className={'text-white'}>
                         {message}
@@ -58,18 +47,7 @@ export const Toast: React.FC<ToastProps> = ({ statusCode, message, show, onclose
                         bg={variant}
                     >
                         <ToastReactBootstrap.Header closeButton={false}>
-                            <strong className="me-auto">
-                                {nameFlavor}
-                            </strong>
-                            <img
-                                src={logo}
-                                className="rounded me-2"
-                                alt={`Logo da ${nameFlavor}`}
-                                style={{
-                                    width: 100
-                                }}
-                            />
-                            <small className='d-flex d-flex-nowrap align-items-center'><Icon name='fa-solid fa-clock' /> {getTimeInHoursMinutes()}</small>
+                            <ToastHeader />
                         </ToastReactBootstrap.Header>
                         <ToastReactBootstrap.Body className={'text-white'}>
                             {item}
