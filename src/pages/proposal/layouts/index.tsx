@@ -3,7 +3,7 @@ import type { States } from "@components/forms/suhai/insuranceQuote/context/type
 import { CovaragePlans } from "@components/proposal/suhai/coveragePlans";
 import { InfoFipe } from "@components/proposal/suhai/infoFipe";
 import ModalQuote from "@components/proposal/suhai/modal/proposal";
-import { useShowModal } from '@components/proposal/suhai/modal/proposal/useShowModal';
+import { useShowModal } from '@components/proposal/suhai/modal/proposal/hooks/useShowModal';
 import { BasicInfo } from "@components/proposal/suhai/proposal/basicInfo";
 import { RFC } from "@components/proposal/suhai/rcf";
 import { Spinner } from "@components/spinner";
