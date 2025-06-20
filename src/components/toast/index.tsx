@@ -33,7 +33,7 @@ export const Toast: React.FC<ToastProps> = ({ statusCode, message, show, onclose
                     <ToastReactBootstrap.Header closeButton={false}>
                         <img
                             src={logo}
-                            className="rounded mr-2"
+                            className="rounded me-2"
                             alt={`Logo da ${nameFlavor}`}
                             style={{
                                 width: 100
@@ -63,7 +63,7 @@ export const Toast: React.FC<ToastProps> = ({ statusCode, message, show, onclose
                             </strong>
                             <img
                                 src={logo}
-                                className="rounded mr-2"
+                                className="rounded me-2"
                                 alt={`Logo da ${nameFlavor}`}
                                 style={{
                                     width: 100

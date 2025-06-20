@@ -69,7 +69,7 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
             {plot && (
                 <Card.Footer className="text-center border border-bottom-0 border-right-0 border-left-0" style={backGroundCard}>
                     <div className="d-flex justify-content-center align-items-center">
-                        <Card.Title className="text-info mr-2 mt-2">
+                        <Card.Title className="text-info me-2 mt-2">
                             R$ {plot.valorTotal.toLocaleString()}
                         </Card.Title>
                         <span className="text-secondary">à vista</span>
