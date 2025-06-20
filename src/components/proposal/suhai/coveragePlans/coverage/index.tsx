@@ -5,7 +5,7 @@ import { useGetExplanationForKeys } from "@components/proposal/suhai/coveragePla
 import { backGroundCard } from "@components/proposal/suhai/coveragePlans/coverage/styles";
 import type { CoberturaItem } from "@components/proposal/suhai/coveragePlans/types";
 import ModalQuote from "@components/proposal/suhai/modal/proposal";
-import { useShowModal } from '@components/proposal/suhai/modal/proposal/useShowModal';
+import { useShowModal } from '@components/proposal/suhai/modal/proposal/hooks/useShowModal';
 import type React from "react";
 import { useState } from "react";
 import { Card } from "react-bootstrap";
