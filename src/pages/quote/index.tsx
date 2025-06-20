@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap"
 
 export const Quote = () => {
     return (
-        <section className="py-5 bg-light">
+        <section className="py-5">
             <Container>
                 <InsuranceProvider>
                     <FormInsuranceQuote />

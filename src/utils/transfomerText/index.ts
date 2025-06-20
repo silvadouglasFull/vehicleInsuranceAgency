@@ -76,3 +76,18 @@ export function formatCep({ cep }: FormatCEP): string {
 export function onlyNumbers(input: string): string {
     return input.replace(/\D/g, '');
 }
+/**
+ * Faz múltiplos replaces em uma string com base em um array de palavras.
+ * @param input - Texto original
+ * @param targets - Palavras a serem removidas/substituídas
+ * @param replacement - Texto de substituição (padrão: string vazia)
+ * @returns Texto com todas as substituições feitas
+ */
+export function replaceMultiple(
+    input: string,
+    targets: string[],
+    replacement = ''
+): string {
+    const pattern = new RegExp(targets.join('|'), 'g');
+    return input.replace(pattern, replacement);
+}

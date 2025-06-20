@@ -14,7 +14,7 @@ export const FormMainDriveData: React.FC = () => {
         dtNascimentoPrincipalCondutor,
     }, onChange } = useInsuranceQuote()
     return (
-        <Card bg="light" className="mb-4 shadow-sm">
+        <Card className="mb-4 shadow-sm">
             <Card.Header className="bg-info text-white">
                 <Card.Title className="mb-0">Dados do Principal Condutor</Card.Title>
             </Card.Header>

@@ -11,7 +11,7 @@ export const FormGarageData: React.FC = () => {
         additionalForms: memoGarageData
     });
     return (
-        <Card bg="light" className="mb-4 shadow-sm">
+        <Card className="mb-4 shadow-sm">
             <Card.Header className="bg-info text-white">
                 <Card.Title className="mb-0">Informações sobre sua Garagem</Card.Title>
             </Card.Header>

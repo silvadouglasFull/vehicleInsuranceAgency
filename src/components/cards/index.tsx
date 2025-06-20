@@ -4,7 +4,7 @@ import type React from "react";
 import { Container, Row } from 'react-bootstrap';
 const ServicesCards: React.FC<ServiceCardsProps> = ({ items }: ServiceCardsProps) => {
     return (
-        <section className="py-5 bg-light">
+        <section className="py-5">
             <Container>
                 <Row className="g-4 justify-content-center flex-wrap">
                     {items.length ? items.map(item => (

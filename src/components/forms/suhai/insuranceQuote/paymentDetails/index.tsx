@@ -10,7 +10,7 @@ export const FormPaymentDetails: React.FC = () => {
         additionalForms
     });
     return (
-        <Card bg="light" className="mb-4 shadow-sm">
+        <Card className="mb-4 shadow-sm">
             <Card.Header className="bg-info text-white">
                 <Card.Title className="mb-0">Informações de Pagamento</Card.Title>
             </Card.Header>

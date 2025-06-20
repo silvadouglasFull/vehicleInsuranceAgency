@@ -54,7 +54,7 @@ export const FormVehicleData: React.FC = () => {
         }
     }
     return (
-        <Card bg="light" className="mb-4 shadow-sm">
+        <Card className="mb-4 shadow-sm">
             <Card.Header className="bg-info text-white">
                 <Card.Title className="mb-0">Dados do Seu Veículo</Card.Title>
             </Card.Header>

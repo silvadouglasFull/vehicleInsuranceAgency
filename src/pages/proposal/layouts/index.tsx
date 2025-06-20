@@ -1,3 +1,4 @@
+import type { StatusCode } from "@api/statusCode/types";
 import type { States } from "@components/forms/suhai/insuranceQuote/context/types";
 import { CovaragePlans } from "@components/proposal/suhai/coveragePlans";
 import { InfoFipe } from "@components/proposal/suhai/infoFipe";
@@ -16,9 +17,10 @@ import type { State } from "@pages/proposal/layouts/hooks/useGetParamsScreen/typ
 import { fetchEnviarProposta } from "@pages/proposal/modules/fetchTransmitirProposta";
 import React, { useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ChildrenModal } from "../childrenModal";
 import { useGetProposalResponse } from "../hooks/useGetResponseProposal";
+import { createParamsToastWhenErrorPayload } from "./utils/createParamsToastWhenErrorPayload";
 
 export const DefaultLayout: React.FC = () => {
     const { data, formData } = useGetParamsSecreen()
@@ -29,7 +31,7 @@ export const DefaultLayout: React.FC = () => {
     const [response, setResponse] = useState<TransmitirProposta | null>(null)
     const { proposta, protocolo } = useGetProposalResponse(response)
     const [loading, setLoading] = useState<boolean>(false)
-
+    const navigate = useNavigate()
     const sendProposal = async () => {
         if (payload) {
             setLoading(true)
@@ -47,6 +49,10 @@ export const DefaultLayout: React.FC = () => {
             }
             setLoading(false)
         }
+        const toastParams = createParamsToastWhenErrorPayload()
+        setStatusCode(toastParams.statusCode as StatusCode)
+        setMessage(toastParams.message ?? '')
+        return navigate('/cotacao')
     }
     return (
         <>

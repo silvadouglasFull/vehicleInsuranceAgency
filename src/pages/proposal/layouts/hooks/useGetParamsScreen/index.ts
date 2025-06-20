@@ -1,6 +1,8 @@
 import type { States } from "@components/forms/suhai/insuranceQuote/context/types"
+import { themes } from "@components/navbarPublic/themes/constants"
 import type { State, UseGetParamsSecreen } from "@pages/proposal/layouts/hooks/useGetParamsScreen/types"
 import { retrieveLocalQuoteData, storageLocalQuoteData } from "@pages/proposal/layouts/utils/storageLocalQuoteData"
+import { replaceMultiple } from "@utils/transfomerText"
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 
@@ -22,12 +24,17 @@ export const useGetParamsSecreen = (): UseGetParamsSecreen => {
     }
     useEffect(() => {
         const getParams = () => {
-            if (pathname !== '/proposta') {
-                return !state && getStoragedLocalParamsScreen()
+            const formatPath = replaceMultiple(pathname, themes.map(item => `#${item.theme}`), '')
+            if (formatPath !== '/proposta') {
+                return
             }
-            const { formData, ...rest } = state
-            setFormData(formData)
-            setData({ ...rest as State })
+            if (state) {
+                const { formData, ...rest } = state
+                setFormData(formData)
+                setData({ ...rest as State })
+            } else {
+                getStoragedLocalParamsScreen()
+            }
         }
         getParams()
     }, [state, pathname])

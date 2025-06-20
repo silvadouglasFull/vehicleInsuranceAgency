@@ -4,7 +4,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 
 export const FormInsuranceQuote: React.FC = () => {
     return (
-        <div className="bg-light min-vh-100 py-5">
+        <div className="min-vh-100 py-5">
             <Container>
                 <Row className="justify-content-center">
                     <Col xs={12} xl={10}>

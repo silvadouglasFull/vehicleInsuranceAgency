@@ -13,7 +13,7 @@ export const storageLocalQuoteData = async (data: State | null): Promise<void> =
     }
 }
 export const retrieveLocalQuoteData = async (): TRetrieve => {
-    const key = keysToLocalStorageData.quote
+    const key = `${keysToLocalStorageData.quote}-object`
     try {
         return await localStorage.retrieve({ key })
     } catch (error) {

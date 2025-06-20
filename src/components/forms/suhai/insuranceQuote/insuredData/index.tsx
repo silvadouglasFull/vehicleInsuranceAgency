@@ -36,7 +36,7 @@ export const FormInsuredData: React.FC = () => {
         }
     }
     return (
-        <Card bg="light" className="mb-4 shadow-sm">
+        <Card className="mb-4 shadow-sm">
             <Card.Header className="bg-info text-white">
                 <Card.Title className="mb-0">Dados do Assegurado</Card.Title>
             </Card.Header>
