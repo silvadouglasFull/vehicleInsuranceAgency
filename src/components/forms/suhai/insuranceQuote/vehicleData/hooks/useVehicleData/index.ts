@@ -35,13 +35,20 @@ export const useVehicleData = (): UseVehicleData => {
     }
     useEffect(() => {
         const controller = new AbortController()
-        if ((codigoFipe?.length === 8) && (categoria)) {
+        fetchInfo(controller)
+        return () => {
+            controller.abort()
+        }
+    }, [])
+    useEffect(() => {
+        const controller = new AbortController()
+        if ((codigoFipe?.length === 8) || (categoria)) {
             fetchInfo(controller)
         }
         return () => {
             controller.abort()
         }
-    }, [codigoFipe])
+    }, [codigoFipe, categoria])
 
     return {
         loading,

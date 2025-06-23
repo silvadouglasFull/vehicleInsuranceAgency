@@ -10,7 +10,7 @@ export const formLabels: FormField[] = [
         name: 'codigoFipe',
         type: 'fipe',
         placeholder: 'Digite o código FIPE',
-        required: true,
+        required: false,
         min: 8,
         max: 8,
         maxLength: 8,

@@ -64,9 +64,10 @@ export const FormVehicleData: React.FC = () => {
                 <Row>
                     <Col className="mb-3 col-12">
                         <Form.Group>
-                            <Form.Label className="fw-bold" >
+                            <Form.Label className="fw-bold">
                                 {props?.codigoFipe?.label}
                                 {props?.codigoFipe?.required && <span className="text-danger ms-1" >* </span>}
+                                {' '}
                                 {props?.codigoFipe?.helperLink && props?.codigoFipe?.title && <Badge style={{
                                     cursor: 'pointer'
                                 }} bg="info"

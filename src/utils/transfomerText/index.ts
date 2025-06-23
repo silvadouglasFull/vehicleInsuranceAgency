@@ -3,9 +3,46 @@ export const transformerInFirstWord = ({ world }: TransformerInFirstWord): strin
     return String(world).substring(0, 1)
 }
 export const maskCodFipe = ({ codFipe }: MaskCodFipe): string => {
+    if (!codFipe) {
+        return ''
+    }
+    if (searchSomeWordInString(codFipe, ['-'])) {
+        return codFipe
+    }
     const lastDigit = codFipe.substring(codFipe.length - 1)
     const replacedTexy = codFipe.replace(lastDigit, `-${lastDigit}`)
     return replacedTexy
+}
+/**
+ * Search in strings with corresponding a array of strings.
+ * 
+ * @param {string} targetString - The original string to be searched.
+ * @param {Array[]} wordsToSearch - An array containing search and replace strings.
+ * @returns {boolean} True if found or false if not found.
+ * 
+ * @example
+ * const targetString = 'This is a test';
+ * const wordsToSearch = [
+ *     'a',
+ *     'e',
+ *     'i',
+ *     'o',
+ *     'u', * ];
+ * 
+ * const isWordFound = searchSomeWordInString(targetString, replacements);
+ * console.log(isWordFound); // true|false
+ */
+export function searchSomeWordInString(targetString: string, wordsToSearch: string[]) {
+    try {
+        if (!targetString) {
+            return false
+        }
+        // Verifica se alguma das palavras no array existe na string
+        const wordExists = wordsToSearch.some(word => targetString.includes(word))
+        return wordExists
+    } catch (error) {
+        return String(error)
+    }
 }
 /**
  * Splits a string into two variables based on a specified separator.
