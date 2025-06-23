@@ -47,9 +47,10 @@ export const FormPersonalData: React.FC = () => {
     }
     const onBlurTelefone = () => {
         if (telefone) {
-            const dd = getDDDFromPhone(telefone)
+            const formatedPhone = formatPhoneNumber(telefone, 'pt')
+            const dd = getDDDFromPhone(formatedPhone)
             handleForm({
-                telefone: formatPhoneNumber(telefone, 'pt'),
+                telefone: formatedPhone,
                 ddd_cel: dd ?? ''
             })
 
