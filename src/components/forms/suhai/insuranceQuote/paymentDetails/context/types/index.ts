@@ -3,6 +3,7 @@ export type States = {
     tipoContratacao?: string;
     formaPagamento?: string;
     cdCobertura?: string;
+    nro_apolice_ant?: string
 };
 
 export type ReducerParams = {

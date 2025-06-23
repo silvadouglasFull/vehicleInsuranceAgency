@@ -3,4 +3,5 @@ export const states: States = {
     tipoContratacao: '',
     formaPagamento: '',
     cdCobertura: '',
+    nro_apolice_ant: '',
 }

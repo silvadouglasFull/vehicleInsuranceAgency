@@ -311,6 +311,16 @@ export const formLabels: FormField[] = [
         placeholder: 'Chassi do Veículo',
         required: true,
         maxLength: 17
+    },
+    {
+        id: 34,
+        name: 'nro_apolice_ant',
+        idControll: 'nro_apolice_ant',
+        label: 'N° da Apolice Anterior',
+        type: 'text',
+        placeholder: 'Somente números',
+        required: false,
+        maxLength: 100
     }
 ];
 export const personalData: GroupForms = [14, 15, 27, 28, 29]; // sexo, estado civil
@@ -318,7 +328,7 @@ export const vehicleData: GroupForms = [9, 16, 17, 18, 31, 33]; // zeroKm, tipoU
 export const mainDriverData: GroupForms = [20, 21, 30]; // sexoPrincipalCondutor, estadoCivilPrincipalCondutor
 export const garageData: GroupForms = [22, 23, 24, 25];
 export const dadosCaminhao = [26]; // pergunta6
-export const paymentData = [10, 19, 32]
+export const paymentData = [10, 19, 32, 34]
 export const states: States = {
     codigoFipe: '',
     marca: '',

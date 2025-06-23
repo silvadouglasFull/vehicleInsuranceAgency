@@ -11,14 +11,11 @@ export const useSelectInput = (): UseSelectInput => {
     const { handleForm } = useInsuranceQuote()
     useEffect(() => {
         if (selectedOption) {
-            console.log(selectedOption)
             try {
                 const { value } = selectedOption
                 const parseValue = transforValue.tranform(value)
-                const { cod_fipe } = parseValue[0]
                 handleForm({
                     ...parseValue[0] as States,
-                    codigoFipe: cod_fipe
                 })
             } catch (error) {
                 console.log(error)
