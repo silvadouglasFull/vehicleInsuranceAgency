@@ -9,7 +9,7 @@ export const socialMidia: TSocialMidia[] = [
     {
         id: 0,
         nameSocialMidia: 'Facebook',
-        route: 'https://www.facebook.com/seucreditonoclick/',
+        route: 'https://www.facebook.com/seuseguronoclick',
         icon: 'fa-brands fa-facebook'
     },
     {
@@ -21,7 +21,7 @@ export const socialMidia: TSocialMidia[] = [
     {
         id: 2,
         nameSocialMidia: 'Instagram',
-        route: 'https://www.instagram.com/seucreditonoclick/',
+        route: 'https://www.instagram.com/seuseguronoclick',
         icon: 'fa-brands fa-instagram',
     }
 ]
