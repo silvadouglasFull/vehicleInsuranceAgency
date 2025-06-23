@@ -8,6 +8,11 @@ export const VehicleTypeCards: React.FC = () => {
     const { handleForm, state } = useInsuranceQuote()
     const { categoria } = state
     const onClick = (label: string) => {
+        if (label === categoria) {
+            return handleForm({
+                categoria: ''
+            })
+        }
         handleForm({
             categoria: label
         })
