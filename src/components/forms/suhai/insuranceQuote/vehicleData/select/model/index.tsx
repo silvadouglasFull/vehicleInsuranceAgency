@@ -15,7 +15,7 @@ export const SelectModel: React.FC<Select2BootStrap> = ({
     const { selectedOption, setSelectedOption } = useSelectInput()
     const { options, loading } = useSetOptions()
     const [modelsOptions, setModelOptions] = useState<Options[]>([])
-    const { state } = useInsuranceQuote()
+    const { state, } = useInsuranceQuote()
     const { marca } = state
     useEffect(() => {
         if ((options?.length) && (marca)) {
