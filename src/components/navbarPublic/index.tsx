@@ -3,9 +3,6 @@ import { useNavbarBackground } from "@components/navbarPublic/hooks/useNavbarBac
 import { Links } from '@components/navbarPublic/links';
 import { styles } from '@components/navbarPublic/styles';
 import '@components/navbarPublic/styles/styles.css';
-import { ThemesDropDown } from '@components/navbarPublic/themes';
-import { themes } from '@components/navbarPublic/themes/constants';
-import { Provider as ThemeProvider } from "@components/navbarPublic/themes/context/provider";
 import { links } from '@flavor/links';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -26,9 +23,6 @@ const NavigationBar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className={`me-auto w-100 navbar-nav justify-content-between align-items-md-end ${!hasBackground ? 'mt-3' : ''}`}>
                         <Links items={links} />
-                        <ThemeProvider>
-                            <ThemesDropDown items={themes} />
-                        </ThemeProvider>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
