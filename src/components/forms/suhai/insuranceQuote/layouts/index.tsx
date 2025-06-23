@@ -65,21 +65,21 @@ export const FormLayout: React.FC = () => {
                         <FormGarageData />
                     </FormGarageProvider>
                 </AnimationSlide>
-                <AnimationSlide direction="left">
-                    <FormPersonalDataProvider>
+                <FormPersonalDataProvider>
+                    <AnimationSlide direction="left">
                         <FormPersonalData />
-                    </FormPersonalDataProvider>
-                </AnimationSlide>
-                <AnimationSlide direction="right">
-                    <FormInsuredDataProvider>
-                        <FormInsuredData />
-                    </FormInsuredDataProvider>
-                </AnimationSlide>
-                <AnimationSlide direction="left">
-                    <FormMainDriverDataProvider>
-                        <FormMainDriveData />
-                    </FormMainDriverDataProvider>
-                </AnimationSlide>
+                    </AnimationSlide>
+                    <AnimationSlide direction="right">
+                        <FormInsuredDataProvider>
+                            <FormInsuredData />
+                        </FormInsuredDataProvider>
+                    </AnimationSlide>
+                    <AnimationSlide direction="left">
+                        <FormMainDriverDataProvider>
+                            <FormMainDriveData />
+                        </FormMainDriverDataProvider>
+                    </AnimationSlide>
+                </FormPersonalDataProvider>
                 <AnimationSlide direction="left">
                     <FormPaymentsDetailsProvider>
                         <FormPaymentDetails />

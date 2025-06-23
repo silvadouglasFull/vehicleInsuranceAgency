@@ -5,6 +5,7 @@ import { SelectEstadoCivilPrincipalCondutor, SelectSexoPrincipalCondutor } from 
 import type React from "react";
 import { useMemo } from "react";
 import { Card, Col, Form, Row } from "react-bootstrap";
+import { SwitchCopyForm } from "./swith";
 export const FormMainDriveData: React.FC = () => {
     const additionalForms = useMemo(() => mainDriverData, []);
     const props = useGetPropsInput({
@@ -20,6 +21,9 @@ export const FormMainDriveData: React.FC = () => {
             </Card.Header>
             <Card.Body>
                 <Row>
+                    <Col className="col-12 mb-3">
+                        <SwitchCopyForm />
+                    </Col>
                     <Col sm={12} md={4} className="mb-3 col-12">
                         <Form.Group>
                             <Form.Label className="fw-bold" >

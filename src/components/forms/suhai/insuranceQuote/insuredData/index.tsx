@@ -7,6 +7,7 @@ import { formatCep, formatCpf } from "@utils/transfomerText";
 import type React from "react";
 import { useMemo } from "react";
 import { Card, Col, Form, InputGroup, Row } from "react-bootstrap";
+import { SwitchCopyForm } from "./swith";
 
 export const FormInsuredData: React.FC = () => {
     const additionalForms = useMemo(() => [28], []);
@@ -42,6 +43,9 @@ export const FormInsuredData: React.FC = () => {
             </Card.Header>
             <Card.Body>
                 <Row>
+                    <Col className="col-12 mb-3">
+                        <SwitchCopyForm />
+                    </Col>
                     <Col sm={12} md={6} className="mb-3">
                         <Form.Group>
                             <Form.Label className="fw-bold" >

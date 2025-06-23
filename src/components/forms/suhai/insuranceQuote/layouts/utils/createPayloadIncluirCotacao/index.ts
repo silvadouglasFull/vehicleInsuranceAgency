@@ -1,8 +1,8 @@
+import { formatPhoneToPayload } from "@components/forms/suhai/insuranceQuote/layouts/utils/createPayloadIncluirCotacao//formaPhoneToPayload";
+import { formatDatesToPayload } from "@components/forms/suhai/insuranceQuote/layouts/utils/createPayloadIncluirCotacao/formaDatesToPayload";
 import type { CreatePayloadProps } from "@components/forms/suhai/insuranceQuote/layouts/utils/createPayloadIncluirCotacao/types";
 import type { IncluirCotacaoRequest } from "@modules/suhai/incluirCotacao/dtos";
 import { sanitizeString } from "@utils/transfomerText/sanitizeString";
-import { formatDatesToPayload } from "./formaDatesToPayload";
-import { formatPhoneToPayload } from "./formaPhoneToPayload";
 
 
 export const createPayload = ({ formData }: CreatePayloadProps): IncluirCotacaoRequest => {
