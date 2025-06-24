@@ -3,10 +3,10 @@
  * Carrossel utilizando React Bootstrap
  */
 import { CarouselItem } from '@components/carousel/carouselItem';
+import '@components/carousel/styles.css';
 import type { CarouselSlides } from '@components/carousel/types';
 import type React from 'react';
 import { Carousel } from 'react-bootstrap';
-import './styles.css';
 
 export const HeroCarousel: React.FC<CarouselSlides> = ({ items }: CarouselSlides) => {
     return (
