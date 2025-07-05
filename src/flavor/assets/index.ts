@@ -1,3 +1,4 @@
+import breadCrumps1 from "@assets/seuSeguroNoClick/imagens/breadCrumps/1.png";
 import cardService1 from '@assets/seuSeguroNoClick/imagens/cards/1.png';
 import cardService2 from "@assets/seuSeguroNoClick/imagens/cards/2.png";
 import cardService3 from "@assets/seuSeguroNoClick/imagens/cards/3.png";
@@ -38,7 +39,7 @@ export const slides: Slide[] = [
         subtitle: "Nossa equipe está pronta para te ajudar em todas as etapas.",
         captionStyle: {
             desktop: {
-                left: 350,
+                left: -350,
                 top: '20%',
                 width: '100%'
             },
@@ -50,7 +51,7 @@ export const slides: Slide[] = [
 export const breadCrumps: BreadCrumps[] = [
     {
         id: 1,
-        midia: slide3,
+        midia: breadCrumps1,
         url: '/cotacao'
     },
     {
