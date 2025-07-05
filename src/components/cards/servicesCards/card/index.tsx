@@ -8,7 +8,7 @@ export const Card: React.FC<CardProps> = ({ text, title, image }: CardProps) => 
 
             <CardBootstrap className="d-block d-md-none shadow-sm text-center" style={{
                 width: '100%',
-                height: '21.875rem'
+                height: '25rem'
             }}>
                 {image ? (
                     <CardBootstrap.Img src={image} />
@@ -20,7 +20,7 @@ export const Card: React.FC<CardProps> = ({ text, title, image }: CardProps) => 
             </CardBootstrap>
             <CardBootstrap className="d-none d-md-block shadow-sm text-center" style={{
                 width: '18rem',
-                height: '21.875rem'
+                height: '25rem'
             }}>
                 {image ? (
                     <CardBootstrap.Img src={image} />
