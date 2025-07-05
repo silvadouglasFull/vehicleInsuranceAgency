@@ -10,17 +10,17 @@ import { Spinner } from "@components/spinner";
 import { Toast } from "@components/toast";
 import { useToast } from "@components/toast/hooks/useToast";
 import type { TransmitirProposta } from "@modules/suhai/transmitirProposta/dtos";
+import { ChildrenModal } from "@pages/proposal/childrenModal";
 import { useCreatePayloadSendProposal } from "@pages/proposal/hooks/useCreatePayloadSendProposal";
+import { useGetProposalResponse } from "@pages/proposal/hooks/useGetResponseProposal";
 import { useDataQuote } from "@pages/proposal/layouts/hooks/useDataQuote";
 import { useGetParamsSecreen } from "@pages/proposal/layouts/hooks/useGetParamsScreen";
 import type { State } from "@pages/proposal/layouts/hooks/useGetParamsScreen/types";
+import { createParamsToastWhenErrorPayload } from "@pages/proposal/layouts/utils/createParamsToastWhenErrorPayload";
 import { fetchEnviarProposta } from "@pages/proposal/modules/fetchTransmitirProposta";
 import React, { useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { ChildrenModal } from "../childrenModal";
-import { useGetProposalResponse } from "../hooks/useGetResponseProposal";
-import { createParamsToastWhenErrorPayload } from "./utils/createParamsToastWhenErrorPayload";
 
 export const DefaultLayout: React.FC = () => {
     const { data, formData } = useGetParamsSecreen()
@@ -59,6 +59,8 @@ export const DefaultLayout: React.FC = () => {
             {summary && (<BasicInfo {...summary} />)}
             {infoFipe && (<InfoFipe {...infoFipe} />)}
             {awardCoverage?.Cobertura?.length && (<CovaragePlans
+                loading={loading}
+                sendProposal={sendProposal}
                 PremioCoberturas={awardCoverage} />)}
             <Container>
                 <Card.Text className="text-info">

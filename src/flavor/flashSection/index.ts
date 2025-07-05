@@ -5,7 +5,7 @@ import type { FlashSection } from "@flavor/flashSection/types";
 export const flashSection: FlashSection[] = [
     {
         id: 1,
-        title: "Carro",
+        title: "Seguro de Automóvel",
         paragraph: [
             {
                 id: 1,
@@ -24,7 +24,7 @@ export const flashSection: FlashSection[] = [
     },
     {
         id: 2,
-        title: "Moto",
+        title: "Seguro de Motocicleta",
         paragraph: [
             {
                 id: 1,
@@ -43,7 +43,7 @@ export const flashSection: FlashSection[] = [
     },
     {
         id: 3,
-        title: "Caminhão",
+        title: "Seguro de Veículo de Carga",
         paragraph: [
             {
                 id: 1,

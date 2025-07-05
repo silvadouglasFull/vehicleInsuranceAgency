@@ -10,13 +10,13 @@ export const FlashSection = () => {
                 </Card.Title>
             </Card>
             {flashSection.map(item => (
-                <Card key={item.id} className="border border-0">
+                <Card key={item.id} className="border border-0 mb-4">
                     <Card.Body>
                         <Row className="d-flex aligin-items-center">
                             {(item.id % 2 === 0) ? (
                                 <>
                                     <Col sm={12} md={6}>
-                                        <Image className="w-100" fluid src={item.midia} />
+                                        <Image className="w-100 rounded rounded-4" fluid src={item.midia} />
                                     </Col>
                                     <Col sm={12} md={6}>
                                         <Card.Title className="w-100">{item.title}</Card.Title>

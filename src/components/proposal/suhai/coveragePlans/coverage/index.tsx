@@ -8,10 +8,18 @@ import ModalQuote from "@components/proposal/suhai/modal/proposal";
 import { useShowModal } from '@components/proposal/suhai/modal/proposal/hooks/useShowModal';
 import type React from "react";
 import { useState } from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLiquido }: CoberturaItem) => {
+export const Coverage: React.FC<CoberturaItem> = ({
+    Parcelamento,
+    nome,
+    premioLiquido,
+    loading,
+    sendProposal,
+    name,
+    setName
+}: CoberturaItem) => {
     const { Parcela } = Parcelamento
     const { plot } = useGetMaxInstallments(Parcela)
     const [classNameCard, setClassNameCard] = useState<string>('mb-4')
@@ -24,11 +32,17 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
     const onMouseLeave = () => {
         setClassNameCard('mb-4')
     }
+    const onClick = () => {
+        if (name === nome) {
+            return setName('')
+        }
+        return setName(nome)
+    }
     return (
-        <Card className={classNameCard} style={{
+        <Card className={(name === nome) ? 'mb-4 border-info' : classNameCard} style={{
             height: 500,
             cursor: 'pointer'
-        }} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        }} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onClick={onClick}>
             <Card.Header className="bg-info text-center border border-top-0 border-right-0 border-left-0"
                 style={{
                     ...backGroundCard,
@@ -68,6 +82,11 @@ export const Coverage: React.FC<CoberturaItem> = ({ Parcelamento, nome, premioLi
                     <small className="text-secondary">
                         Em até {plot.quantidade}x de R$ {plot._value_1.toLocaleString()}
                     </small>
+                    <div className="d-grid gap-2 w-100">
+                        <Button variant="info" className="w-100" size="lg" onClick={sendProposal}>
+                            {loading ? (<Spinner animation="border" />) : 'Aceitar Proposta'}
+                        </Button>
+                    </div>
                 </Card.Footer>
             )}
             {plot && (

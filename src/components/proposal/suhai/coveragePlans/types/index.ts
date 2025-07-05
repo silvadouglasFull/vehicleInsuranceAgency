@@ -15,9 +15,15 @@ export type CoberturaItem = {
     id: number
     nome: string
     premioLiquido: number
+    loading: boolean
+    sendProposal: () => Promise<void>
+    name: string
+    setName: React.Dispatch<React.SetStateAction<string>>
 }
 export type Calculo = {
     PremioCoberturas: {
         Cobertura: CoberturaItem[]
     }
+    loading: boolean
+    sendProposal: () => Promise<void>
 }
