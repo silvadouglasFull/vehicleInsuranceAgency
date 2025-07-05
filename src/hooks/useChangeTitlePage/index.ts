@@ -9,6 +9,9 @@ export const useChangeTitlePage = (): UseChangeTitlePageReturn => {
     const { pathname } = useLocation()
     useEffect(() => {
         const changeTitlePage = () => {
+            if (pathname === '/') {
+                return setTitlePage(`${flavor} | Inicio`)
+            }
             setTitlePage(`${flavor} | ${pathname.replace('/', '')}`)
         }
         changeTitlePage()
