@@ -1,12 +1,9 @@
-import { endPoints, host } from "@flavor/whatsapp";
-import type { RequestWhatsapp } from "@modules/whatsapp/quotationCompletion/dto";
+import type { RequestWhatsapp, ResponseWhatsapp } from "@modules/whatsapp/quotationCompletion/dto";
+import { whatsapp } from "@modules/whatsapp/quotationCompletion/services";
 
-export const fetchWhatsapp = ({ destino, nome }: RequestWhatsapp): void => {
+export const fetchWhatsapp = ({ destino, nome }: RequestWhatsapp): Promise<ResponseWhatsapp | void> => {
     if (destino && nome) {
-        const payload = { destino, nome }
-        const blob = new Blob([JSON.stringify(payload)], {
-            type: 'application/json',
-        });
-        navigator.sendBeacon(`${host}${endPoints.send}`, blob);
+        return whatsapp.send({ destino, nome });
     }
+    return Promise.resolve();
 }
