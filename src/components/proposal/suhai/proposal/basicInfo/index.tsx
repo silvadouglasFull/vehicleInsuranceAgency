@@ -7,17 +7,17 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({ premioLiquido, premioTotal
         <Container>
             <Card.Title className="text-info">Informações Básicas</Card.Title>
             <Row>
-                <Col sm={12} md={4}>
+                <Col sm={12} md={4} className="mb-3">
                     <Card.Text>
                         <strong className="text-secondary">Protocolo:</strong> {protocolo}
                     </Card.Text>
                 </Col>
-                <Col sm={12} md={4}>
+                <Col sm={12} md={4} className="mb-3">
                     <Card.Text>
                         <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-info" />  Valor do Seguro:</strong> <span className="text-info">R$ {premioLiquido}</span>
                     </Card.Text>
                 </Col>
-                <Col sm={12} md={4}>
+                <Col sm={12} md={4} className="mb-3">
                     <Card.Text>
                         <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-info" />  Retorno do valor total do seguro:</strong> <span className="text-info">R$ {premioTotalAVista}</span>
                     </Card.Text>

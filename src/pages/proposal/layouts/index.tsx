@@ -12,15 +12,14 @@ import { useToast } from "@components/toast/hooks/useToast";
 import { usePageExitDetector } from "@hooks/usePageExitDetector";
 import type { TransmitirProposta } from "@modules/suhai/transmitirProposta/dtos";
 import { ChildrenModal } from "@pages/proposal/childrenModal";
-import { useCreatePayloadSendMessageWhatsapp } from "@pages/proposal/hooks/useCreatePayloadSendMessageWhatsapp";
 import { useCreatePayloadSendProposal } from "@pages/proposal/hooks/useCreatePayloadSendProposal";
+import { useFecthDataToSendMessageWhatsappMessage } from "@pages/proposal/hooks/useFetchDataToSendWhatsappMessage";
 import { useGetProposalResponse } from "@pages/proposal/hooks/useGetResponseProposal";
 import { useDataQuote } from "@pages/proposal/layouts/hooks/useDataQuote";
 import { useGetParamsSecreen } from "@pages/proposal/layouts/hooks/useGetParamsScreen";
 import type { State } from "@pages/proposal/layouts/hooks/useGetParamsScreen/types";
 import { createParamsToastWhenErrorPayload } from "@pages/proposal/layouts/utils/createParamsToastWhenErrorPayload";
 import { fetchEnviarProposta } from "@pages/proposal/modules/fetchTransmitirProposta";
-import { fetchWhatsapp } from "@pages/proposal/modules/fetchWhatsapp";
 import React, { useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -34,14 +33,10 @@ export const DefaultLayout: React.FC = () => {
     const [response, setResponse] = useState<TransmitirProposta | null>(null)
     const { proposta, protocolo } = useGetProposalResponse(response)
     const [loading, setLoading] = useState<boolean>(false)
-    const { ddd_cel, num_cel, nome } = formData as States
-    const { destino, nome: nomeDestino } = useCreatePayloadSendMessageWhatsapp({
-        ddd: ddd_cel,
-        num_cel,
-        nome
-    })
     usePageExitDetector(() => {
-        fetchWhatsapp({ destino, nome: nomeDestino })
+    })
+    useFecthDataToSendMessageWhatsappMessage({
+        formData: formData as States,
     })
     const sendProposal = async () => {
         if (payload) {
