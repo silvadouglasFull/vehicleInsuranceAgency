@@ -39,24 +39,29 @@ export const Coverage: React.FC<CoberturaItem> = ({
         return setName(nome)
     }
     return (
-        <Card className={(name === nome) ? 'mb-4 border-info' : classNameCard} style={{
+        <Card className={(name === nome) ? 'mb-4 border-info shadow bg-body rounded' : `${classNameCard} shadow bg-body rounded`} style={{
             height: 500,
+            width: '18rem',
             cursor: 'pointer'
         }} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onClick={onClick}>
-            <Card.Header className="bg-info text-center border border-top-0 border-right-0 border-left-0"
-                style={{
-                    ...backGroundCard,
-                    height: 100
-                }}>
-                <Card.Text className="text-light">{nome}</Card.Text>
-            </Card.Header>
-            <Card.Body className="text-center">
-                <Card.Text style={{
-                    paddingTop: '20%'
-                }}
-                    title={titlepremioLiquido}
-                >
-                    <Icon name="fa-solid fa-trophy text-info" /> <strong className="text-secondary">Retorno do valor liquido do seguro:</strong> <span className="text-info">R$ {premioLiquido}</span>
+            <Card.Body className="d-flex flex-column text-center justify-content-center align-items-center">
+                {plot && (
+
+                    <>
+                        <div className="d-flex justify-content-center align-items-center">
+                            <Card.Title className="text-info me-2 mt-2">
+                                R$ {plot.valorTotal.toLocaleString()}
+                            </Card.Title>
+                            <span className="text-secondary">à vista</span>
+                        </div>
+                        <small className="text-secondary">
+                            Em até {plot.quantidade}x de R$ {plot._value_1.toLocaleString()}
+                        </small>
+                    </>
+                )}
+                <Card.Text className="text-light mt-3">{nome}</Card.Text>
+                <Card.Text title={titlepremioLiquido}>
+                    <Icon name="fa-solid fa-trophy text-info" /> <strong className="text-secondary">Valor do Seguro:</strong> <span className="text-info">R$ {premioLiquido}</span>
                 </Card.Text>
                 {plot && (
                     <>
@@ -71,24 +76,13 @@ export const Coverage: React.FC<CoberturaItem> = ({
                     </Link>
                 </Card.Text>)}
             </Card.Body>
-            {plot && (
-                <Card.Footer className="text-center border border-bottom-0 border-right-0 border-left-0" style={backGroundCard}>
-                    <div className="d-flex justify-content-center align-items-center">
-                        <Card.Title className="text-info me-2 mt-2">
-                            R$ {plot.valorTotal.toLocaleString()}
-                        </Card.Title>
-                        <span className="text-secondary">à vista</span>
-                    </div>
-                    <small className="text-secondary">
-                        Em até {plot.quantidade}x de R$ {plot._value_1.toLocaleString()}
-                    </small>
-                    <div className="d-grid gap-2 w-100">
-                        <Button variant="info" className="w-100" size="lg" onClick={sendProposal}>
-                            {loading ? (<Spinner animation="border" />) : 'Aceitar Proposta'}
-                        </Button>
-                    </div>
-                </Card.Footer>
-            )}
+            <Card.Footer className="text-center border border-0" style={backGroundCard}>
+                <div className="d-grid gap-2 w-100">
+                    <Button variant="outline-info" className="w-100 text-uppercase" size="lg" onClick={sendProposal}>
+                        {loading ? (<Spinner animation="border" />) : 'Quero Esse'}
+                    </Button>
+                </div>
+            </Card.Footer>
             {plot && (
                 <ModalQuote onHide={handleClose} show={show} children={<ChildrenModal Parcela={Parcela} />} title={nome} />
             )}

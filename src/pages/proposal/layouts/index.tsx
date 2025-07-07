@@ -20,7 +20,7 @@ import { createParamsToastWhenErrorPayload } from "@pages/proposal/layouts/utils
 import { fetchEnviarProposta } from "@pages/proposal/modules/fetchTransmitirProposta";
 import React, { useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const DefaultLayout: React.FC = () => {
     const { data, formData } = useGetParamsSecreen()
@@ -31,7 +31,6 @@ export const DefaultLayout: React.FC = () => {
     const [response, setResponse] = useState<TransmitirProposta | null>(null)
     const { proposta, protocolo } = useGetProposalResponse(response)
     const [loading, setLoading] = useState<boolean>(false)
-    const navigate = useNavigate()
     const sendProposal = async () => {
         if (payload) {
             setLoading(true)
@@ -47,12 +46,12 @@ export const DefaultLayout: React.FC = () => {
                 setResponse({ ...data })
                 handleShow()
             }
-            setLoading(false)
+            return setLoading(false)
         }
         const toastParams = createParamsToastWhenErrorPayload()
         setStatusCode(toastParams.statusCode as StatusCode)
         setMessage(toastParams.message ?? '')
-        return navigate('/cotacao')
+
     }
     return (
         <>

@@ -8,10 +8,10 @@ export const CovaragePlans: React.FC<Calculo> = ({ PremioCoberturas, loading, se
     const [name, setName] = useState<string>('')
     return (
         <Container className="mt-5">
-            <Card.Title className="text-info">Planos de Cobertura</Card.Title>
-            <Row>
+            <Card.Title className="text-info mb-3">Planos de Cobertura</Card.Title>
+            <Row className="d-flex flex-wrap justify-content-md-center">
                 {Cobertura.length ? Cobertura.map(item => (
-                    <Col key={item.id} sm={12} md={4}>
+                    <Col key={item.id} sm={12} md={3} className="m-3">
                         <Coverage
                             {...item}
                             loading={loading}

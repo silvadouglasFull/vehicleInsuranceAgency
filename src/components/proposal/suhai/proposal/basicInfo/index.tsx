@@ -14,7 +14,7 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({ premioLiquido, premioTotal
                 </Col>
                 <Col sm={12} md={4}>
                     <Card.Text>
-                        <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-info" />  Retorno do valor liquido do seguro:</strong> <span className="text-info">R$ {premioLiquido}</span>
+                        <strong className="text-secondary"> <Icon name="fa-solid fa-trophy text-info" />  Valor do Seguro:</strong> <span className="text-info">R$ {premioLiquido}</span>
                     </Card.Text>
                 </Col>
                 <Col sm={12} md={4}>

@@ -19,7 +19,7 @@ export const Plot = ({ _value_1, quantidade, valorIOF, valorJuros, valorTotal }:
                 <Col sm={4} className="mb-3">
                     <Card.Text
                         title={titleValorJuros}
-                    > <strong className="text-secondary">Juros:</strong>
+                    > <strong className="text-secondary">Juros:</strong>{' '}
                         R$ {valorJuros.toFixed(2)}
                     </Card.Text>
                 </Col>

@@ -7,7 +7,7 @@ export const explanationProposedReturnFields: ExplanationProposedReturnFields[] 
 }, {
     id: 1,
     key: 'premioLiquido',
-    title: `Retorno do valor liquido do seguro`
+    title: `Valor do Seguro`
 }, {
     id: 2,
     key: 'valorJuros',
