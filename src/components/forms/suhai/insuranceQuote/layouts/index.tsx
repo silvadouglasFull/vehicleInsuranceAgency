@@ -24,6 +24,7 @@ import { useToast } from "@components/toast/hooks/useToast";
 import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+
 export const FormLayout: React.FC = () => {
     const { state: formData } = useInsuranceQuote();
     const { onClose, show, setMessage, setStatusCode, statusCode, message: messageResponse } = useToast()
