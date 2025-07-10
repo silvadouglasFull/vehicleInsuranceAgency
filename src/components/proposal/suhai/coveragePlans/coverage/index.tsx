@@ -59,7 +59,7 @@ export const Coverage: React.FC<CoberturaItem> = ({
                         </small>
                     </>
                 )}
-                <Card.Text className="text-light mt-3">{nome}</Card.Text>
+                <Card.Text className="text-dark fw-bold mt-3">{nome}</Card.Text>
                 <Card.Text title={titlepremioLiquido}>
                     <Icon name="fa-solid fa-trophy text-info" /> <strong className="text-secondary">Valor do Seguro:</strong> <span className="text-info">R$ {premioLiquido}</span>
                 </Card.Text>
